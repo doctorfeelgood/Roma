@@ -111,7 +111,7 @@
 	
 	.link_to_new
 	{
-		color:#0066bf;
+		color:#0072BC;
 		text-decoration:none;
 		line-height:16px;
 		background:url(../images/add.png) 2px no-repeat;
@@ -123,12 +123,12 @@
 	
 	.link_to_new:hover
 	{
-		border:1px solid #0066bf;
+		border:1px solid #0072BC;
 	}
 	
 	.link_to_new:visited
 	{
-		color:#0066bf;	
+		color:#0072BC;	
 	}
 
 .on_top
@@ -158,5 +158,25 @@
 {
 	border:1px solid #444;
 	background:white;
+}
+
+.big_close
+{
+	display:block;
+	color:#aaa;
+	background-color:#EEF5FB;
+	border:1px solid #aaa;
+	border-left:none;
+	border-right:none;
+	margin-left:-3px;
+	margin-right:-3px;
+	text-align:center;
+	text-decoration:none;
+}
+
+.big_close:hover
+{
+	color:#0072BC;
+	border-color:#0072BC;
 }
 

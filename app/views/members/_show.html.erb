@@ -1,22 +1,30 @@
 <div id='popup'>
 	<div id='popup_info'>
-		<table>
+		<table class='profile_card' width="100%">
 			<tr>
-				<td rowspan=4><%=image_tag("rbd.png") %></td>
-				<td><%=@member.name%> <%=@member.last_name%></td>
+				<th rowspan=5><%=image_tag("rbd.png") %></th>
+				<td><span class='card_name'><%=@member.name%> <%=@member.last_name%></span></td>
 			</tr>
 			<tr>
-				<td><i><%=@member.member_number%></i></td>
+				<td><span class='card_number'><%=@member.member_number%></span></td>
 			</tr>
 			<tr>
-				<td><%=@member.phone%>, <%=@member.email%></td>
+				<td><span class='card_phone'><%=@member.phone%></span></td>
 			</tr>
 			<tr>
-				<td><%=@member.address%></td>	
+				<td><span class='card_email'><%=@member.email%></span></td>
+			</tr>
+			<tr>
+				<td><span class='card_address'><%=@member.address%></span></td>	
+			</tr>
+			<tr>
+				<td colspan=2>
+				<%=link_to_function('cerrar', nil, :class=>'big_close') do |page|	  
+					page.visual_effect :fade, "show_member", :duration => 0.5
+				  end %>
+				</td>
 			</tr>
 		</table>
-		<%=link_to_function('cerrar', nil) do |page|	  
-			page.visual_effect :fade, "show_member", :duration => 0.5
-		  end %>
+
 	</div>
 </div>

@@ -48,7 +48,44 @@ textarea:focus { background-color: #ffd }
 	{
 		text-align:left;
 		padding:2px;
+		color:#333;
 	
 	}	
 	
+.profile_card td
+{
+	text-align:left;
+	padding-left:15px;
+}
 
+.profile_card th
+{
+	width:95px;;
+}
+
+.card_name
+{
+	font-size:2em;
+	color:#0072BC;
+}
+
+.card_number
+{
+	font-size:1.2em;
+	font-weight:bold;
+}
+
+.card_phone
+{
+	
+}
+
+.card_name
+{
+	
+}
+
+.card_name
+{
+	
+}
