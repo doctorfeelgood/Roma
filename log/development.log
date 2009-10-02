@@ -1,0 +1,2723 @@
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (34.6ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (5.4ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateMembers (20090923075411)
+  [4;35;1mSQL (2.8ms)[0m   [0mCREATE TABLE `members` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `last_name` varchar(255), `phone` varchar(255), `email` varchar(255), `address` varchar(255), `member_number` int(11), `created_by` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090923075411')[0m
+Migrating to CreateMemberships (20090923075416)
+  [4;35;1mSQL (17.0ms)[0m   [0mCREATE TABLE `memberships` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `member_id` int(11), `rate_id` int(11), `group_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090923075416')[0m
+Migrating to CreateAttendances (20090923075425)
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE `attendances` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `member_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090923075425')[0m
+Migrating to CreatePayments (20090923075432)
+  [4;35;1mSQL (36.7ms)[0m   [0mCREATE TABLE `payments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `membership_id` int(11), `rate_id` int(11), `paid_month` int(11), `paid_year` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090923075432')[0m
+Migrating to CreateGroups (20090923075447)
+  [4;35;1mSQL (2.1ms)[0m   [0mCREATE TABLE `groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `member_id` int(11), `rate_id` int(11), `is_complete` tinyint(1), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090923075447')[0m
+Migrating to CreateGroupMembers (20090923075502)
+  [4;35;1mSQL (5.3ms)[0m   [0mCREATE TABLE `group_members` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `group_id` int(11), `member_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090923075502')[0m
+Migrating to CreateExercises (20090923075601)
+  [4;35;1mSQL (2.4ms)[0m   [0mCREATE TABLE `exercises` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `category_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090923075601')[0m
+Migrating to CreateRoutineExercises (20090923075729)
+  [4;35;1mSQL (2.2ms)[0m   [0mCREATE TABLE `routine_exercises` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `routine_id` int(11), `exercise_id` int(11), `sets` int(11), `reps` int(11), `super_set` int(11), `user_id` int(11), `comments` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090923075729')[0m
+Migrating to CreateCategories (20090923075738)
+  [4;35;1mSQL (2.2ms)[0m   [0mCREATE TABLE `categories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090923075738')[0m
+Migrating to CreateRates (20090923080229)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateMembers (20090923075411)
+Migrating to CreateMemberships (20090923075416)
+Migrating to CreateAttendances (20090923075425)
+Migrating to CreatePayments (20090923075432)
+Migrating to CreateGroups (20090923075447)
+Migrating to CreateGroupMembers (20090923075502)
+Migrating to CreateExercises (20090923075601)
+Migrating to CreateRoutineExercises (20090923075729)
+Migrating to CreateCategories (20090923075738)
+Migrating to CreateRates (20090923080229)
+  [4;36;1mSQL (2.5ms)[0m   [0;1mCREATE TABLE `rates` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `price` decimal(4,2), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090923080229')[0m
+Migrating to CreateRoutines (20090923082825)
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE `routines` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `comments` varchar(255), `member_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090923082825')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mSHOW FIELDS FROM `attendances`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `attendances`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW KEYS FROM `attendances`[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mdescribe `categories`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW KEYS FROM `categories`[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mdescribe `exercises`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `exercises`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSHOW FIELDS FROM `group_members`[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mdescribe `group_members`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `group_members`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mdescribe `groups`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `groups`[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mdescribe `members`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `members`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW FIELDS FROM `memberships`[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mdescribe `memberships`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW KEYS FROM `memberships`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mSHOW FIELDS FROM `payments`[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mdescribe `payments`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `payments`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mSHOW FIELDS FROM `rates`[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mdescribe `rates`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW KEYS FROM `rates`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mSHOW FIELDS FROM `routine_exercises`[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mdescribe `routine_exercises`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `routine_exercises`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mSHOW FIELDS FROM `routines`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mdescribe `routines`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `routines`[0m
+  [4;36;1mSQL (21.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2009-09-29 23:25:26) [GET]
+  [4;36;1mMember Columns (82.4ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Rendering template within layouts/members
+Rendering members/new
+
+ActionView::TemplateError (undefined method `title' for #<Member:0x22ab30c>) on line #4 of app/views/members/_form.erb:
+1: <table align="center" class="form_table">
+2: 	<tr>		
+3:  		<th><%= f.label 'titulo:' %></th>
+4: 		<td><%= f.text_field :title %></td>
+5: 	</tr>
+6: 	<tr>	
+7: 	 	<th><%= f.label :descripcion %></th>
+
+    app/views/members/_form.erb:4
+    app/views/members/new.html.erb:3
+    app/views/members/new.html.erb:1
+    app/controllers/members_controller.rb:29:in `new'
+
+Rendered rescues/_trace (160.6ms)
+Rendered rescues/_request_and_response (2.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2009-09-29 23:33:17) [GET]
+  [4;35;1mMember Columns (246.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Rendering template within layouts/members
+Rendering members/new
+
+ActionView::TemplateError (undefined method `phoone' for #<Member:0x24a09f0>) on line #12 of app/views/members/_form.erb:
+9: 	</tr>
+10: 	<tr>
+11: 	   	<th><%=f.label 'Telefono:' %></th>
+12: 	    <td><%=f.text_field :phoone %></td>
+13: 	</tr>
+14: 	<tr>
+15: 	 	<th><%=f.label 'email:' %></th>
+
+    app/views/members/_form.erb:12
+    app/views/members/new.html.erb:3
+    app/views/members/new.html.erb:1
+    app/controllers/members_controller.rb:29:in `new'
+
+Rendered rescues/_trace (152.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2009-09-29 23:33:37) [GET]
+  [4;36;1mMember Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Rendering template within layouts/members
+Rendering members/new
+Rendered members/_form (3.3ms)
+Completed in 40ms (View: 31, DB: 3) | 200 OK [http://localhost/members/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2009-09-29 23:34:34) [GET]
+  [4;35;1mMember Columns (3.2ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Rendering template within layouts/members
+Rendering members/new
+Rendered members/_form (1.5ms)
+Completed in 16ms (View: 6, DB: 3) | 200 OK [http://localhost/members/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2009-09-29 23:35:17) [GET]
+  [4;36;1mMember Columns (71.1ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Rendering template within layouts/members
+Rendering members/new
+Rendered members/_form (1.6ms)
+Completed in 85ms (View: 7, DB: 71) | 200 OK [http://localhost/members/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2009-09-29 23:35:32) [GET]
+  [4;35;1mMember Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Rendering template within layouts/members
+Rendering members/new
+Rendered members/_form (2.8ms)
+Completed in 21ms (View: 8, DB: 3) | 200 OK [http://localhost/members/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2009-09-29 23:35:36) [GET]
+  [4;36;1mMember Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Rendering template within layouts/members
+Rendering members/new
+Rendered members/_form (1.8ms)
+Completed in 20ms (View: 7, DB: 3) | 200 OK [http://localhost/members/new]
+  [4;35;1mSQL (0.9ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2009-09-29 23:35:38) [GET]
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Rendering template within layouts/members
+Rendering members/new
+Rendered members/_form (1.5ms)
+Completed in 17ms (View: 6, DB: 4) | 200 OK [http://localhost/members/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2009-09-29 23:36:43) [GET]
+  [4;36;1mMember Columns (72.8ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Rendering template within layouts/main
+Rendering members/new
+Rendered members/_form (1.6ms)
+Completed in 91ms (View: 11, DB: 73) | 200 OK [http://localhost/members/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2009-09-29 23:39:09) [GET]
+  [4;35;1mMember Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Rendering template within layouts/main
+Rendering members/new
+Rendered members/_form (3.1ms)
+Completed in 22ms (View: 13, DB: 3) | 200 OK [http://localhost/members/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2009-09-29 23:39:49) [GET]
+  [4;36;1mMember Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Rendering template within layouts/main
+Rendering members/new
+Rendered members/_form (1.7ms)
+Completed in 19ms (View: 7, DB: 3) | 200 OK [http://localhost/members/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2009-09-29 23:41:17) [GET]
+  [4;35;1mMember Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Rendering template within layouts/main
+Rendering members/new
+Rendered members/_form (1.6ms)
+Completed in 18ms (View: 7, DB: 3) | 200 OK [http://localhost/members/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2009-09-29 23:41:50) [GET]
+  [4;36;1mMember Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Rendering template within layouts/main
+Rendering members/new
+Rendered members/_form (1.8ms)
+Completed in 17ms (View: 7, DB: 3) | 200 OK [http://localhost/members/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2009-09-29 23:44:24) [GET]
+  [4;35;1mMember Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Rendering template within layouts/main
+Rendering members/new
+Rendered members/_form (1.6ms)
+Completed in 18ms (View: 7, DB: 3) | 200 OK [http://localhost/members/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2009-09-29 23:44:27) [GET]
+  [4;36;1mMember Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Rendering template within layouts/main
+Rendering members/new
+Rendered members/_form (1.7ms)
+Completed in 16ms (View: 7, DB: 3) | 200 OK [http://localhost/members/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2009-09-29 23:44:45) [GET]
+  [4;35;1mMember Columns (3.1ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Rendering template within layouts/main
+Rendering members/new
+Rendered members/_form (1.9ms)
+Completed in 19ms (View: 8, DB: 3) | 200 OK [http://localhost/members/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2009-09-29 23:44:47) [GET]
+  [4;36;1mMember Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Rendering template within layouts/main
+Rendering members/new
+Rendered members/_form (1.6ms)
+Completed in 19ms (View: 7, DB: 3) | 200 OK [http://localhost/members/new]
+  [4;35;1mSQL (1.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2009-09-29 23:44:48) [GET]
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Rendering template within layouts/main
+Rendering members/new
+Rendered members/_form (1.7ms)
+Completed in 17ms (View: 7, DB: 4) | 200 OK [http://localhost/members/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2009-09-29 23:45:02) [GET]
+  [4;36;1mMember Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Rendering template within layouts/main
+Rendering members/new
+Rendered members/_form (1.7ms)
+Completed in 17ms (View: 7, DB: 3) | 200 OK [http://localhost/members/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2009-09-29 23:46:45) [GET]
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Rendering template within layouts/main
+Rendering members/new
+Rendered members/_form (1.5ms)
+Completed in 16ms (View: 6, DB: 3) | 200 OK [http://localhost/members/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2009-09-29 23:49:12) [GET]
+  [4;36;1mMember Columns (81.1ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Rendering template within layouts/main
+Rendering members/new
+Rendered members/_form (90.7ms)
+Completed in 184ms (View: 96, DB: 81) | 200 OK [http://localhost/members/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2009-09-29 23:53:54) [GET]
+  [4;35;1mMember Columns (77.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Rendering template within layouts/main
+Rendering members/new
+Rendered members/_form (3.7ms)
+Completed in 96ms (View: 12, DB: 78) | 200 OK [http://localhost/members/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2009-09-29 23:54:28) [GET]
+  [4;36;1mMember Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Rendering template within layouts/main
+Rendering members/new
+Rendered members/_form (4.0ms)
+Completed in 22ms (View: 12, DB: 3) | 200 OK [http://localhost/members/new]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#create (for 127.0.0.1 at 2009-09-29 23:54:46) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"qMbMIki82qNYuBd4lmLTuFfYZztU/h99En3LiljAGW8=", "member"=>{"name"=>"alberto", "phone"=>"8115561319", "address"=>"filosofos 100 apt 4", "last_name"=>"rodriguez", "email"=>"alberto.rodriguez@adoxis.com"}}
+  [4;35;1mMember Columns (80.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMember Create (11.1ms)[0m   [0mINSERT INTO `members` (`name`, `updated_at`, `created_by`, `phone`, `member_number`, `last_name`, `address`, `email`, `created_at`) VALUES('alberto', '2009-09-30 04:54:46', NULL, '8115561319', NULL, 'rodriguez', 'filosofos 100 apt 4', 'alberto.rodriguez@adoxis.com', '2009-09-30 04:54:46')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/members/1
+Completed in 168ms (DB: 92) | 302 Found [http://localhost/members]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#show (for 127.0.0.1 at 2009-09-29 23:54:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMember Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (1.6ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+Rendering template within layouts/main
+Rendering members/show
+Completed in 38ms (View: 26, DB: 4) | 200 OK [http://localhost/members/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-29 23:55:27) [GET]
+  [4;35;1mMember Load (0.6ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 113ms (View: 102, DB: 3) | 200 OK [http://localhost/members/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 00:01:49) [GET]
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (72.4ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 92ms (View: 11, DB: 73) | 200 OK [http://localhost/members/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2009-09-30 00:01:57) [GET]
+  [4;35;1mMember Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Rendering template within layouts/main
+Rendering members/new
+Rendered members/_form (3.9ms)
+Completed in 23ms (View: 12, DB: 3) | 200 OK [http://localhost/members/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#create (for 127.0.0.1 at 2009-09-30 00:02:47) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"qMbMIki82qNYuBd4lmLTuFfYZztU/h99En3LiljAGW8=", "member"=>{"name"=>"peluso", "member_number"=>"4565465", "phone"=>"8115.561319", "address"=>"Filosofos 100 apt 4", "last_name"=>"ruiz", "email"=>"peluso@hotmail.com"}}
+  [4;36;1mMember Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mMember Create (0.3ms)[0m   [0;1mINSERT INTO `members` (`name`, `updated_at`, `created_by`, `phone`, `member_number`, `last_name`, `address`, `email`, `created_at`) VALUES('peluso', '2009-09-30 05:02:47', NULL, '8115.561319', 4565465, 'ruiz', 'Filosofos 100 apt 4', 'peluso@hotmail.com', '2009-09-30 05:02:47')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/members/2
+Completed in 17ms (DB: 4) | 302 Found [http://localhost/members]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#show (for 127.0.0.1 at 2009-09-30 00:02:47) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mMember Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (1.1ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+Rendering template within layouts/main
+Rendering members/show
+Completed in 13ms (View: 2, DB: 4) | 200 OK [http://localhost/members/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 00:02:53) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 16ms (View: 7, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 00:03:42) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 21ms (View: 11, DB: 4) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2009-09-30 00:03:45) [GET]
+  [4;36;1mMember Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Rendering template within layouts/main
+Rendering members/new
+Rendered members/_form (1.9ms)
+Completed in 94ms (View: 7, DB: 3) | 200 OK [http://localhost/members/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 00:04:13) [GET]
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 16ms (View: 6, DB: 3) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2009-09-30 00:26:51) [GET]
+  [4;35;1mMember Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Rendering template within layouts/main
+Rendering members/new
+Rendered members/_form (2.0ms)
+Completed in 18ms (View: 7, DB: 3) | 200 OK [http://localhost/members/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 00:26:57) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 16ms (View: 7, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 00:28:21) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (3.2ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 22ms (View: 13, DB: 4) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 00:29:15) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (73.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 86ms (View: 6, DB: 74) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 00:30:10) [GET]
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (246.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 262ms (View: 7, DB: 247) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 00:30:12) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 105ms (View: 7, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 00:31:36) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 19ms (View: 7, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 00:34:05) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 16ms (View: 7, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 00:34:51) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 17ms (View: 6, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 00:36:05) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 16ms (View: 6, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 00:38:43) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (78.7ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 92ms (View: 7, DB: 79) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 00:38:45) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 14ms (View: 6, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 00:38:55) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 104ms (View: 93, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 00:39:11) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 17ms (View: 6, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 00:40:37) [GET]
+  [4;36;1mMember Load (0.6ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 19ms (View: 7, DB: 4) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 00:43:43) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (75.4ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 90ms (View: 7, DB: 76) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 00:44:34) [GET]
+  [4;36;1mMember Load (0.6ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 19ms (View: 8, DB: 4) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 00:45:11) [GET]
+  [4;36;1mMember Load (0.6ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 18ms (View: 7, DB: 4) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#show (for 127.0.0.1 at 2009-09-30 00:45:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mMember Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.5ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+Rendering template within layouts/main
+Rendering members/show
+Completed in 13ms (View: 3, DB: 3) | 200 OK [http://localhost/members/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#edit (for 127.0.0.1 at 2009-09-30 00:45:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mMember Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.3ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+Rendering template within layouts/main
+Rendering members/edit
+Completed in 131ms (View: 120, DB: 3) | 200 OK [http://localhost/members/1/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#edit (for 127.0.0.1 at 2009-09-30 00:46:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mMember Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+Rendering template within layouts/main
+Rendering members/edit
+Rendered members/_form (2.0ms)
+Completed in 21ms (View: 11, DB: 3) | 200 OK [http://localhost/members/1/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 00:46:57) [GET]
+  [4;36;1mMember Load (0.6ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 19ms (View: 7, DB: 4) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 00:53:48) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (79.7ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 95ms (View: 7, DB: 80) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 00:56:29) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (78.7ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 92ms (View: 6, DB: 79) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 00:56:31) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 18ms (View: 7, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 00:57:10) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 14ms (View: 6, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 00:57:13) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 19ms (View: 8, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 00:57:13) [GET]
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (3.8ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 20ms (View: 8, DB: 5) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 00:57:13) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 18ms (View: 7, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 00:57:14) [GET]
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 14ms (View: 6, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 00:57:14) [GET]
+  [4;36;1mMember Load (2.0ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 16ms (View: 6, DB: 4) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 00:57:42) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 16ms (View: 6, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 00:58:53) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 16ms (View: 7, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 00:59:52) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 19ms (View: 7, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 01:00:28) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 18ms (View: 7, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 01:00:42) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 17ms (View: 7, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 01:01:12) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 17ms (View: 7, DB: 4) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 01:01:49) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 16ms (View: 7, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 01:02:03) [GET]
+  [4;36;1mMember Load (0.6ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 18ms (View: 7, DB: 4) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 01:02:18) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 16ms (View: 7, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 01:02:30) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 17ms (View: 7, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 01:03:05) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 16ms (View: 6, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 01:03:40) [GET]
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 17ms (View: 7, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 01:03:52) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 17ms (View: 7, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 01:06:07) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 16ms (View: 7, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 01:06:53) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 16ms (View: 7, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 01:06:55) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 16ms (View: 7, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 01:06:56) [GET]
+  [4;36;1mMember Load (0.6ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 18ms (View: 8, DB: 4) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 01:07:20) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 17ms (View: 8, DB: 4) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 01:09:38) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 17ms (View: 7, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 01:11:12) [GET]
+  [4;36;1mMember Load (0.6ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 22ms (View: 11, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 01:11:53) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 16ms (View: 7, DB: 4) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 01:12:27) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 16ms (View: 7, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 01:12:57) [GET]
+  [4;36;1mMember Load (0.6ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 18ms (View: 8, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 01:16:24) [GET]
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 17ms (View: 8, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 01:16:52) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 20ms (View: 7, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 01:18:41) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 17ms (View: 6, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 01:18:45) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 17ms (View: 7, DB: 4) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 01:18:46) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 17ms (View: 7, DB: 4) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 01:18:46) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 17ms (View: 8, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 01:19:19) [GET]
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 18ms (View: 7, DB: 4) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 01:19:41) [GET]
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 17ms (View: 7, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 01:19:44) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 15ms (View: 6, DB: 2) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 01:20:02) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 16ms (View: 7, DB: 4) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 01:20:55) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 16ms (View: 7, DB: 4) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 01:23:51) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 16ms (View: 7, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 01:23:51) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 16ms (View: 7, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 01:24:13) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 16ms (View: 7, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 01:24:30) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 15ms (View: 6, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 01:24:31) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 16ms (View: 7, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2009-09-30 01:32:25) [GET]
+  [4;36;1mMember Columns (250.4ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Rendering template within layouts/main
+Rendering members/new
+Rendered members/_form (3.5ms)
+Completed in 272ms (View: 11, DB: 251) | 200 OK [http://localhost/members/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#create (for 127.0.0.1 at 2009-09-30 01:32:55) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"qMbMIki82qNYuBd4lmLTuFfYZztU/h99En3LiljAGW8=", "member"=>{"name"=>"persona", "member_number"=>"5465465", "phone"=>"no", "address"=>"zaragoza 304", "last_name"=>"apellido", "email"=>"alberto.rodriguez@adoxis.com"}}
+  [4;35;1mMember Columns (70.4ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMember Create (0.3ms)[0m   [0mINSERT INTO `members` (`name`, `updated_at`, `created_by`, `phone`, `member_number`, `last_name`, `address`, `email`, `created_at`) VALUES('persona', '2009-09-30 06:32:55', NULL, 'no', 5465465, 'apellido', 'zaragoza 304', 'alberto.rodriguez@adoxis.com', '2009-09-30 06:32:55')[0m
+  [4;36;1mSQL (24.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/members/3
+Completed in 108ms (DB: 96) | 302 Found [http://localhost/members]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#show (for 127.0.0.1 at 2009-09-30 01:32:55) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (1.1ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 3) [0m
+Rendering template within layouts/main
+Rendering members/show
+Completed in 13ms (View: 2, DB: 4) | 200 OK [http://localhost/members/3]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 01:32:59) [GET]
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 18ms (View: 8, DB: 3) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#edit (for 127.0.0.1 at 2009-09-30 01:33:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMember Columns (249.9ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+Rendering template within layouts/main
+Rendering members/edit
+Rendered members/_form (1.5ms)
+Completed in 267ms (View: 7, DB: 251) | 200 OK [http://localhost/members/1/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#update (for 127.0.0.1 at 2009-09-30 01:36:22) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"qMbMIki82qNYuBd4lmLTuFfYZztU/h99En3LiljAGW8=", "member"=>{"name"=>"alberto", "member_number"=>"32155", "phone"=>"8115561319", "address"=>"filosofos 100 apt 4", "last_name"=>"rodriguez", "email"=>"alberto.rodriguez@adoxis.com"}, "id"=>"1"}
+  [4;35;1mMember Columns (78.5ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mMember Update (0.4ms)[0m   [0;1mUPDATE `members` SET `member_number` = 32155, `updated_at` = '2009-09-30 06:36:22' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/members/1
+Completed in 96ms (DB: 80) | 302 Found [http://localhost/members/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#show (for 127.0.0.1 at 2009-09-30 01:36:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mMember Columns (3.3ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (1.2ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+Rendering template within layouts/main
+Rendering members/show
+Completed in 19ms (View: 2, DB: 5) | 200 OK [http://localhost/members/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 01:36:27) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 17ms (View: 7, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (21.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:25:22) [GET]
+  [4;36;1mMember Load (112.5ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (32.3ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 397ms (View: 213, DB: 166) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:26:25) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 18ms (View: 8, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:28:01) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 22ms (View: 13, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:28:21) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 21ms (View: 12, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:30:14) [GET]
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 16ms (View: 7, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:32:27) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 18ms (View: 8, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:33:56) [GET]
+  [4;36;1mMember Load (0.6ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 22ms (View: 12, DB: 3) | 200 OK [http://localhost/members/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2009-09-30 23:34:22) [GET]
+  [4;36;1mMember Columns (73.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Rendering template within layouts/main
+Rendering members/new
+Rendered members/_form (33.1ms)
+Completed in 129ms (View: 47, DB: 73) | 200 OK [http://localhost/members/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#create (for 127.0.0.1 at 2009-09-30 23:34:57) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"otStkdX3XytZAFAqD4TfKNUa0GxFVN2vH1BfaTOV5kI=", "member"=>{"name"=>"Jirafa", "member_number"=>"5465465", "phone"=>"4894988798", "address"=>"filosofos 100 apt 4", "last_name"=>"Ruiz", "email"=>"jirafaenelespacio@hotmail.com"}}
+  [4;35;1mMember Columns (3.7ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMember Create (1.3ms)[0m   [0mINSERT INTO `members` (`name`, `updated_at`, `created_by`, `phone`, `member_number`, `last_name`, `address`, `email`, `created_at`) VALUES('Jirafa', '2009-10-01 04:34:57', NULL, '4894988798', 5465465, 'Ruiz', 'filosofos 100 apt 4', 'jirafaenelespacio@hotmail.com', '2009-10-01 04:34:57')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/members/4
+Completed in 61ms (DB: 6) | 302 Found [http://localhost/members]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#show (for 127.0.0.1 at 2009-09-30 23:34:57) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mMember Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (15.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 4) [0m
+Rendering template within layouts/main
+Rendering members/show
+Completed in 54ms (View: 29, DB: 17) | 200 OK [http://localhost/members/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:35:00) [GET]
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 17ms (View: 8, DB: 3) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:36:56) [GET]
+  [4;35;1mMember Load (0.5ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 19ms (View: 8, DB: 3) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:38:58) [GET]
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (339.9ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 361ms (View: 13, DB: 341) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:39:47) [GET]
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 18ms (View: 8, DB: 3) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:40:01) [GET]
+  [4;35;1mMember Load (0.5ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 21ms (View: 9, DB: 4) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:40:27) [GET]
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 18ms (View: 9, DB: 3) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:40:29) [GET]
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 18ms (View: 9, DB: 3) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:40:30) [GET]
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 16ms (View: 7, DB: 3) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:40:30) [GET]
+  [4;35;1mMember Load (0.6ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 21ms (View: 9, DB: 3) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:40:46) [GET]
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 17ms (View: 8, DB: 3) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:40:48) [GET]
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (3.2ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 22ms (View: 9, DB: 4) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:40:48) [GET]
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 17ms (View: 7, DB: 3) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:40:48) [GET]
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 17ms (View: 8, DB: 3) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:40:48) [GET]
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 19ms (View: 9, DB: 3) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:40:49) [GET]
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 21ms (View: 9, DB: 3) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:40:49) [GET]
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 17ms (View: 7, DB: 3) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:41:27) [GET]
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 18ms (View: 8, DB: 3) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:41:41) [GET]
+  [4;35;1mMember Load (0.5ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 101ms (View: 9, DB: 3) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:46:38) [GET]
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 19ms (View: 9, DB: 3) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2009-09-30 23:47:03) [GET]
+  [4;35;1mMember Columns (251.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Rendering template within layouts/main
+Rendering members/new
+Rendered members/_form (1.8ms)
+Completed in 266ms (View: 7, DB: 252) | 200 OK [http://localhost/members/new]
+  [4;36;1mSQL (1.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:48:50) [GET]
+  [4;36;1mMember Load (1.0ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 18ms (View: 8, DB: 6) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:49:38) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 16ms (View: 7, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:50:15) [GET]
+  [4;36;1mMember Load (0.6ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 20ms (View: 8, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:51:09) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (110.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 126ms (View: 9, DB: 111) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:51:22) [GET]
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 20ms (View: 9, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:51:55) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 19ms (View: 9, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:52:29) [GET]
+  [4;36;1mMember Load (0.6ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 19ms (View: 8, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:53:00) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 16ms (View: 8, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:55:29) [GET]
+  [4;36;1mMember Load (0.6ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 21ms (View: 9, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:55:57) [GET]
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 17ms (View: 7, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:56:29) [GET]
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 18ms (View: 9, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:56:57) [GET]
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 20ms (View: 9, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-09-30 23:59:40) [GET]
+  [4;36;1mMember Load (0.6ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 20ms (View: 9, DB: 4) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2009-10-01 00:09:08) [GET]
+  [4;36;1mMember Columns (76.5ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Rendering template within layouts/main
+Rendering members/new
+Rendered members/_form (1.5ms)
+Completed in 93ms (View: 6, DB: 77) | 200 OK [http://localhost/members/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#create (for 127.0.0.1 at 2009-10-01 00:11:05) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"otStkdX3XytZAFAqD4TfKNUa0GxFVN2vH1BfaTOV5kI=", "member"=>{"name"=>"Doña chancla", "member_number"=>"55836447", "phone"=>"001-512368-12563", "address"=>"26 Main st, Memphis, TN", "last_name"=>"Johnson", "email"=>"owner@chanclaco.com"}}
+  [4;35;1mMember Columns (241.5ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMember Create (0.3ms)[0m   [0mINSERT INTO `members` (`name`, `updated_at`, `created_by`, `phone`, `member_number`, `last_name`, `address`, `email`, `created_at`) VALUES('Doña chancla', '2009-10-01 05:11:05', NULL, '001-512368-12563', 55836447, 'Johnson', '26 Main st, Memphis, TN', 'owner@chanclaco.com', '2009-10-01 05:11:05')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/members/5
+Completed in 257ms (DB: 243) | 302 Found [http://localhost/members]
+  [4;35;1mSQL (0.7ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#show (for 127.0.0.1 at 2009-10-01 00:11:05) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mMember Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (1.1ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+Rendering template within layouts/main
+Rendering members/show
+Completed in 14ms (View: 3, DB: 4) | 200 OK [http://localhost/members/5]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 00:11:07) [GET]
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 20ms (View: 10, DB: 3) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#edit (for 127.0.0.1 at 2009-10-01 00:15:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMember Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+Rendering template within layouts/main
+Rendering members/edit
+Rendered members/_form (1.8ms)
+Completed in 126ms (View: 115, DB: 3) | 200 OK [http://localhost/members/1/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#update (for 127.0.0.1 at 2009-10-01 00:15:41) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"otStkdX3XytZAFAqD4TfKNUa0GxFVN2vH1BfaTOV5kI=", "member"=>{"name"=>"alberto", "member_number"=>"32155", "phone"=>"8115561319", "address"=>"filosofos 100 apt 4", "last_name"=>"rodriguez", "email"=>"alberto.rodriguez@adoxis.com"}, "id"=>"1"}
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/members/1
+Completed in 15ms (DB: 3) | 302 Found [http://localhost/members/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#show (for 127.0.0.1 at 2009-10-01 00:15:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMember Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (1.1ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+Rendering template within layouts/main
+Rendering members/show
+Completed in 13ms (View: 2, DB: 4) | 200 OK [http://localhost/members/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 00:15:44) [GET]
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 23ms (View: 10, DB: 3) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#edit (for 127.0.0.1 at 2009-10-01 00:15:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMember Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+Rendering template within layouts/main
+Rendering members/edit
+Rendered members/_form (1.5ms)
+Completed in 16ms (View: 7, DB: 3) | 200 OK [http://localhost/members/1/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#update (for 127.0.0.1 at 2009-10-01 00:15:51) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"otStkdX3XytZAFAqD4TfKNUa0GxFVN2vH1BfaTOV5kI=", "member"=>{"name"=>"alberto", "member_number"=>"32155", "phone"=>"8115561319", "address"=>"filosofos 100 apt 4", "last_name"=>"rodriguezs", "email"=>"alberto.rodriguez@adoxis.com"}, "id"=>"1"}
+  [4;35;1mMember Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mMember Update (70.0ms)[0m   [0;1mUPDATE `members` SET `last_name` = 'rodriguezs', `updated_at` = '2009-10-01 05:15:51' WHERE `id` = 1[0m
+  [4;35;1mSQL (8.8ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/members/1
+Completed in 95ms (DB: 82) | 302 Found [http://localhost/members/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#show (for 127.0.0.1 at 2009-10-01 00:15:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mMember Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (1.1ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+Rendering template within layouts/main
+Rendering members/show
+Completed in 15ms (View: 4, DB: 4) | 200 OK [http://localhost/members/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 00:15:53) [GET]
+  [4;36;1mMember Load (0.6ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (3.2ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 21ms (View: 10, DB: 4) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#show (for 127.0.0.1 at 2009-10-01 00:16:08) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mMember Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+Rendering template within layouts/main
+Rendering members/show
+Completed in 14ms (View: 2, DB: 4) | 200 OK [http://localhost/members/5]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#edit (for 127.0.0.1 at 2009-10-01 00:16:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mMember Columns (78.9ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+Rendering template within layouts/main
+Rendering members/edit
+Rendered members/_form (1.6ms)
+Completed in 95ms (View: 7, DB: 80) | 200 OK [http://localhost/members/1/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#update (for 127.0.0.1 at 2009-10-01 00:16:59) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"otStkdX3XytZAFAqD4TfKNUa0GxFVN2vH1BfaTOV5kI=", "member"=>{"name"=>"alberto", "member_number"=>"32155", "phone"=>"8115561319", "address"=>"filosofos 100 apt 4", "last_name"=>"rodriguez", "email"=>"alberto.rodriguez@adoxis.com"}, "id"=>"1"}
+  [4;36;1mMember Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.3ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMember Update (0.4ms)[0m   [0mUPDATE `members` SET `last_name` = 'rodriguez', `updated_at` = '2009-10-01 05:16:59' WHERE `id` = 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/members/1
+Completed in 18ms (DB: 5) | 302 Found [http://localhost/members/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#show (for 127.0.0.1 at 2009-10-01 00:16:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMember Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (1.4ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+Rendering template within layouts/main
+Rendering members/show
+Completed in 14ms (View: 2, DB: 5) | 200 OK [http://localhost/members/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 00:17:02) [GET]
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 19ms (View: 9, DB: 3) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2009-10-01 00:19:00) [GET]
+  [4;35;1mMember Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Rendering template within layouts/main
+Rendering members/new
+Rendered members/_form (1.8ms)
+Completed in 18ms (View: 7, DB: 3) | 200 OK [http://localhost/members/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#create (for 127.0.0.1 at 2009-10-01 00:19:43) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"otStkdX3XytZAFAqD4TfKNUa0GxFVN2vH1BfaTOV5kI=", "member"=>{"name"=>"Tita", "member_number"=>"886231", "phone"=>"8986546", "address"=>"Filosofos 100 apt 4", "last_name"=>"almaguer", "email"=>"tita_la_loca@gmail.com"}}
+  [4;36;1mMember Columns (78.5ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mMember Create (0.3ms)[0m   [0;1mINSERT INTO `members` (`name`, `updated_at`, `created_by`, `phone`, `member_number`, `last_name`, `address`, `email`, `created_at`) VALUES('Tita', '2009-10-01 05:19:43', NULL, '8986546', 886231, 'almaguer', 'Filosofos 100 apt 4', 'tita_la_loca@gmail.com', '2009-10-01 05:19:43')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  app/controllers/members_controller.rb:50:in `create'
+  app/controllers/members_controller.rb:47:in `create'
+
+Rendered rescues/_trace (145.0ms)
+Rendered rescues/_request_and_response (23.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 00:20:45) [GET]
+  [4;36;1mMember Load (0.6ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (77.3ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 96ms (View: 10, DB: 79) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#edit (for 127.0.0.1 at 2009-10-01 00:22:43) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mMember Columns (79.6ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 6) [0m
+Rendering template within layouts/main
+Rendering members/edit
+Rendered members/_form (1.6ms)
+Completed in 96ms (View: 7, DB: 80) | 200 OK [http://localhost/members/6/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#update (for 127.0.0.1 at 2009-10-01 00:22:48) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"otStkdX3XytZAFAqD4TfKNUa0GxFVN2vH1BfaTOV5kI=", "member"=>{"name"=>"Tita", "member_number"=>"886231", "phone"=>"8986546", "address"=>"Filosofos 100 apt 4", "last_name"=>"almaguers", "email"=>"tita_la_loca@gmail.com"}, "id"=>"6"}
+  [4;36;1mMember Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.7ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 6) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMember Update (0.3ms)[0m   [0mUPDATE `members` SET `last_name` = 'almaguers', `updated_at` = '2009-10-01 05:22:48' WHERE `id` = 6[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/members
+Completed in 17ms (DB: 5) | 302 Found [http://localhost/members/6]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 00:22:48) [GET]
+  [4;35;1mMember Load (0.5ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 21ms (View: 10, DB: 3) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#edit (for 127.0.0.1 at 2009-10-01 00:22:58) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mMember Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 6) [0m
+Rendering template within layouts/main
+Rendering members/edit
+Rendered members/_form (2.0ms)
+Completed in 19ms (View: 8, DB: 3) | 200 OK [http://localhost/members/6/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#update (for 127.0.0.1 at 2009-10-01 00:23:02) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"otStkdX3XytZAFAqD4TfKNUa0GxFVN2vH1BfaTOV5kI=", "member"=>{"name"=>"Tita", "member_number"=>"886231", "phone"=>"8986546", "address"=>"Filosofos 100 apt 4", "last_name"=>"almaguer", "email"=>"tita_la_loca@gmail.com"}, "id"=>"6"}
+  [4;35;1mMember Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 6) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mMember Update (0.3ms)[0m   [0;1mUPDATE `members` SET `last_name` = 'almaguer', `updated_at` = '2009-10-01 05:23:02' WHERE `id` = 6[0m
+  [4;35;1mSQL (21.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/members
+Completed in 39ms (DB: 25) | 302 Found [http://localhost/members/6]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 00:23:02) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (3.2ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 21ms (View: 10, DB: 4) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2009-10-01 00:30:55) [GET]
+  [4;36;1mMember Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Rendering template within layouts/main
+Rendering members/new
+Rendered members/_form (1.4ms)
+Completed in 16ms (View: 6, DB: 3) | 200 OK [http://localhost/members/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 01:28:31) [GET]
+  [4;35;1mMember Load (0.6ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 24ms (View: 15, DB: 4) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 01:28:35) [GET]
+  [4;35;1mMember Load (0.5ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (78.3ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 94ms (View: 9, DB: 79) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 01:28:36) [GET]
+  [4;35;1mMember Load (0.5ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 22ms (View: 11, DB: 3) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 01:28:36) [GET]
+  [4;35;1mMember Load (0.5ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 21ms (View: 11, DB: 3) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 01:31:23) [GET]
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 18ms (View: 9, DB: 3) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 01:31:43) [GET]
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 26ms (View: 16, DB: 4) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 01:33:32) [GET]
+  [4;35;1mMember Load (0.5ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 18ms (View: 9, DB: 3) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2009-10-01 01:33:34) [GET]
+  [4;35;1mMember Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Rendering template within layouts/main
+Rendering members/new
+Rendered members/_form (1.7ms)
+Completed in 17ms (View: 7, DB: 3) | 200 OK [http://localhost/members/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 01:33:37) [GET]
+  [4;36;1mMember Load (0.7ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 18ms (View: 9, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2009-10-01 01:33:52) [GET]
+  [4;36;1mMember Columns (71.7ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Rendering template within layouts/main
+Rendering members/new
+Rendered members/_form (1.4ms)
+Completed in 87ms (View: 6, DB: 72) | 200 OK [http://localhost/members/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2009-10-01 01:37:04) [GET]
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Rendering template within layouts/main
+Rendering members/new
+Rendered members/_form (1.6ms)
+Completed in 17ms (View: 7, DB: 3) | 200 OK [http://localhost/members/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 01:47:36) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (79.1ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 96ms (View: 10, DB: 80) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 01:48:07) [GET]
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 21ms (View: 10, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 01:49:01) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 19ms (View: 10, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 01:49:11) [GET]
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 23ms (View: 11, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 01:49:13) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 20ms (View: 11, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 01:49:25) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (75.7ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 93ms (View: 10, DB: 77) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 01:49:44) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 22ms (View: 11, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 01:49:55) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 21ms (View: 11, DB: 4) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 01:50:25) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 19ms (View: 9, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 01:51:15) [GET]
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 21ms (View: 10, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 01:51:27) [GET]
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (558.8ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 577ms (View: 11, DB: 560) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 01:51:50) [GET]
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (3.2ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 113ms (View: 9, DB: 4) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 01:51:59) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 20ms (View: 11, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 01:54:46) [GET]
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (80.3ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 100ms (View: 10, DB: 81) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#edit (for 127.0.0.1 at 2009-10-01 01:59:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mMember Columns (78.2ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+Rendering template within layouts/main
+Rendering members/edit
+Rendered members/_form (1.7ms)
+Completed in 96ms (View: 9, DB: 79) | 200 OK [http://localhost/members/1/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#update (for 127.0.0.1 at 2009-10-01 01:59:09) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"otStkdX3XytZAFAqD4TfKNUa0GxFVN2vH1BfaTOV5kI=", "member"=>{"name"=>"alberto", "member_number"=>"32155", "phone"=>"8115561319", "address"=>"filosofos 100 apt 4", "last_name"=>"rodrigue", "email"=>"alberto.rodriguez@adoxis.com"}, "id"=>"1"}
+  [4;36;1mMember Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.3ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMember Update (0.4ms)[0m   [0mUPDATE `members` SET `last_name` = 'rodrigue', `updated_at` = '2009-10-01 06:59:09' WHERE `id` = 1[0m
+  [4;36;1mSQL (24.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/members
+Completed in 40ms (DB: 28) | 302 Found [http://localhost/members/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 01:59:09) [GET]
+  [4;35;1mMember Load (0.5ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (4.1ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 21ms (View: 10, DB: 5) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 02:00:22) [GET]
+  [4;35;1mMember Load (0.6ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 26ms (View: 16, DB: 4) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 02:00:24) [GET]
+  [4;35;1mMember Load (0.5ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 20ms (View: 9, DB: 3) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 02:00:39) [GET]
+  [4;35;1mMember Load (0.5ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 26ms (View: 14, DB: 4) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#edit (for 127.0.0.1 at 2009-10-01 02:00:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMember Columns (71.7ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+Rendering template within layouts/main
+Rendering members/edit
+Rendered members/_form (1.4ms)
+Completed in 86ms (View: 6, DB: 72) | 200 OK [http://localhost/members/1/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#update (for 127.0.0.1 at 2009-10-01 02:01:03) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"otStkdX3XytZAFAqD4TfKNUa0GxFVN2vH1BfaTOV5kI=", "member"=>{"name"=>"alberto", "member_number"=>"32155", "phone"=>"8115561319", "address"=>"filosofos 100 apt 4", "last_name"=>"rodriguez", "email"=>"alberto.rodriguez@adoxis.com"}, "id"=>"1"}
+  [4;35;1mMember Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mMember Update (0.3ms)[0m   [0;1mUPDATE `members` SET `last_name` = 'rodriguez', `updated_at` = '2009-10-01 07:01:03' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/members
+Completed in 17ms (DB: 4) | 302 Found [http://localhost/members/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 02:01:03) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 22ms (View: 12, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 02:01:27) [GET]
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 20ms (View: 10, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#edit (for 127.0.0.1 at 2009-10-01 02:01:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mMember Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+Rendering template within layouts/main
+Rendering members/edit
+Rendered members/_form (2.3ms)
+Completed in 23ms (View: 11, DB: 3) | 200 OK [http://localhost/members/1/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#update (for 127.0.0.1 at 2009-10-01 02:01:38) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"otStkdX3XytZAFAqD4TfKNUa0GxFVN2vH1BfaTOV5kI=", "member"=>{"name"=>"alberto", "member_number"=>"321555", "phone"=>"8115561319", "address"=>"filosofos 100 apt 4", "last_name"=>"rodriguez", "email"=>"alberto.rodriguez@adoxis.com"}, "id"=>"1"}
+  [4;36;1mMember Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMember Update (0.3ms)[0m   [0mUPDATE `members` SET `member_number` = 321555, `updated_at` = '2009-10-01 07:01:38' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/members
+Completed in 16ms (DB: 4) | 302 Found [http://localhost/members/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 02:01:38) [GET]
+  [4;35;1mMember Load (0.5ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 23ms (View: 9, DB: 3) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 02:05:26) [GET]
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 29ms (View: 18, DB: 3) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#edit (for 127.0.0.1 at 2009-10-01 02:05:29) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mMember Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 6) [0m
+Rendering template within layouts/main
+Rendering members/edit
+Rendered members/_form (1.5ms)
+Completed in 19ms (View: 8, DB: 4) | 200 OK [http://localhost/members/6/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#update (for 127.0.0.1 at 2009-10-01 02:05:32) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"otStkdX3XytZAFAqD4TfKNUa0GxFVN2vH1BfaTOV5kI=", "member"=>{"name"=>"Tita", "member_number"=>"8862313", "phone"=>"8986546", "address"=>"Filosofos 100 apt 4", "last_name"=>"almaguer", "email"=>"tita_la_loca@gmail.com"}, "id"=>"6"}
+  [4;35;1mMember Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 6) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mMember Update (0.5ms)[0m   [0;1mUPDATE `members` SET `member_number` = 8862313, `updated_at` = '2009-10-01 07:05:32' WHERE `id` = 6[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/members
+Completed in 18ms (DB: 5) | 302 Found [http://localhost/members/6]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 02:05:32) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 20ms (View: 11, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 02:06:04) [GET]
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (3.1ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 23ms (View: 13, DB: 4) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 02:06:18) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 21ms (View: 11, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 02:06:33) [GET]
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 22ms (View: 11, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 02:07:54) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 21ms (View: 11, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 02:08:03) [GET]
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 22ms (View: 12, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 02:08:21) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 22ms (View: 12, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 02:08:36) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 20ms (View: 10, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 02:08:52) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 21ms (View: 12, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 02:08:55) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 22ms (View: 11, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 02:09:01) [GET]
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 24ms (View: 13, DB: 4) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 02:09:14) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 21ms (View: 12, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 02:09:16) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 22ms (View: 12, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 02:09:24) [GET]
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 22ms (View: 11, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 02:09:43) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 20ms (View: 11, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 02:09:53) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 22ms (View: 11, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 02:10:04) [GET]
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 22ms (View: 12, DB: 4) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 02:10:17) [GET]
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 21ms (View: 11, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 02:10:33) [GET]
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 22ms (View: 12, DB: 4) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 02:10:39) [GET]
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 19ms (View: 10, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 02:10:55) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 20ms (View: 11, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 02:11:09) [GET]
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 21ms (View: 10, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 02:12:40) [GET]
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 20ms (View: 10, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 02:13:19) [GET]
+  [4;36;1mMember Load (1.0ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 23ms (View: 12, DB: 4) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 02:13:34) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 25ms (View: 14, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 02:13:54) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 21ms (View: 12, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-01 02:15:10) [GET]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 20ms (View: 9, DB: 3) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (21.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-10-02 00:05:00) [GET]
+  [4;36;1mMember Load (91.9ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (3.8ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 306ms (View: 172, DB: 117) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2009-10-02 00:05:52) [GET]
+  [4;36;1mMember Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Rendering template within layouts/main
+Rendering members/new
+Rendered members/_form (12.8ms)
+Completed in 61ms (View: 52, DB: 3) | 200 OK [http://localhost/members/new]

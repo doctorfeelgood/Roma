@@ -1,0 +1,12 @@
+<h1>Editing exercise</h1>
+
+<% form_for(@exercise) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @exercise %> |
+<%= link_to 'Back', exercises_path %>

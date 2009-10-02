@@ -1,0 +1,12 @@
+<h1>Editing routine</h1>
+
+<% form_for(@routine) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @routine %> |
+<%= link_to 'Back', routines_path %>

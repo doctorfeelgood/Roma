@@ -1,0 +1,18 @@
+<h1>Listing routines</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% @routines.each do |routine| %>
+  <tr>
+    <td><%= link_to 'Show', routine %></td>
+    <td><%= link_to 'Edit', edit_routine_path(routine) %></td>
+    <td><%= link_to 'Destroy', routine, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New routine', new_routine_path %>

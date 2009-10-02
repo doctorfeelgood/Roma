@@ -1,0 +1,26 @@
+<table align="center" class="form_table" width='100%'>
+	<tr>		
+ 		<th><%= f.label 'Nombre:' %></th>
+		<td><%= f.text_field :name, :class => "capitalize_me" %></td>
+	</tr>
+	<tr>	
+	 	<th><%= f.label 'Apellido(s):' %></th>
+	   	<td><%= f.text_field :last_name, :class => "capitalize_me" %></td>
+	</tr>
+	<tr>
+	   	<th><%=f.label 'Telefono:' %></th>
+	    <td><%=f.text_field :phone %></td>
+	</tr>
+	<tr>
+	 	<th><%=f.label 'email:' %></th>
+	  	<td><%= f.text_field :email %></td>	
+	</tr>
+	<tr>
+	 	<th><%=f.label 'Direccion:' %></th>
+	  	<td><%= f.text_field :address, :class => "capitalize_me" %></td>	
+	</tr>
+	<tr>
+	 	<th><%=f.label 'Numero de control:' %></th>
+	  	<td><%= f.text_field :member_number %></td>	
+	</tr>			
+</table>

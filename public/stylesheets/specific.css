@@ -1,0 +1,54 @@
+body {
+  	font-family: "Lucida Grande", verdana, arial, helvetica, sans-serif;
+  	font-size:   13px;
+	color: #333;
+}
+
+input:focus,
+select:focus,
+textarea:focus { background-color: #ffd }
+
+.member_table_width
+{
+	width:800px;
+}
+
+
+.capitalize_me
+{
+	text-transform:capitalize;
+}
+
+.form_table
+{
+
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border:1px solid #CDCDCD;
+	padding:10px;
+}
+
+	.form_table caption
+	{
+		background:url(../images/caption.png) repeat-x;
+		height:31px;
+		line-height:31px;
+		
+	}
+	
+
+	.form_table th
+	{
+		text-align:right;
+		padding:2px;
+		border:1px solid #aaa;
+	}
+	
+	.form_table td
+	{
+		text-align:left;
+		padding:2px;
+	
+	}	
+	
+
