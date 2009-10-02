@@ -1,3 +1,22 @@
-
-<%= link_to 'Edit', edit_member_path(@member) %> |
-<%= link_to 'Back', members_path %>
+<div id='popup'>
+	<div id='popup_info'>
+		<table>
+			<tr>
+				<td rowspan=4><%=image_tag("rbd.png") %></td>
+				<td><%=@member.name%> <%=@member.last_name%></td>
+			</tr>
+			<tr>
+				<td><i><%=@member.member_number%></i></td>
+			</tr>
+			<tr>
+				<td><%=@member.phone%>, <%=@member.email%></td>
+			</tr>
+			<tr>
+				<td><%=@member.address%></td>	
+			</tr>
+		</table>
+		<%=link_to_function('cerrar', nil) do |page|	  
+			page.visual_effect :fade, "show_member", :duration => 0.5
+		  end %>
+	</div>
+</div>

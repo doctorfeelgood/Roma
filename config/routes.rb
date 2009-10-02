@@ -6,7 +6,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :routines
   map.resources :rates
   map.resources :payments
-  map.resources :members
+  map.resources :members, :collection=>{:show_member=>:get}
   map.resources :groups
   map.resources :exercises
   map.resources :categories

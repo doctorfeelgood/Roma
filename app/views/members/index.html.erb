@@ -11,7 +11,7 @@
 	  	<tr class="<%= cycle("even", "odd") %>">
 			<td><%=member.member_number%></td>
 			<td><%=member.name%> <%=member.last_name%></td>
-	    	<td><%= link_to 'Show', member %></td>
+	    	<td><%= link_to_remote 'Show', :url=>{:action=>'show_member', :id=>member.id} %></td>
 	    	<td><%= link_to 'Edit', edit_member_path(member) %></td>
 	    	<td><%= link_to 'Destroy', member, :confirm => 'Are you sure?', :method => :delete %></td>
 	  	</tr>
@@ -22,5 +22,7 @@
 	</div><!--termina list footer-->
 </div><!--termina list container -->	
 
+<div id="show_member" style='display:none;' class='on_top' >
+</div>
 
 

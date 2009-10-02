@@ -13,14 +13,8 @@ class MembersController < ApplicationController
 
   # GET /members/1
   # GET /members/1.xml
-  def show
+  def show_member
     @member = Member.find(params[:id])
-    page.replace_html("cart", :partial => "cart", :object => @cart)         
-    page[:cart].visual_effect :blind_down
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @member }
-    end
   end
 
   # GET /members/new
@@ -80,7 +74,7 @@ class MembersController < ApplicationController
   def destroy
     @member = Member.find(params[:id])
     @member.destroy
-
+    logger.info("#{Time.now} Se elimina el miembro ##{@member.id}!")
     respond_to do |format|
       format.html { redirect_to(members_url) }
       format.xml  { head :ok }
