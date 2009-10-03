@@ -55,7 +55,6 @@ textarea:focus { background-color: #ffd }
 .profile_card td
 {
 	text-align:left;
-	padding-left:15px;
 }
 
 .profile_card th
@@ -73,19 +72,36 @@ textarea:focus { background-color: #ffd }
 {
 	font-size:1.2em;
 	font-weight:bold;
+	color:#0072BC;
+	line-height:16px;
+	background:url(../images/vcard.png) 2px no-repeat;
+	padding:2px;
+	padding-left:22px;
 }
 
 .card_phone
 {
-	
+	color:#0072BC;
+	line-height:16px;
+	background:url(../images/telephone.png) 2px no-repeat;
+	padding:2px;
+	padding-left:22px;
 }
 
-.card_name
+.card_email
 {
-	
+	color:#0072BC;
+	line-height:16px;
+	background:url(../images/email.png) 2px no-repeat;
+	padding:2px;
+	padding-left:22px;
 }
 
-.card_name
+.card_address
 {
-	
+	color:#0072BC;
+	line-height:16px;
+	background:url(../images/house.png) 2px no-repeat;
+	padding:2px;
+	padding-left:22px;
 }
