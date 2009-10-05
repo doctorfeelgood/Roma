@@ -18,11 +18,12 @@
 	<% end %>
 	</table>
 	<div class='list_footer'>
-		<%= link_to 'Agregar', new_member_path, :class=>'link_to_new' %>
+		<%= link_to_remote 'Agregar', :url=>{:action=>'new'}, :html=>{:class=>'link_to_new'} %>
 	</div><!--termina list footer-->
 </div><!--termina list container -->	
 
 <div id="show_member" style='display:none;' class='on_top' >
 </div>
-
+<div id="new_member" style='display:none;' class='on_top' >
+</div>
 

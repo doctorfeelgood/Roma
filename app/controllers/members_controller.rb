@@ -21,11 +21,6 @@ class MembersController < ApplicationController
   # GET /members/new.xml
   def new
     @member = Member.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @member }
-    end
   end
 
   # GET /members/1/edit
@@ -37,8 +32,6 @@ class MembersController < ApplicationController
   # POST /members.xml
   def create
     @member = Member.new(params[:member])
-    @member.name.capitalize
-    @member.last_name.capitalize
     respond_to do |format|
       if @member.save
         flash[:notice] = 'El socio se guardo con exito.'
@@ -55,8 +48,6 @@ class MembersController < ApplicationController
   # PUT /members/1.xml
   def update
     @member = Member.find(params[:id])
-    params[:member][:name].capitalize.to_s
-    params[:member][:last_name].capitalize.to_s
     respond_to do |format|
       if @member.update_attributes(params[:member])
         flash[:notice] = "Los datos del socio #{@member.name} #{@member.last_name} se actualizaron satisfactoriamente"

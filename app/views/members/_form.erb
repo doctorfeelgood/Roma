@@ -22,5 +22,9 @@
 	<tr>
 	 	<th><%=f.label 'Numero de control:' %></th>
 	  	<td><%= f.text_field :member_number %></td>	
-	</tr>			
+	</tr>	
+	<tr>	
+		<th><%= f.label :member, "Photo" %></th>  
+    	<td><%= f.file_field :photo %></td>
+	</tr>
 </table>

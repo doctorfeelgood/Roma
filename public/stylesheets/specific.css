@@ -1,6 +1,7 @@
 body {
   	font-family: "Lucida Grande", verdana, arial, helvetica, sans-serif;
-  	font-size:   13px;
+  	font-size:   12px;
+
 	color: #333;
 }
 
@@ -8,9 +9,27 @@ input:focus,
 select:focus,
 textarea:focus { background-color: #ffd }
 
+#frame
+{
+	position:relative;
+	width:1000px;
+	padding:10px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 10px;
+	background:url(../images/blackbg.png) ;
+	margin:auto;
+	margin-top:10%;
+}
+
+#container
+{
+	background-color:#fff;
+	padding:10px;
+}
+
 .member_table_width
 {
-	width:800px;
+	width:600px;
 }
 
 
@@ -21,10 +40,6 @@ textarea:focus { background-color: #ffd }
 
 .form_table
 {
-
-	-moz-border-radius: 12px;
-	-webkit-border-radius: 12px;
-	border:1px solid #CDCDCD;
 	padding:10px;
 }
 
@@ -42,6 +57,7 @@ textarea:focus { background-color: #ffd }
 		text-align:right;
 		padding:2px;
 		border:1px solid #aaa;
+		color:#0072BC;
 	}
 	
 	.form_table td
