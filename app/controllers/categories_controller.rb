@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+  layout 'main'
   # GET /categories
   # GET /categories.xml
   def index
@@ -9,6 +10,12 @@ class CategoriesController < ApplicationController
       format.xml  { render :xml => @categories }
     end
   end
+
+  # GET /members/1
+  # GET /members/1.xml
+  def show_category
+    @category = Category.find(params[:id])
+  end  
 
   # GET /categories/1
   # GET /categories/1.xml
@@ -25,11 +32,6 @@ class CategoriesController < ApplicationController
   # GET /categories/new.xml
   def new
     @category = Category.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @category }
-    end
   end
 
   # GET /categories/1/edit

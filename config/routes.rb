@@ -1,7 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :groups
-  map.resources :exercises
-  map.resources :categories
+  map.resources :exercises, :collection=>{:show_exercise=>:get}
+  map.resources :categories, :collection=>{:show_category=>:get}
   map.resources :attendances
   map.resources :routines
   map.resources :rates

@@ -5,6 +5,17 @@
 			<%= f.error_messages %>
 			<%= render :partial => 'form', :locals => {:f => f} %>
 
+
+		<div class='two_column'>
+			<div class='left'>
+				<a href=# class='left_button' ><img src='../images/cancelar.png'></a>
+			</div>
+			<div class='right'>
+				<%= image_submit_tag 'guardar.png', :class => 'right_button' %>
+			</div>
+		</div>
+		
+		<div class='clear'></div>
 		  <p>
 		    <%# f.submit 'Create' %>
 		  </p>

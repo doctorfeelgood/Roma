@@ -15,6 +15,11 @@
 	
 }
 
+.clear
+{
+	clear:both;
+}
+
 .top_bar
 {
 	border:1px solid #aaa;
@@ -180,3 +185,20 @@
 	border-color:#0072BC;
 }
 
+
+.two_column
+{
+	clear:both;
+}
+
+	.two_column .left
+	{
+		width:50%;
+		float:left;
+	}
+	
+	.two_column .right
+	{
+		width:50%;
+		float:right;
+	}

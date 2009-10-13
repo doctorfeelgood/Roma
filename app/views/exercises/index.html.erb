@@ -1,18 +1,30 @@
-<h1>Listing exercises</h1>
+<div class='top_bar member_table_width'><span class="list_title">Listado de categorias</span></div>
+<div class="table_container member_table_width">
+	<table class='list_table'>
+		<tr>
+			<th>Id</th>
+			<th>Ejercicio</th>
+			<th colspan='3'>Acciones</th>
+	  	</tr>
 
-<table>
-  <tr>
-  </tr>
+	<% @exercises.each do |exercise| %>
+	  	<tr class="<%= cycle("even", "odd") %>">
+			<td><%=exercise.id%></td>
+			<td><%=exercise.name%> </td>
+	    	<td><%= link_to_remote 'Show', :url=>{:action=>'show_exercise', :id=>exercise.id} %></td>
+	    	<td><%= link_to 'Edit', edit_exercise_path(exercise) %></td>
+	    	<td><%= link_to 'Destroy', exercise, :confirm => 'Seguro?', :method => :delete %></td>
+	  	</tr>
+	<% end %>
+	</table>
+	<div class='list_footer'>
+		<%= link_to_remote 'Agregar', :url=>{:action=>'new'}, :html=>{:class=>'link_to_new'} %>
+	</div><!--termina list footer-->
+</div><!--termina list container -->	
 
-<% @exercises.each do |exercise| %>
-  <tr>
-    <td><%= link_to 'Show', exercise %></td>
-    <td><%= link_to 'Edit', edit_exercise_path(exercise) %></td>
-    <td><%= link_to 'Destroy', exercise, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
+<div id="show_exercise" style='display:none;' class='on_top' >
+</div>
+<div id="new_exercise" style='display:none;' class='on_top' >
+</div>
 
 <%= link_to 'New exercise', new_exercise_path %>

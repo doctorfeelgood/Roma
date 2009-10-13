@@ -1,18 +1,29 @@
-<h1>Listing categories</h1>
+<div class='top_bar member_table_width'><span class="list_title">Listado de categorias</span></div>
+<div class="table_container member_table_width">
+	<table class='list_table'>
+		<tr>
+			<th>Id</th>
+			<th>Categoria</th>
+			<th colspan='2'>Acciones</th>
+	  	</tr>
 
-<table>
-  <tr>
-  </tr>
+	<% @categories.each do |category| %>
+	  	<tr class="<%= cycle("even", "odd") %>">
+			<td><%=category.id%></td>
+			<td><%=category.name%> </td>
+	    	<td><%= link_to 'Edit', edit_category_path(category) %></td>
+	    	<td><%= link_to 'Destroy', category, :confirm => 'Seguro?', :method => :delete %></td>
+	  	</tr>
+	<% end %>
+	</table>
+	<div class='list_footer'>
+		<%= link_to_remote 'Agregar', :url=>{:action=>'new'}, :html=>{:class=>'link_to_new'} %>
+	</div><!--termina list footer-->
+</div><!--termina list container -->	
 
-<% @categories.each do |category| %>
-  <tr>
-    <td><%= link_to 'Show', category %></td>
-    <td><%= link_to 'Edit', edit_category_path(category) %></td>
-    <td><%= link_to 'Destroy', category, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+<div id="show_category" style='display:none;' class='on_top' >
+</div>
+<div id="new_category" style='display:none;' class='on_top' >
+</div>
 
-<br />
-
-<%= link_to 'New category', new_category_path %>
+<%= link_to 'Agregar', new_category_path %>

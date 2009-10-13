@@ -1,0 +1,2 @@
+page.replace_html("new_category", :partial => "new", :object => @category)         
+page[:new_category].visual_effect :appear

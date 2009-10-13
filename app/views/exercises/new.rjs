@@ -1,0 +1,2 @@
+page.replace_html("new_exercise", :partial => "new", :object => @exercise)         
+page[:new_exercise].visual_effect :appear
