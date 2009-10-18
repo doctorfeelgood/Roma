@@ -1,5 +1,9 @@
 <div id='popup'>
-	<div id='popup_info'
+	<div id='popup_info'>
+		<%=link_to_function(nil, nil, :class=>'close') do |page|	  
+			page.visual_effect :fade, "new_member", :duration => 0.5
+		  end %>
+		
 
 		<% form_for @member, :html => { :multipart => true } do |f| %>  
 			<%= f.error_messages %>

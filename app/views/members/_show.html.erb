@@ -1,5 +1,8 @@
 <div id='popup'>
 	<div id='popup_info'>
+		<%=link_to_function(nil, nil, :class=>'close') do |page|	  
+			page.visual_effect :fade, "show_member", :duration => 0.5
+		  end %>
 		<table class='profile_card' width="100%">
 			<tr>
 				<th rowspan=5><%= image_tag @member.photo.url(:small) %>  </th>
