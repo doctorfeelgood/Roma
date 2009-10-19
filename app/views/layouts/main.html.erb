@@ -9,7 +9,12 @@
 	  <%= javascript_include_tag :defaults %>
 	</head>
 	<body>
-				<%=image_tag ('logo.png')%>
+		<div id='stripe'></div>
+		<div id='wrapper'>
+			<div id='header'>
+				<%=image_tag ('logo_300.png')%>
+			</div><!--termina el header-->
+			<div id='content'>
 				<% if flash[:notice] then %><div id="flash_notice"><%= flash[:notice] %></div><% end %>
 				<script type="text/javascript">
 				  <%= visual_effect(:fade, "flash_notice", :duration => 5)%>
@@ -20,6 +25,7 @@
 				  <%= visual_effect(:highlight, "flash_error", :duration => 10)%>
 				</script>    
 				<%= yield %>
-
+			</div>
+		</div><!--termina el wrapper-->
 	</body>
 </html>
