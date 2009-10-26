@@ -1,8 +1,18 @@
 <div id='popup'>
-	<div id='popup_info'
+	<div id='popup_info'>
 		<% form_for @category do |f| %>  
 			<%= f.error_messages %>
 			<%= render :partial => 'form', :locals => {:f => f} %>
+			<div class='two_column'>
+				<div class='left'>
+					<a href=# class='left_button' ><img src='../images/cancelar.png'></a>
+				</div>
+				<div class='right'>
+					<%= image_submit_tag 'guardar.png', :class => 'right_button' %>
+				</div>
+			</div>
+
+			<div class='clear'></div>
 		<% end %>
 	</div>
 </div>

@@ -2,11 +2,15 @@
 
 <% form_for(@category) do |f| %>
   <%= f.error_messages %>
-
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
+	<%= render :partial => 'form', :locals => {:f => f} %>	
+	<div class='two_column'>
+		<div class='left'>
+			<a href=# class='left_button' ><img src='../images/cancelar.png'></a>
+		</div>
+		<div class='right'>
+			<%= image_submit_tag 'guardar.png', :class => 'right_button' %>
+		</div>
+	</div>
+	
+	<div class='clear'></div>
 <% end %>
-
-<%= link_to 'Show', @category %> |
-<%= link_to 'Back', categories_path %>

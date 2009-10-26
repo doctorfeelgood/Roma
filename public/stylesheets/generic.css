@@ -206,3 +206,8 @@
 		width:50%;
 		float:right;
 	}
+
+.clear
+{
+	clear:both;
+}

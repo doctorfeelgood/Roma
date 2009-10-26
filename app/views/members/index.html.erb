@@ -11,8 +11,9 @@
 	  	<tr class="<%= cycle("even", "odd") %>">
 			<td><%=member.member_number%></td>
 			<td><%=member.name%> <%=member.last_name%></td>
-	    	<td><%= link_to_remote 'Show', :url=>{:action=>'show_member', :id=>member.id} %></td>
-	    	<td><%= link_to 'Edit', edit_member_path(member) %></td>
+	    	<td><%= link_to_remote 'Mostrar', :url=>{:action=>'show_member', :id=>member.id} %></td>
+			<td><%= link_to_remote 'Editar', :url=>{:action=>'edit', :id=>member}, :html=>{:class=>'link_to_new'} %></td>
+
 	    	<td><%= link_to 'Destroy', member, :confirm => 'Are you sure?', :method => :delete %></td>
 	  	</tr>
 	<% end %>
@@ -25,5 +26,7 @@
 <div id="show_member" style='display:none;' class='on_top' >
 </div>
 <div id="new_member" style='display:none;' class='on_top' >
+</div>
+<div id="edit_member" style='display:none;' class='on_top' >
 </div>
 

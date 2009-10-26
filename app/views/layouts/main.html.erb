@@ -13,7 +13,17 @@
 		<div id='wrapper'>
 			<div id='header'>
 				<%=image_tag ('logo_300.png')%>
+				<div id='menu_box'>
+					<a href=<%=members_path%> class='menu_link' ><%=image_tag 'house.png'%>Dashboard</a>
+					<a href=<%=members_path%> class='menu_link' ><%=image_tag 'list.png'%>Lista</a>
+					<a href=<%=members_path%> class='menu_link' ><%=image_tag 'group.png'%>Miembros</a>
+					<a href=<%=members_path%> class='menu_link' ><%=image_tag 'money.png'%>Pagos</a>
+					<a href=<%=members_path%> class='menu_link' ><%=image_tag 'routines.png'%>Rutinas</a>
+					<a href=<%=members_path%> class='menu_link' ><%=image_tag 'ejercicios.png'%>Ejercicios</a>
+					<a href=<%=members_path%> class='menu_link' ><%=image_tag 'door_out.png'%>Logout</a>
+				</div>
 			</div><!--termina el header-->
+
 			<div id='content'>
 				<% if flash[:notice] then %><div id="flash_notice"><%= flash[:notice] %></div><% end %>
 				<script type="text/javascript">
