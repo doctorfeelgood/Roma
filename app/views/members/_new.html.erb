@@ -12,7 +12,9 @@
 
 		<div class='two_column'>
 			<div class='left'>
-				<a href=# class='left_button' ><img src='../images/cancelar.png'></a>
+				<%=link_to_function(image_tag('cancelar.png'), nil, :class=>'left_button') do |page|	  
+					page.visual_effect :fade, "new_member", :duration => 0.5
+				  end %>
 			</div>
 			<div class='right'>
 				<%= image_submit_tag 'guardar.png', :class => 'right_button' %>

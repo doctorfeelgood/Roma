@@ -77,13 +77,18 @@
 
 	.list_table a:visited
 	{
-		color:#aaa;
+		color:#0066bf;
 	}
 	
 	.list_table a
 	{
 		color:#0066bf;
 		text-decoration:none;
+	}
+	
+	.list_table th a
+	{
+		color:#666;	
 	}
 
 	.list_table th
@@ -140,6 +145,30 @@
 		color:#0072BC;	
 	}
 
+.link
+{
+	color:#0072BC;
+	text-decoration:none;
+	line-height:16px;
+	padding:2px;
+	padding-left:22px;
+}
+
+.to_edit
+{
+	background:url(../images/pencil.png) 2px no-repeat;
+}
+
+.to_show
+{
+	background:url(../images/zoom.png) 2px no-repeat;
+}
+
+.to_destroy
+{
+	background:url(../images/cross.png) 2px no-repeat;
+}
+
 .on_top
 {
 	position:absolute; 
@@ -193,6 +222,7 @@
 .two_column
 {
 	clear:both;
+	margin-bottom:10px;
 }
 
 	.two_column .left
@@ -210,4 +240,10 @@
 .clear
 {
 	clear:both;
+}
+
+.float_left
+{
+	display:block;
+	float:left;
 }

@@ -6,13 +6,13 @@
 	  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 	  <title>Gym Manager: <%= controller.action_name %></title>
 	  <%= stylesheet_link_tag 'generic', 'specific' %>
-	  <%= javascript_include_tag :defaults %>
+	  <%= javascript_include_tag :defaults, 'tablesort' %>
 	</head>
 	<body>
 		<div id='stripe'></div>
 		<div id='wrapper'>
 			<div id='header'>
-				<%=image_tag ('logo_300.png')%>
+				<%=image_tag ('logo_roma_2.png', :class => "float_left")%>
 				<div id='menu_box'>
 					<a href=<%=members_path%> class='menu_link' ><%=image_tag 'house.png'%>Dashboard</a>
 					<a href=<%=members_path%> class='menu_link' ><%=image_tag 'list.png'%>Lista</a>
@@ -23,7 +23,7 @@
 					<a href=<%=members_path%> class='menu_link' ><%=image_tag 'door_out.png'%>Logout</a>
 				</div>
 			</div><!--termina el header-->
-
+			<div id='title'><%=image_tag('members.png')%><%=session[:title]%></div>
 			<div id='content'>
 				<% if flash[:notice] then %><div id="flash_notice"><%= flash[:notice] %></div><% end %>
 				<script type="text/javascript">

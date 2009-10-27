@@ -1,10 +1,11 @@
 class MembersController < ApplicationController
   layout 'main'
+  
   # GET /members
   # GET /members.xml
   def index
     @members = Member.all
-
+    session[:title]='Miembros'
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @members }
