@@ -1,18 +1,24 @@
-<h1>Listing rates</h1>
+<div class='top_bar member_table_width'><span class="list_title">Listado de tarifas</span></div>
+<div class="table_container member_table_width">
+	<table class='list_table'>
+		<tr>
+			<th class='sortable'>Tarifa</th>
+			<th class='sortable'>Precio</th>
+			<th colspan='3'>Acciones</th>
+	  	</tr>
 
-<table>
-  <tr>
-  </tr>
+	<% @rates.each do |rate| %>
+	  	<tr class="<%= cycle("even", "odd") %>">
+			<td><%=rate.name%></td>
+			<td><%=number_to_currency(rate.price)%></td>
+		    <td><%= link_to 'Mostrar', rate %></td>
+		    <td><%= link_to 'Editar', edit_rate_path(rate) %></td>
+		    <td><%= link_to 'Eliminar', rate, :confirm => 'Esta seguro?', :method => :delete %></td>
+	  	</tr>
+	<% end %>
+	</table>
+	<div class='list_footer'>
+		<%= link_to 'Agregar', new_rate_path, :class=>'link_to_new' %>
+	</div><!--termina list footer-->
+</div><!--termina list container -->
 
-<% @rates.each do |rate| %>
-  <tr>
-    <td><%= link_to 'Show', rate %></td>
-    <td><%= link_to 'Edit', edit_rate_path(rate) %></td>
-    <td><%= link_to 'Destroy', rate, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New rate', new_rate_path %>

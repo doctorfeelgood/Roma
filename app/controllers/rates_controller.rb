@@ -1,9 +1,10 @@
 class RatesController < ApplicationController
+  layout 'main'
   # GET /rates
   # GET /rates.xml
   def index
     @rates = Rate.all
-
+    session[:title]='Tarifas'
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @rates }

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091004003031) do
+ActiveRecord::Schema.define(:version => 20091030071057) do
 
   create_table "attendances", :force => true do |t|
     t.integer  "member_id"
@@ -81,9 +81,9 @@ ActiveRecord::Schema.define(:version => 20091004003031) do
 
   create_table "rates", :force => true do |t|
     t.string   "name"
-    t.decimal  "price",      :precision => 4, :scale => 2
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.decimal  "price",      :precision => 6, :scale => 2
   end
 
   create_table "routine_exercises", :force => true do |t|
