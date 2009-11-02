@@ -1,8 +1,8 @@
 <h1>New attendance</h1>
 
-<% form_for(@attendance) do |f| %>
+<% form_tag('/posts/1', :method => :put) %>
   <%= f.error_messages %>
-
+	<%= render :partial => 'form', :locals => {:f => f} %>
   <p>
     <%= f.submit 'Create' %>
   </p>

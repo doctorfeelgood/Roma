@@ -1,9 +1,11 @@
 class AttendancesController < ApplicationController
+  layout 'main'
+  
   # GET /attendances
   # GET /attendances.xml
-  def index
+  def index    
     @attendances = Attendance.all
-
+    session[:title]='Lista '<<Date.today.to_s
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @attendances }

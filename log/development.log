@@ -201,3 +201,257 @@ Rendering template within layouts/main
 Rendering members/index
   [4;36;1mMember Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
 Completed in 159ms (View: 124, DB: 4) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (21.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#index (for 127.0.0.1 at 2009-11-02 14:14:39) [GET]
+  [4;36;1mMembership Load (82.3ms)[0m   [0;1mSELECT * FROM `memberships` [0m
+  [4;35;1mRate Load (54.1ms)[0m   [0mSELECT * FROM `rates` [0m
+Rendering template within layouts/main
+Rendering memberships/index
+  [4;36;1mMembership Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `memberships`[0m
+  [4;35;1mMember Columns (12.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.6ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 15) [0m
+  [4;35;1mRate Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `rates`[0m
+  [4;36;1mRate Load (0.4ms)[0m   [0;1mSELECT * FROM `rates` WHERE (`rates`.`id` = 3) [0m
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 19) [0m
+  [4;36;1mRate Load (0.2ms)[0m   [0;1mSELECT * FROM `rates` WHERE (`rates`.`id` = 1) [0m
+  [4;35;1mMember Load (0.5ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 21) [0m
+  [4;36;1mRate Load (0.3ms)[0m   [0;1mSELECT * FROM `rates` WHERE (`rates`.`id` = 2) [0m
+  [4;35;1mMember Load (0.3ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 22) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `rates` WHERE (`rates`.`id` = 3) [0m
+Completed in 521ms (View: 240, DB: 178) | 200 OK [http://localhost/memberships]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#new (for 127.0.0.1 at 2009-11-02 14:15:03) [POST]
+  Parameters: {"authenticity_token"=>"eqjrGjYytBa1ydGUopbuqo2TSTiGd3rIRHJujm/2oQg=", "_"=>""}
+  [4;35;1mMembership Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `memberships`[0m
+Rendering memberships/new
+  [4;36;1mRate Load (0.4ms)[0m   [0;1mSELECT * FROM `rates` [0m
+  [4;35;1mRate Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `rates`[0m
+Rendered memberships/_form (31.6ms)
+Rendered memberships/_new (55.9ms)
+Completed in 109ms (View: 96, DB: 5) | 200 OK [http://localhost/memberships/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-11-02 14:15:08) [GET]
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM `members` WHERE (created_at >= '2009-11-02') [0m
+  [4;35;1mMember Load (0.2ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;36;1mMember Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Completed in 62ms (View: 51, DB: 3) | 200 OK [http://localhost/members]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2009-11-02 14:15:30) [GET]
+  [4;35;1mMember Load (0.5ms)[0m   [0mSELECT * FROM `members` WHERE (created_at >= '2009-11-02') [0m
+  [4;36;1mMember Load (0.2ms)[0m   [0;1mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+  [4;35;1mMember Columns (252.1ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 282ms (View: 20, DB: 253) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#index (for 127.0.0.1 at 2009-11-02 14:15:34) [GET]
+  [4;36;1mMembership Load (0.4ms)[0m   [0;1mSELECT * FROM `memberships` [0m
+  [4;35;1mRate Load (0.3ms)[0m   [0mSELECT * FROM `rates` [0m
+Rendering template within layouts/main
+Rendering memberships/index
+  [4;36;1mMembership Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `memberships`[0m
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.7ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 15) [0m
+  [4;35;1mRate Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `rates`[0m
+  [4;36;1mRate Load (0.3ms)[0m   [0;1mSELECT * FROM `rates` WHERE (`rates`.`id` = 3) [0m
+  [4;35;1mMember Load (0.3ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 19) [0m
+  [4;36;1mRate Load (0.2ms)[0m   [0;1mSELECT * FROM `rates` WHERE (`rates`.`id` = 1) [0m
+  [4;35;1mMember Load (0.3ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 21) [0m
+  [4;36;1mRate Load (0.2ms)[0m   [0;1mSELECT * FROM `rates` WHERE (`rates`.`id` = 2) [0m
+  [4;35;1mMember Load (0.3ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 22) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `rates` WHERE (`rates`.`id` = 3) [0m
+Completed in 45ms (View: 24, DB: 11) | 200 OK [http://localhost/memberships]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#show (for 127.0.0.1 at 2009-11-02 14:15:40) [GET]
+  Parameters: {"authenticity_token"=>"eqjrGjYytBa1ydGUopbuqo2TSTiGd3rIRHJujm/2oQg=", "id"=>"4"}
+  [4;35;1mMembership Columns (73.4ms)[0m   [0mSHOW FIELDS FROM `memberships`[0m
+  [4;36;1mMembership Load (0.3ms)[0m   [0;1mSELECT * FROM `memberships` WHERE (`memberships`.`id` = 4) [0m
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 15) [0m
+Rendering memberships/show
+  [4;35;1mRate Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `rates`[0m
+  [4;36;1mRate Load (0.3ms)[0m   [0;1mSELECT * FROM `rates` WHERE (`rates`.`id` = 3) [0m
+Rendered memberships/_show (142.2ms)
+Completed in 256ms (View: 164, DB: 79) | 200 OK [http://localhost/memberships/4?authenticity_token=eqjrGjYytBa1ydGUopbuqo2TSTiGd3rIRHJujm%2F2oQg%3D]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#index (for 127.0.0.1 at 2009-11-02 14:17:40) [GET]
+  [4;35;1mMembership Load (0.5ms)[0m   [0mSELECT * FROM `memberships` [0m
+  [4;36;1mRate Load (0.3ms)[0m   [0;1mSELECT * FROM `rates` [0m
+Rendering template within layouts/main
+Rendering memberships/index
+  [4;35;1mMembership Columns (76.4ms)[0m   [0mSHOW FIELDS FROM `memberships`[0m
+  [4;36;1mMember Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.3ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 15) [0m
+  [4;36;1mRate Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `rates`[0m
+  [4;35;1mRate Load (0.3ms)[0m   [0mSELECT * FROM `rates` WHERE (`rates`.`id` = 3) [0m
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 19) [0m
+  [4;35;1mRate Load (0.3ms)[0m   [0mSELECT * FROM `rates` WHERE (`rates`.`id` = 1) [0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 21) [0m
+  [4;35;1mRate Load (0.2ms)[0m   [0mSELECT * FROM `rates` WHERE (`rates`.`id` = 2) [0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 22) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `rates` WHERE (`rates`.`id` = 3) [0m
+Completed in 214ms (View: 32, DB: 84) | 200 OK [http://localhost/memberships]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2009-11-02 14:17:42) [GET]
+
+SyntaxError (/Users/silverhawk/Desktop/Roma/app/models/attendance.rb:2: Invalid char `\020' in expression):
+  app/controllers/attendances_controller.rb:5:in `index'
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (2.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2009-11-02 14:19:25) [GET]
+
+SyntaxError (/Users/silverhawk/Desktop/Roma/app/models/attendance.rb:2: Invalid char `\020' in expression):
+  app/controllers/attendances_controller.rb:5:in `index'
+
+Rendered rescues/_trace (146.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2009-11-02 14:19:28) [GET]
+
+SyntaxError (/Users/silverhawk/Desktop/Roma/app/models/attendance.rb:2: Invalid char `\020' in expression):
+  app/controllers/attendances_controller.rb:5:in `index'
+
+Rendered rescues/_trace (48.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#index (for 127.0.0.1 at 2009-11-02 14:22:18) [GET]
+  [4;36;1mMembership Load (0.4ms)[0m   [0;1mSELECT * FROM `memberships` [0m
+  [4;35;1mRate Load (0.2ms)[0m   [0mSELECT * FROM `rates` [0m
+Rendering template within layouts/main
+Rendering memberships/index
+  [4;36;1mMembership Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `memberships`[0m
+  [4;35;1mMember Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 15) [0m
+  [4;35;1mRate Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `rates`[0m
+  [4;36;1mRate Load (0.3ms)[0m   [0;1mSELECT * FROM `rates` WHERE (`rates`.`id` = 3) [0m
+  [4;35;1mMember Load (0.3ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 19) [0m
+  [4;36;1mRate Load (0.2ms)[0m   [0;1mSELECT * FROM `rates` WHERE (`rates`.`id` = 1) [0m
+  [4;35;1mMember Load (0.2ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 21) [0m
+  [4;36;1mRate Load (0.2ms)[0m   [0;1mSELECT * FROM `rates` WHERE (`rates`.`id` = 2) [0m
+  [4;35;1mMember Load (0.2ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 22) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `rates` WHERE (`rates`.`id` = 3) [0m
+Completed in 73ms (View: 55, DB: 9) | 200 OK [http://localhost/memberships]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2009-11-02 14:29:49) [GET]
+
+SyntaxError (/Users/silverhawk/Desktop/Roma/app/models/attendance.rb:2: Invalid char `\020' in expression):
+  app/controllers/attendances_controller.rb:5:in `index'
+
+Rendered rescues/_trace (50.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2009-11-02 14:30:15) [GET]
+  [4;35;1mAttendance Load (24.7ms)[0m   [0mSELECT * FROM `attendances` [0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 61ms (View: 29, DB: 25) | 200 OK [http://localhost/attendances]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2009-11-02 14:30:32) [GET]
+  [4;36;1mAttendance Load (0.5ms)[0m   [0;1mSELECT * FROM `attendances` [0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/attendances]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2009-11-02 14:30:34) [GET]
+  [4;35;1mAttendance Load (0.4ms)[0m   [0mSELECT * FROM `attendances` [0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/attendances]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2009-11-02 14:31:09) [GET]
+  [4;36;1mAttendance Load (0.5ms)[0m   [0;1mSELECT * FROM `attendances` [0m
+Rendering template within layouts/main
+Rendering attendances/index
+Completed in 12ms (View: 4, DB: 1) | 200 OK [http://localhost/attendances]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2009-11-02 14:32:19) [GET]
+  [4;35;1mAttendance Load (0.4ms)[0m   [0mSELECT * FROM `attendances` [0m
+
+NoMethodError (undefined method `>>' for "Lista ":String):
+  app/controllers/attendances_controller.rb:8:in `index'
+
+Rendered rescues/_trace (40.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2009-11-02 14:32:27) [GET]
+  [4;36;1mAttendance Load (0.4ms)[0m   [0;1mSELECT * FROM `attendances` [0m
+
+TypeError (can't convert Date into String):
+  app/controllers/attendances_controller.rb:8:in `<<'
+  app/controllers/attendances_controller.rb:8:in `index'
+
+Rendered rescues/_trace (130.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2009-11-02 14:32:37) [GET]
+  [4;35;1mAttendance Load (0.4ms)[0m   [0mSELECT * FROM `attendances` [0m
+Rendering template within layouts/main
+Rendering attendances/index
+Completed in 10ms (View: 3, DB: 1) | 200 OK [http://localhost/attendances]

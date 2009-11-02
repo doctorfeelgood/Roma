@@ -1,3 +1,3 @@
 class Attendance < ActiveRecord::Base
-  has_many :members
+  belongs_to :member
 end
