@@ -4,6 +4,8 @@ class MembersController < ApplicationController
   # GET /members
   # GET /members.xml
   def index
+    #usar este para attendances
+    @hoy=Member.find(:all, :conditions=>["created_at >= ?", Date.today])
     @members = Member.all
     session[:title]='Miembros'
     respond_to do |format|
