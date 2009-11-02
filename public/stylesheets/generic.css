@@ -179,7 +179,7 @@
 	left:0;
 }	
 	
-#popup
+.popup
 {
 	position:relative;
 	width:400px;
@@ -192,10 +192,14 @@
 }	
 
 
-#popup_info
+.popup_info
 {
-	border:1px solid #444;
+	border:1px solid #aaa;
 	background:white;
+	/*filter:alpha(opacity=80);
+	-moz-opacity:0.8;
+	-khtml-opacity: 0.8;
+	opacity: 0.8;*/
 }
 
 .big_close

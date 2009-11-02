@@ -94,10 +94,10 @@ body {
 	
 #title img
 {
-	width:40px;
-	height:40px;
+	width:50px;
+	height:50px;
 	display:block;
-	margin-top:-10px;
+	margin-top:-15px;
 	float:left;
 	margin-right:4px;
 }
@@ -229,6 +229,15 @@ textarea:focus { background-color: #ffd }
 	padding-left:22px;
 }
 
+.card_rate
+{
+	color:#0072BC;
+	line-height:16px;
+	background:url(../images/money.png) 2px no-repeat;
+	padding:2px;
+	padding-left:22px;
+}
+
 .close
 {
 	display:inline-block;
@@ -254,6 +263,7 @@ textarea:focus { background-color: #ffd }
 	float:left;
 	text-decoration:none;
 	border:1px solid #cdcdcd;
+	border-bottom:none;
 	-moz-border-radius-topright: 8px;
 	-webkit-border-top-right-radius: 8px;
 	
@@ -277,6 +287,7 @@ textarea:focus { background-color: #ffd }
 	text-decoration:none;
 	border:1px solid #cdcdcd;
 	border-right:none;
+	border-bottom:none;
 	-moz-border-radius-topleft: 8px;
 	-webkit-border-top-left-radius: 8px;
 	

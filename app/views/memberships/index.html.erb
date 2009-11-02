@@ -1,18 +1,34 @@
-<h1>Listing memberships</h1>
+<div class='top_bar member_table_width'><span class="list_title">Listado de membres&iacute;as</span></div>
+<div class="table_container member_table_width">
+	<table class='list_table'>
+		<tr>
+			<th class='sortable'>Membres&iacute;a</th>
+			<th class='sortable'>Nombre</th>
+			<th class='sortable'>Tarifa</th>
+			<th colspan='3'>Acciones</th>
+	  	</tr>
 
-<table>
-  <tr>
-  </tr>
+	<% @memberships.each do |membership| %>
+	  	<tr class="<%= cycle("even", "odd") %>">
+			<td><%=membership.id%></td>
+			<td class='capitalize_me'><%=membership.member.name+' '+membership.member.last_name%></td>
+			<td><%=membership.rate.name%></td>
+	    	<td><%= link_to_remote 'Mostrar', :url=>membership, :method=>:get, :html=>{:class=>'link to_show'} %></td>
+			<td><%= link_to_remote 'Editar', :url=>edit_membership_path(membership), :method=>:get, :html=>{:class=>'link to_edit'} %></td>
 
-<% @memberships.each do |membership| %>
-  <tr>
-    <td><%= link_to 'Show', membership %></td>
-    <td><%= link_to 'Edit', edit_membership_path(membership) %></td>
-    <td><%= link_to 'Destroy', membership, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+	    	<td><%= link_to 'Eliminar', membership, :class=>'link to_destroy', :confirm => 'Está seguro?', :method => :delete  %></td>
+	  	</tr>
+	<% end %>
+	</table>
+	<div class='list_footer'>
+		<%= link_to_remote 'Nueva Membres&iacute;a', :url=>{:action=>'new'}, :html=>{:class=>'link_to_new'} %>
+	</div><!--termina list footer-->
+</div><!--termina list container -->
 
-<br />
+<div id="show_membership" style='display:none;' class='on_top' >
+</div>
+<div id="new_membership" style='display:none;' class='on_top' >
+</div>
+<div id="edit_membership" style='display:none;' class='on_top' >
+</div>
 
-<%= link_to 'New membership', new_membership_path %>

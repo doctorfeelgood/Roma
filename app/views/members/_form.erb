@@ -19,12 +19,17 @@
 	 	<th><%=f.label 'Direccion:' %></th>
 	  	<td><%= f.text_field :address, :class => "capitalize_me" %></td>	
 	</tr>
-	<tr>
-	 	<th><%=f.label 'Numero de control:' %></th>
-	  	<td><%= f.text_field :member_number %></td>	
-	</tr>	
+	<%if @editing %>
+		<tr>
+		 	<th><%=f.label 'Foto actual:' %></th>
+		  	<td><%= image_tag @member.photo.url(:small) %> </td>	
+		</tr>		
 	<tr>	
-		<th><%= f.label :member, "Photo" %></th>  
+		<th><%= f.label :member, "Foto nueva" %></th>  
+	<%else%>	
+	<tr>	
+		<th><%= f.label :member, "Foto" %></th>
+	<%end%>	
     	<td><%= f.file_field :photo %></td>
 	</tr>
 </table>

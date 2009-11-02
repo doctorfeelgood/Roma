@@ -1,0 +1,2 @@
+page.replace_html("show_membership", :partial => "show", :object => @membership)         
+page[:show_membership].visual_effect :appear

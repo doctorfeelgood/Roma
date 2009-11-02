@@ -1,0 +1,38 @@
+<% f.fields_for @membership.member do |m| %>
+	<table align="center" class="form_table" width='100%'>
+		<tr>		
+	 		<th><%=m.label 'Nombre:' %></th>
+			<td><%= m.text_field :name, :class => "capitalize_me" %></td>
+		</tr>
+		<tr>	
+		 	<th><%= m.label 'Apellido(s):' %></th>
+		   	<td><%= m.text_field :last_name, :class => "capitalize_me" %></td>
+		</tr>
+		<tr>
+		   	<th><%=m.label 'Telefono:' %></th>
+		    <td><%=m.text_field :phone %></td>
+		</tr>
+		<tr>
+		 	<th><%= m.label 'email:' %></th>
+		  	<td><%= m.text_field :email %></td>	
+		</tr>
+		<tr>
+		 	<th><%=m.label 'Direccion:' %></th>
+		  	<td><%=m.text_field :address, :class => "capitalize_me" %></td>	
+		</tr>	
+		<tr>
+		 	<th><%=f.label 'Foto actual:' %></th>
+		  	<td><%= image_tag @membership.member.photo.url(:small) %> </td>	
+		</tr>
+		<tr>	
+			<th><%=m.label :member, "Foto Nueva" %></th>  
+	    	<td><%=m.file_field :photo %></td>
+		</tr>
+	
+<%end%>
+
+		<tr>	
+			<th><%=f.label :membership, "Tarifa" %></th>  
+			<td><%=select("membership", "rate_id", Rate.all.collect {|r| [ r.name, r.id ] }, {:include_blank => 'None'}) %></td>
+		</tr>		
+	</table>

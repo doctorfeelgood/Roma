@@ -1,7 +1,36 @@
-<% form_for(@member) do |f| %>
-  <%= f.error_messages %>
-	<%= render :partial => 'form', :locals => {:f => f} %>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
-<% end %>
+<%# form_for(@member) do |f| %>
+  <%#f.error_messages %>
+	<%# render :partial => 'form', :locals => {:f => f} %>
+
+    <%# f.submit 'Update' %>
+<%# end %>
+
+<div class='popup'>
+	<div class='popup_info'>
+		<%=link_to_function(nil, nil, :class=>'close') do |page|	  
+			page.visual_effect :fade, "edit_member", :duration => 0.5
+		  end %>
+		
+
+		<% form_for @member, :html => { :multipart => true } do |f| %>  
+			<%= f.error_messages %>
+			<%= render :partial => 'form', :locals => {:f => f} %>
+
+
+		<div class='two_column'>
+			<div class='left'>
+				<%=link_to_function(image_tag('cancelar.png'), nil, :class=>'left_button') do |page|	  
+					page.visual_effect :fade, "edit_member", :duration => 0.5
+				  end %>
+			</div>
+			<div class='right'>
+				<%= image_submit_tag 'guardar.png', :class => 'right_button' %>
+			</div>
+		</div>
+		
+		<div class='clear'></div>
+		<% end %>
+
+
+	</div>
+</div>

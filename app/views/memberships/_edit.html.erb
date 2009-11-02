@@ -1,19 +1,19 @@
 <div class='popup'>
 	<div class='popup_info'>
 		<%=link_to_function(nil, nil, :class=>'close') do |page|	  
-			page.visual_effect :fade, "new_member", :duration => 0.5
+			page.visual_effect :fade, "edit_membership", :duration => 0.5
 		  end %>
 		
 
-		<% form_for @member, :html => { :multipart => true } do |f| %>  
+		<% form_for @membership, :html => { :multipart => true } do |f| %>  
 			<%= f.error_messages %>
-			<%= render :partial => 'form', :locals => {:f => f} %>
+			<%= render :partial => 'special_form', :locals => {:f => f} %>
 
 
 		<div class='two_column'>
 			<div class='left'>
 				<%=link_to_function(image_tag('cancelar.png'), nil, :class=>'left_button') do |page|	  
-					page.visual_effect :fade, "new_member", :duration => 0.5
+					page.visual_effect :fade, "edit_membership", :duration => 0.5
 				  end %>
 			</div>
 			<div class='right'>

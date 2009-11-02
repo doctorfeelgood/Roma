@@ -12,7 +12,7 @@
 			<td><%=member.member_number%></td>
 			<td><%=member.name%> <%=member.last_name%></td>
 	    	<td><%= link_to_remote 'Mostrar', :url=>{:action=>'show_member', :id=>member.id}, :html=>{:class=>'link to_show'} %></td>
-			<td><%= link_to_remote 'Editar', :url=>{:action=>'edit', :id=>member}, :html=>{:class=>'link to_edit'} %></td>
+			<td><%= link_to_remote 'Editar', :url=>edit_member_path(member), :method=>:get, :html=>{:class=>'link to_edit'} %></td>
 
 	    	<td><%= link_to 'Eliminar', member, :class=>'link to_destroy', :confirm => 'Está seguro?', :method => :delete  %></td>
 	  	</tr>

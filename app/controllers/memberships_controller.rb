@@ -3,8 +3,9 @@ class MembershipsController < ApplicationController
   # GET /memberships.xml
   layout 'main'
   def index
+    session[:title]='Membres&iacute;as'
     @memberships = Membership.all
-
+    @rates = Rate.all
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @memberships }
@@ -15,22 +16,14 @@ class MembershipsController < ApplicationController
   # GET /memberships/1.xml
   def show
     @membership = Membership.find(params[:id])
+    @member = @membership.member
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @membership }
-    end
   end
 
   # GET /memberships/new
   # GET /memberships/new.xml
   def new
     @membership = Membership.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @membership }
-    end
   end
 
   # GET /memberships/1/edit
@@ -41,12 +34,14 @@ class MembershipsController < ApplicationController
   # POST /memberships
   # POST /memberships.xml
   def create
-    @membership = Membership.new(params[:membership])
-
+    @membership = Membership.new(:rate_id=>params[:membership][:rate_id].to_i)
+    @member=Member.new(params[:membership][:member])
+    @member.save
+    @membership.member_id=@member.id
     respond_to do |format|
       if @membership.save
         flash[:notice] = 'Membership was successfully created.'
-        format.html { redirect_to(@membership) }
+        format.html { redirect_to(memberships_path) }
         format.xml  { render :xml => @membership, :status => :created, :location => @membership }
       else
         format.html { render :action => "new" }
@@ -59,11 +54,12 @@ class MembershipsController < ApplicationController
   # PUT /memberships/1.xml
   def update
     @membership = Membership.find(params[:id])
-
+    @member=Member.find(@membership.member_id.to_i)
+    @member.update_attributes(params[:membership][:member])
     respond_to do |format|
-      if @membership.update_attributes(params[:membership])
-        flash[:notice] = 'Membership was successfully updated.'
-        format.html { redirect_to(@membership) }
+      if @membership.update_attribute(:rate_id, params[:membership][:rate_id])
+        flash[:notice] = "Los datos de la membresía #{@membership.id} de #{@member.name} #{@member.last_name} se actualizaron satisfactoriamente"
+        format.html { redirect_to(memberships_path) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
