@@ -222,7 +222,7 @@
 	border-color:#0072BC;
 }
 
-
+/*dos columnas 50% cada una */
 .two_column
 {
 	clear:both;
@@ -246,8 +246,43 @@
 	clear:both;
 }
 
-.float_left
-{
-	display:block;
-	float:left;
-}
+	.float_left
+	{
+		display:block;
+		float:left;
+	}
+
+	.left_column
+	{
+		display:block;
+		float:left;
+	}
+
+	.right_column
+	{
+		display:block;
+		float:right;
+	}
+
+	.column
+	{
+		display:block;
+		float:left;
+	}
+	
+	.full_width
+	{
+		width:100%;
+	}
+	
+	.rounded_corners
+	{
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+	}
+	
+	/* este lo uso para debuggear */
+	.with_border
+	{
+		border:1px solid #000;
+	}

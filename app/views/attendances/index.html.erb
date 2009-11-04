@@ -1,18 +1,49 @@
-<h1>Listing attendances</h1>
+<div class='left_column with_border' style='width:300px; height:400px'>
+	<div class='with_border'>
+		aqui va la busqueda
+	</div>
+	dfs 
+	dsdf
+	 <Br />
+</div><!--termina right column-->
 
-<table>
-  <tr>
-  </tr>
+<div class='left_column with_border' >
+	<div class='top_bar'><span class="list_title">Asistencia de Hoy</span></div>
+	<div class="table_container full_width"  >
+		<table class='list_table' >
+			<tr>
+				<th class='sortable'>Membres&iacute;a</th>
+				<th class='sortable'>Nombre</th>
+				<th class='sortable'>Hora</th>
+				<th colspan='3'>Acciones</th>
+		  	</tr>
 
-<% @attendances.each do |attendance| %>
-  <tr>
-    <td><%= link_to 'Show', attendance %></td>
-    <td><%= link_to 'Edit', edit_attendance_path(attendance) %></td>
-    <td><%= link_to 'Destroy', attendance, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+		<% @attendances.each do |attendance| %>
+		  	<tr class="<%= cycle("even", "odd") %>">
+				<td><%=attendance.id%></td>
+				<td class='capitalize_me'><%#attendance.member.name+' '+attendance.member.last_name%></td>
+				<td><%#attendance.rate.name%></td>
+		    	<td><%= link_to_remote 'Mostrar', :url=>attendance, :method=>:get, :html=>{:class=>'link to_show'} %></td>
+				<td><%= link_to_remote 'Editar', :url=>edit_attendance_path(attendance), :method=>:get, :html=>{:class=>'link to_edit'} %></td>
 
-<br />
+		    	<td><%= link_to 'Eliminar', attendance, :class=>'link to_destroy', :confirm => 'Está seguro?', :method => :delete  %></td>
+		  	</tr>
+		<% end %>
+		</table>
+		<div class='list_footer'>
+			<%= link_to_remote 'Nueva Membres&iacute;a', :url=>{:action=>'new'}, :html=>{:class=>'link_to_new'} %>
+		</div><!--termina list footer-->
+	</div><!--termina list container -->
+</div><!--termina left column-->
 
-<%= link_to 'New attendance', new_attendance_path %>
+
+
+
+	<div id="show_attendance" style='display:none;' class='on_top' >
+	</div>
+	<div id="new_attendance" style='display:none;' class='on_top' >
+	</div>
+	<div id="edit_attendance" style='display:none;' class='on_top' >
+	</div>
+	
+
