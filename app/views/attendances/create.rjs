@@ -1,0 +1,5 @@
+page.insert_html :after, :empty_row, :partial => 'attendance', :object => @attendance  
+session[:even_or_odd]=(session[:even_or_odd]=='odd' ? 'even' : 'odd')
+#page[:new_review].reset  
+#page.replace_html :notice, flash[:notice]  
+#flash.discard

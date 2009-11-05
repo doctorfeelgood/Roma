@@ -4,7 +4,7 @@ class AttendancesController < ApplicationController
   # GET /attendances
   # GET /attendances.xml
   def index    
-    @attendances = Attendance.all
+    @attendances = Attendance.find(:all, :order=>'created_at DESC')
     session[:title]='Lista '<<Date.today.to_s
     respond_to do |format|
       format.html # index.html.erb
@@ -42,18 +42,10 @@ class AttendancesController < ApplicationController
   # POST /attendances
   # POST /attendances.xml
   def create
-    @attendance = Attendance.new(params[:attendance])
-
-    respond_to do |format|
-      if @attendance.save
-        flash[:notice] = 'Attendance was successfully created.'
-        format.html { redirect_to(@attendance) }
-        format.xml  { render :xml => @attendance, :status => :created, :location => @attendance }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @attendance.errors, :status => :unprocessable_entity }
-      end
-    end
+    #@attendance = Attendance.new(params[:attendance])
+    membership=Membership.find(params[:membership])
+    @attendance=Attendance.new(:member_id=>membership.member.id)
+    @attendance.save
   end
 
   # PUT /attendances/1
