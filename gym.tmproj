@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>app/views/attendances/index.html.erb</string>
+	<string>config/environment.rb</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -40,9 +40,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>45</integer>
+				<integer>66</integer>
 				<key>line</key>
-				<integer>7</integer>
+				<integer>6</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -121,19 +121,63 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>app/views/attendances/index.html.erb</key>
+		<key>app/views/attendances/_attendance.html.erb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>65</integer>
+				<integer>49</integer>
 				<key>line</key>
-				<integer>0</integer>
+				<integer>3</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
+		</dict>
+		<key>app/views/attendances/create.rjs</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>69</integer>
+				<key>line</key>
+				<integer>1</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>app/views/attendances/index.html.erb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>10</integer>
+				<key>line</key>
+				<integer>18</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>54</integer>
+				<key>line</key>
+				<integer>18</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>10</integer>
+				<key>line</key>
+				<integer>18</integer>
+			</dict>
 		</dict>
 		<key>app/views/attendances/new.html.erb</key>
 		<dict>
@@ -265,49 +309,47 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>public/stylesheets/generic.css</key>
+		<key>config/environment.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
 				<integer>0</integer>
 				<key>line</key>
-				<integer>256</integer>
+				<integer>0</integer>
 			</dict>
-			<key>columnSelection</key>
-			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>239</integer>
-			<key>selectFrom</key>
+			<integer>0</integer>
+		</dict>
+		<key>public/stylesheets/generic.css</key>
+		<dict>
+			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>16</integer>
+				<integer>18</integer>
 				<key>line</key>
-				<integer>256</integer>
+				<integer>40</integer>
 			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>256</integer>
-			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>22</integer>
 		</dict>
 		<key>public/stylesheets/specific.css</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>9</integer>
+				<integer>11</integer>
 				<key>line</key>
 				<integer>24</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>24</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
@@ -315,11 +357,15 @@
 		<string>public/stylesheets/generic.css</string>
 		<string>public/stylesheets/specific.css</string>
 		<string>app/views/attendances/index.html.erb</string>
+		<string>app/views/attendances/_attendance.html.erb</string>
+		<string>config/environment.rb</string>
+		<string>app/controllers/attendances_controller.rb</string>
+		<string>app/views/attendances/create.rjs</string>
 		<string>app/views/layouts/main.html.erb</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{299, 33}, {1141, 845}}</string>
+	<string>{{282, 33}, {1141, 845}}</string>
 </dict>
 </plist>

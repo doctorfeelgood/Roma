@@ -23,20 +23,30 @@
 				<% end %>
 				</table>
 				<div class='list_footer'>
-					<%= link_to_remote 'Nueva Membres&iacute;a', :url=>{:action=>'new'}, :html=>{:class=>'link_to_new'} %>
+
 				</div><!--termina list footer-->
 			</div><!--termina list container -->
 		</td>
-		<td width=350px>
-			<div style='margin-top:-10px;'>
+		<td width='350px' valign='top'>
+
 				<div class='top_bar'><span class="list_title">Agregar miembro</span></div>
 				<div class="table_container" style='padding:10px' >
 					<% form_remote_tag :url => {:controller => 'attendances', :action => 'create'},
 					:html => {:action => {:controller => 'attendances', :action => 'create'}} do %>
 					<%= text_field_tag :membership, nil, :size=>'10'%> <%= submit_tag 'Aceptar' -%>
 					<% end %>
+				</div>
+
+			
+				<div class='top_bar' style='margin-top:20px'><span class="list_title">Buscar miembro</span></div>
+				<div class="table_container" style='padding:10px' >
+					<% form_remote_tag :url => {:controller => 'attendances', :action => 'create'},
+					:html => {:action => {:controller => 'attendances', :action => 'create'}} do %>
+					<%= text_field_tag :membership, nil, :size=>'10'%> <%= submit_tag 'Aceptar' -%>
+					<% end %>
 				<div>
-			</div>
+
+			
 		</td>
 	</tr>
 </table>
