@@ -1,10 +1,8 @@
 <%session[:even_or_odd]='odd'%>
-<%=link_to image_tag(''), :action=>'yesterday'%>
-ink_to_function(image_tag('cancelar.png'), nil, :class=>'left_button') d
 <table width=100% cellspacing=7>
 	<tr>
 		<td>
-			<div class='top_bar'><span class="list_title">Asistencia de Hoy</span></div>
+			<div class='top_bar'><span class="list_title"><%=l Date.today, :format=>:long %></span></div>
 			<div class="table_container"  >
 				<table class='list_table' >
 					<tr>
@@ -34,7 +32,7 @@ ink_to_function(image_tag('cancelar.png'), nil, :class=>'left_button') d
 				<div class='top_bar'><span class="list_title">Agregar miembro</span></div>
 				<div class="table_container" style='padding:10px' >
 					<% form_remote_tag :url => {:controller => 'attendances', :action => 'create'},
-					:html => {:action => {:controller => 'attendances', :action => 'create'}} do %>
+					:html => {:action => {:controller => 'attendances', :action => 'create'}, :id=>'add_member'} do %>
 					<%= text_field_tag :membership, nil, :size=>'10'%> <%= submit_tag 'Aceptar' -%>
 					<% end %>
 				</div>
@@ -43,7 +41,7 @@ ink_to_function(image_tag('cancelar.png'), nil, :class=>'left_button') d
 				<div class='top_bar' style='margin-top:20px'><span class="list_title">Buscar miembro</span></div>
 				<div class="table_container" style='padding:10px' >
 					<% form_remote_tag :url => {:controller => 'attendances', :action => 'search_member'},
-					:html => {:action => {:controller => 'attendances', :action => 'search_member'}} do %>
+					:html => {:action => {:controller => 'attendances', :action => 'search_member'}, :id=>'search_member'} do %>
 					<table align='center'>
 						<tr>
 							<th>Nombre</th>
@@ -72,5 +70,7 @@ ink_to_function(image_tag('cancelar.png'), nil, :class=>'left_button') d
 </div>
 <div id="edit_attendance" style='display:none;' class='on_top' >
 </div>
+<div id="jimmy" style='display:none;' class='on_top'></div>
+
 
 

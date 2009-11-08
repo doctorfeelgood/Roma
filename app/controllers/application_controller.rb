@@ -8,4 +8,19 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
   layout 'main'
+  
+  before_filter :set_user_language  
+  
+  private  
+  def set_user_language  
+    I18n.locale = 'es'  
+  end
+  
+  def jimmy_says(message)
+    render :update do |page|
+      page.replace_html :jimmy, :partial => 'shared/jimmy', :locals=>{:message => message}
+      page.visual_effect :appear, "jimmy" 
+    end
+  end
+  
 end

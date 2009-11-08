@@ -1,0 +1,67 @@
+/* Calendar */
+
+#calendar {
+}
+
+#calendar caption {
+	padding-bottom: 5px;
+	font-weight: bold;
+}
+
+#calendar table {
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid #ccc;
+}
+
+#calendar thead th {
+	width:14%;
+	padding: 5px 0;
+	text-align: center;
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	background:url(../images/top_bar_bg.png);
+}
+
+#calendar tbody td {
+	padding: 5px 0;
+	text-align: center;
+	border: 1px solid #ccc;
+	height:60px;
+}
+
+#calendar tbody td:hover
+{
+	background-color:#C6D7F2;
+	color:#fff;
+	cursor:pointer;
+}
+
+#calendar tbody td:hover .attendances_count
+{
+	color:#0072BC;
+	background-color:#C6D7F2;
+	cursor:pointer;
+}
+
+#calendar tfoot td {
+	padding: 5px;
+}
+
+#calendar tfoot #next {
+	text-align: right;
+}
+
+#calendar .today {
+	background: lightgray;
+}
+
+#calendar .highlight {
+	background: lightblue;
+}
+
+.attendances_count
+{
+	font-weight:bold;
+	color:#0072BC;
+}

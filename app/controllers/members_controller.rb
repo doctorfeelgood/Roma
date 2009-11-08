@@ -6,6 +6,7 @@ class MembersController < ApplicationController
   def index
     #usar este para attendances
     @hoy=Member.find(:all, :conditions=>["created_at >= ?", Date.today])
+    session[:image]='members.png'
     @members = Member.all
     session[:title]='Miembros'
     respond_to do |format|

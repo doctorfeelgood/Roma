@@ -1,0 +1,16 @@
+<div class='popup'>
+		<div class='popup_info' style='background:none; border:none'>
+		<%=link_to_function(nil, nil, :class=>'close') do |page|	  
+			page.visual_effect :fade, "jimmy", :duration => 0.5
+		  end %>			
+			<div class="table_container" style='background-color:#fff;'>
+					<div class='not_found_title'>Jimmy dice:</div>
+					<div class='not_found_body'>
+						<%=image_tag "jimmy.png"%>
+						<br /><br /><%=message%>
+						<div class='clear'></div>
+					</div>
+			</div><!--termina list container -->		
+		<div class='clear'></div>
+	</div>
+</div>

@@ -4,6 +4,7 @@ class MembershipsController < ApplicationController
   layout 'main'
   def index
     session[:title]='Membres&iacute;as'
+    session[:image]='members.png'
     @memberships = Membership.all
     @rates = Rate.all
     respond_to do |format|
