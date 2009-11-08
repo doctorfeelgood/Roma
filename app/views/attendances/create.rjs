@@ -1,5 +1,8 @@
 page.insert_html :after, :empty_row, :partial => 'attendance', :object => @attendance  
 session[:even_or_odd]=(session[:even_or_odd]=='odd' ? 'even' : 'odd')
+if session[:from_results]
+  page.visual_effect :fade, "results", :duration => 0.5
+end
 #page[:new_review].reset  
 #page.replace_html :notice, flash[:notice]  
 #flash.discard

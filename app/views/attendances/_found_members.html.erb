@@ -1,0 +1,47 @@
+<div class='popup'>
+		<div class='popup_info' style='background:none; border:none'>
+		<%=link_to_function(nil, nil, :class=>'close') do |page|	  
+			page.visual_effect :fade, "results", :duration => 0.5
+		  end %>
+		
+			
+			<div class="table_container" style='background-color:#fff;'>
+				
+				<%unless @members.blank? %>
+					<table class='list_table' >
+						<tr>
+							<th class='sortable'>Membres&iacute;a</th>
+							<th class='sortable'>Nombre</th>
+							<th ></th>
+					  	</tr>
+					<% @members.each do |member| %>
+					  	<tr class="<%= cycle("even", "odd") %>">
+							<td><%=member.membership.id%></td>
+							<td class='capitalize_me'><%=member.name+' '+member.last_name%></td>
+					    	<td><%= link_to_remote image_tag('right.png', :border=>0, :class=>'add_button'), :url=>{:controller => 'attendances', :action => 'create', :membership=>member.membership.id, :from_results=>true}, :method=>:post %></td>
+					  	</tr>
+					<% end %>
+					</table>
+					<div class='list_footer' >
+
+					</div><!--termina list footer-->
+				<%else%>
+					<div class='not_found_title'>Jimmy dice:</div>
+					<div class='not_found_body'>
+						<%=image_tag "jimmy.png"%>
+						<br /><br />Tu b&uacute;squeda no arroj&oacute; ning&uacute;n resultado muchach@. Sigue esforz&aacute;ndote
+						<div class='clear'></div>
+					</div>
+					
+				<%end%>
+			</div><!--termina list container -->
+
+
+
+		
+		<div class='clear'></div>
+
+
+
+	</div>
+</div>

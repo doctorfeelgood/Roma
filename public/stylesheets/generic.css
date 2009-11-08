@@ -291,3 +291,26 @@
 	{
 		margin-top:0;
 	}
+	
+	.not_found_title
+	{
+		background-color:#C6D7F2;
+		color:#fff;
+		font-size:20px;
+		line-height:28px;
+		padding-left:20px;
+	}
+	
+	.not_found_body
+	{
+		font-size:16px;	
+	}
+	
+	.not_found_body img
+	{
+		display:block;
+		float:left;
+
+		margin-right:10px;
+	}
+	

@@ -1,4 +1,6 @@
 <%session[:even_or_odd]='odd'%>
+<%=link_to image_tag(''), :action=>'yesterday'%>
+ink_to_function(image_tag('cancelar.png'), nil, :class=>'left_button') d
 <table width=100% cellspacing=7>
 	<tr>
 		<td>
@@ -27,7 +29,7 @@
 				</div><!--termina list footer-->
 			</div><!--termina list container -->
 		</td>
-		<td width='350px' valign='top'>
+		<td width='300px' valign='top'>
 
 				<div class='top_bar'><span class="list_title">Agregar miembro</span></div>
 				<div class="table_container" style='padding:10px' >
@@ -40,10 +42,22 @@
 			
 				<div class='top_bar' style='margin-top:20px'><span class="list_title">Buscar miembro</span></div>
 				<div class="table_container" style='padding:10px' >
-					<% form_remote_tag :url => {:controller => 'attendances', :action => 'create'},
-					:html => {:action => {:controller => 'attendances', :action => 'create'}} do %>
-					<%= text_field_tag :membership, nil, :size=>'10'%> <%= submit_tag 'Aceptar' -%>
-					<% end %>
+					<% form_remote_tag :url => {:controller => 'attendances', :action => 'search_member'},
+					:html => {:action => {:controller => 'attendances', :action => 'search_member'}} do %>
+					<table align='center'>
+						<tr>
+							<th>Nombre</th>
+							<td><%= text_field_tag :name, nil, :size=>'20'%></td>
+						</tr>
+						<tr>
+							<th>Apellido</th>
+							<td><%= text_field_tag :last_name, nil, :size=>'20'%></td>
+						</tr>
+						<tr>
+							<td colspan=2 align='right'><%= submit_tag 'Aceptar' -%></td>
+						</tr>
+					</table>
+					<%end%>
 				<div>
 
 			
@@ -52,7 +66,7 @@
 </table>
 
 
-<div id="show_attendance" style='display:none;' class='on_top' >
+<div id="results" style='display:none;' class='on_top' >
 </div>
 <div id="new_attendance" style='display:none;' class='on_top' >
 </div>
