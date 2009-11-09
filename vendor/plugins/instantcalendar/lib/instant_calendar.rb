@@ -10,8 +10,8 @@ module InstantCalendar
                   }
     end
 
-		def today?(i)
-			Time.now.day == i
+		def today?(i, month)
+			Time.now.day == i && Time.now.month==month
 		end
 	end
 end

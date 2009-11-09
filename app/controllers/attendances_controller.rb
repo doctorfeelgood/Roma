@@ -22,10 +22,28 @@ class AttendancesController < ApplicationController
   
   
   def today
+    @attendances = Attendance.find(:all, :conditions=>['created_at > ? AND created_at < ?', Date.today, Date.today+1], :order=>'created_at DESC')
+    @date=Date.today
+    session[:image]='attendances.png'
+    session[:title]='Asistencia de hoy'  
+  end
+  
+  def day
+    @date=params[:date].to_date
+    if @date==Date.today
+      redirect_to(:action=>"today")
+    else
+      session[:image]='calendar.png'
+      @attendances = Attendance.find(:all, :conditions=>['created_at > ? AND created_at < ?', @date, @date+1], :order=>'created_at DESC')
+      session[:title]='Consultando fecha'
+    end
   end
   
   def calendar
-    session[:title]='Lista '
+    @month=params[:date].to_date.month
+    @year=params[:date].to_date.year
+    session[:title]='Calendario de asistencias'
+    session[:image]='calendar.png'
   end
   
   
@@ -78,6 +96,7 @@ class AttendancesController < ApplicationController
       membership=Membership.find(params[:membership])
       @attendance=Attendance.new(:member_id=>membership.member.id)
       @attendance.save
+      @attendances = Attendance.find(:all, :conditions=>['created_at > ? AND created_at < ?', Date.today, Date.today+1], :order=>'created_at DESC')
       session[:from_results] = params[:from_results] ? true : false
     else
       jimmy_says("No hay ning&uacute;n miembro con ese n&uacute;mero")
@@ -108,7 +127,7 @@ class AttendancesController < ApplicationController
     @attendance.destroy
 
     respond_to do |format|
-      format.html { redirect_to(attendances_url) }
+      format.html { redirect_to(:action=>'today') }
       format.xml  { head :ok }
     end
   end

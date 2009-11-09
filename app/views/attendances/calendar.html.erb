@@ -1,1 +1,3 @@
-<%=show_calendar :month=>11%>
+<%=link_to image_tag('back.png')+" Regresar", {:action=>'today'}, :class=>'button_link left_rounded'%>
+<div class='clear'></div>
+<%=show_calendar :month=>@month, :year=>@year, :highlight_today => true%>

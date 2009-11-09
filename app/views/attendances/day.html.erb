@@ -1,14 +1,12 @@
 <%session[:even_or_odd]='odd'%>
-	<%=link_to image_tag('mini-calendar.png')+" Calendario", {:action=>'calendar', :date=>Date.today}, :class=>'button_link right_rounded'%>
-	<%=link_to image_tag('ayer.png')+" Ayer", {:action=>'day', :date=>Date.today-1}, :class=>'button_link left_rounded'%>
-	
+<%=link_to image_tag('back.png')+" Regresar", {:action=>'today'}, :class=>'button_link left_rounded'%>
 <div class='clear'></div>
 <table width=100% cellspacing=7>
 	<tr>
-		<td valign='top'>
+		<td>
 			<div class='top_bar'>
 				<span class="list_title"><%=l @date, :format=>:long %></span> 
-				<div class='total_members' id='total_members'><%=@attendances.size%> asistencias</div>
+				<div class='total_members'><%=@attendances.size%> asistencias</div>
 			</div>
 			<div class="table_container"  >
 				<table class='list_table' >
@@ -36,35 +34,12 @@
 		</td>
 		<td width='300px' valign='top'>
 
-
-			<div class='top_bar'><span class="list_title">Agregar miembro</span></div>
-			<div class="table_container" style='padding:10px' >
-				<% form_remote_tag :url => {:controller => 'attendances', :action => 'create'},
-				:html => {:action => {:controller => 'attendances', :action => 'create'}, :id=>'add_member'} do %>
-				<%= text_field_tag :membership, nil, :size=>'10'%> <%= submit_tag 'Aceptar' -%>
-				<% end %>
-			</div>
-
-		
-			<div class='top_bar' style='margin-top:20px'><span class="list_title">Buscar miembro</span></div>
-			<div class="table_container" style='padding:10px' >
-				<% form_remote_tag :url => {:controller => 'attendances', :action => 'search_member'},
-				:html => {:action => {:controller => 'attendances', :action => 'search_member'}, :id=>'search_member'} do %>
-				<table align='center'>
-					<tr>
-						<th>Nombre</th>
-						<td><%= text_field_tag :name, nil, :size=>'20'%></td>
-					</tr>
-					<tr>
-						<th>Apellido</th>
-						<td><%= text_field_tag :last_name, nil, :size=>'20'%></td>
-					</tr>
-					<tr>
-						<td colspan=2 align='right'><%= submit_tag 'Aceptar' -%></td>
-					</tr>
-				</table>
-				<%end%>
-			<div>
+				<div class='top_bar'><span class="list_title">Agregar miembro</span></div>
+				<div class="table_container" style='padding:10px' >
+					16 members en total
+					12 deudores
+					4 al corriente
+				</div>
 
 
 			

@@ -6,6 +6,12 @@
 <% first_day = time.beginning_of_month %>
 <% n = Time.days_in_month(time.month,time.year)%>
 
+<div style='float:left; display:inline-block; margin-top:-26px'>
+<%=link_to  "#{l next_month, :format=>:month_year}", {:action=>'calendar', :date=>next_month}, :class=>'button_link right_rounded'%>
+<%=link_to  "#{l prev_month, :format=>:month_year}", {:action=>'calendar', :date=>prev_month}, :class=>'button_link left_rounded'%>
+</div>
+<div class='clear'></div>
+
 <div id="calendar">
 				<div id="calendar_wrap">
 					<table summary="Calendar">
@@ -32,14 +38,22 @@
 									<td colspan="<%= padding %>" class="pad">&nbsp;</td>
 								<%end%>
               	<%1.upto(n) do |i|%>
-									<%date=Date.new(time.year, time.month, i)%>
-									<%if highlight_today and today?(i)%>
-										<%url = dates[i] %>
-										<%if url%>
-											<td id="date_<%=i%>" class="today"><%=url%></td>
+									<%date=Date.new(time.year, time.month, i)
+									attendances_count=attendances_count(date).to_i
+									%>
+									<%if highlight_today and today?(i, month)%>
+										<%if attendances_count>0 %>
+											<td id="date_<%=i%>" class='has_attendances today'>
+												<%=link_to "#{i} <br />
+													#{attendances_count} asistencias", 
+													{:action=>'day', :date=>date}, :class=>'attendances_count'%>
+											</td>
+
 										<%else%>
-											<td id="date_<%=i%>" class="today"><%=i%></td>
-										<%end%>
+											<td id="date_<%=i%>" class='today'>
+											 	<%=i%>
+											</td>
+										<%end%><!--termina el if de has attendances -->
 								  <%else%>
 										<%url = dates[i] %>
 										<%if url%>
@@ -52,16 +66,21 @@
 											<%if highlight_dates.include?(i)%>
 												<td class="highlight" id="date_<%=i%>" ><%=i%></td>
 											<%else%>
-												<td id="date_<%=i%>" >
-													<%=i%> <br /><br />
-													<span class='attendances_count'>
-														<%if attendances_count(date).to_i>0 %>
-															<%=attendances_count(date)%> asistencias
-														<%end%> 
-													</span>
-												</td>
-											<%end%>
-										<%end%>
+												<%if attendances_count>0 %>
+													<td id="date_<%=i%>" class='has_attendances'>
+														<%=link_to "#{i} <br />
+															#{attendances_count} asistencias", 
+															{:action=>'day', :date=>date}, :class=>'attendances_count'%>
+													</td>
+												
+												<%else%>
+													<td id="date_<%=i%>">
+													 	<%=i%>
+													</td>
+												<%end%><!--termina el if de has attendances -->
+												
+											<%end%><!--termina el if de high lights include -->
+										<%end%><!--termina el if de url -->
 									<%end%>
 									<%if count%7 ==0%>
 										<tr/>

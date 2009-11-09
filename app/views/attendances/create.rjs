@@ -3,7 +3,8 @@ session[:even_or_odd]=(session[:even_or_odd]=='odd' ? 'even' : 'odd')
 if session[:from_results]
   page.visual_effect :fade, "results", :duration => 0.5
 end
+page.replace_html :total_members, "#{@attendances.size} asistencias" 
 page[:add_member].reset 
 page[:search_member].reset 
-#page.replace_html :notice, flash[:notice]  
+ 
 #flash.discard

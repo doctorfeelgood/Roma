@@ -30,19 +30,35 @@
 	height:60px;
 }
 
-#calendar tbody td:hover
+.today {
+	background:url('../images/today_bg.png') right bottom no-repeat;
+
+}
+
+.attendances_count
 {
+	display:block;
+	font-weight:bold;
+	color:#0072BC;
+	height:100%;
+	width:100%;
+	text-decoration:none;
+}
+
+.has_attendances
+{
+	line-height:30px;
+}
+
+.has_attendances:hover, attendances_count:hover
+{
+	border:1px solid #F00;
 	background-color:#C6D7F2;
 	color:#fff;
 	cursor:pointer;
 }
 
-#calendar tbody td:hover .attendances_count
-{
-	color:#0072BC;
-	background-color:#C6D7F2;
-	cursor:pointer;
-}
+
 
 #calendar tfoot td {
 	padding: 5px;
@@ -52,16 +68,9 @@
 	text-align: right;
 }
 
-#calendar .today {
-	background: lightgray;
-}
+
 
 #calendar .highlight {
 	background: lightblue;
 }
 
-.attendances_count
-{
-	font-weight:bold;
-	color:#0072BC;
-}

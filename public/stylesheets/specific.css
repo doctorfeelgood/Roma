@@ -305,45 +305,63 @@ textarea:focus { background-color: #ffd }
 
 
 
-/*aquii */
-.right_button
-{
-	display:inline-block;
-	padding:4px;
-	float:left;
-	text-decoration:none;
-	border:1px solid #cdcdcd;
-	border-bottom:none;
-	-moz-border-radius-topright: 8px;
-	-webkit-border-top-right-radius: 8px;
-	
-}
-
-.right_button:hover
-{
-	background:url(../images/little_button_bg.png) repeat-x;
-}
-
-.left_button img
-{
-	border:none;
-}
-
-.left_button
+/*aquii estan los botones de navegacion
+	si se pone solo un boton hay que hacerlo left rounded
+	si es mas de uno, el primero debe ser right_rounded
+	hay que ponerlos al reves ya que el primero se ira a la derecha 
+	y el segundo a su izquierda
+*/
+.button_link
 {
 	display:inline-block;
 	padding:4px;
 	float:right;
 	text-decoration:none;
 	border:1px solid #cdcdcd;
-	border-right:none;
-	border-bottom:none;
+	color:#0072BC;
+	font-weight:bold;
+}
+
+.button_link img
+{
+	vertical-align:middle;
+	height:16px;
+	width:16px;
+}
+
+.left_rounded
+{
 	-moz-border-radius-topleft: 8px;
+	-moz-border-radius-bottomleft: 8px;
 	-webkit-border-top-left-radius: 8px;
+	-webkit-border-bottom-left-radius: 8px;
+
+}
+
+.right_rounded
+{
+	-moz-border-radius-toprigth: 8px;
+	-moz-border-radius-bottomright: 8px;
+	-webkit-border-top-right-radius: 8px;
+	-webkit-border-bottom-right-radius: 8px;
+	border-left:none;
 	
 }
 
-.left_button:hover
+
+.button_link:hover
 {
 	background:url(../images/little_button_bg.png) repeat-x;
+}
+
+
+
+/*esto es para el top bar */
+.total_members
+{
+	color:#0072BC;
+	display:block;
+	margin-right:20px;
+	float:right;
+	line-height:26px;
 }
