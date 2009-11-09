@@ -1,7 +1,8 @@
 <%session[:even_or_odd]='odd'%>
+<div class='rounded_corners option_buttons_box' style="">
 	<%=link_to image_tag('mini-calendar.png')+" Calendario", {:action=>'calendar', :date=>Date.today}, :class=>'button_link right_rounded'%>
 	<%=link_to image_tag('ayer.png')+" Ayer", {:action=>'day', :date=>Date.today-1}, :class=>'button_link left_rounded'%>
-	
+</div>	
 <div class='clear'></div>
 <table width=100% cellspacing=7>
 	<tr>

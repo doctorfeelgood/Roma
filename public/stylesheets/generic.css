@@ -278,8 +278,8 @@
 	
 	.rounded_corners
 	{
-		-moz-border-radius: 10px;
-		-webkit-border-radius: 10px;
+		-moz-border-radius: 6px;
+		-webkit-border-radius: 6px;
 	}
 	
 	/* este lo uso para debuggear */

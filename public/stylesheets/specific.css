@@ -246,7 +246,7 @@ textarea:focus { background-color: #ffd }
 	height:25px;
 	background:url(/images/close_button_white.png) no-repeat;
 	cursor:pointer;
-	margin-top:-25px;
+	margin-top:-26px;
 
 }
 
@@ -311,6 +311,19 @@ textarea:focus { background-color: #ffd }
 	hay que ponerlos al reves ya que el primero se ira a la derecha 
 	y el segundo a su izquierda
 */
+.option_buttons_box
+{
+	display:inline-block; 
+	margin-top:-30px; 
+	padding:6px; 
+	padding-bottom:0; 
+	float:right; 
+	background-color:#FFF;
+	clear:both;
+}
+
+
+
 .button_link
 {
 	display:inline-block;

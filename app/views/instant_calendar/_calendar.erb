@@ -6,7 +6,7 @@
 <% first_day = time.beginning_of_month %>
 <% n = Time.days_in_month(time.month,time.year)%>
 
-<div style='float:left; display:inline-block; margin-top:-26px'>
+<div style='float:left; display:inline-block; '>
 <%=link_to  "#{l next_month, :format=>:month_year}", {:action=>'calendar', :date=>next_month}, :class=>'button_link right_rounded'%>
 <%=link_to  "#{l prev_month, :format=>:month_year}", {:action=>'calendar', :date=>prev_month}, :class=>'button_link left_rounded'%>
 </div>
