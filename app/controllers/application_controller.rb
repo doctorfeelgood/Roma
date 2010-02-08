@@ -22,5 +22,5 @@ class ApplicationController < ActionController::Base
       page.visual_effect :appear, "jimmy" 
     end
   end
-  
+  #comentario
 end
