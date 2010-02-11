@@ -16239,3 +16239,1757 @@ Rendering attendances/index
   [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 15) [0m
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `memberships` WHERE (`memberships`.member_id = 15) LIMIT 1[0m
 Completed in 107ms (View: 88, DB: 12) | 200 OK [http://localhost/attendances]
+/!\ FAILSAFE /!\  Mon Feb 08 00:41:34 -0600 2010
+  Status: 500 Internal Server Error
+  no such file to load -- mysql
+    c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:156:in `require'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:156:in `require'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/kernel/requires.rb:7:in `require_library_or_gem'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/kernel/reporting.rb:11:in `silence_warnings'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/kernel/requires.rb:5:in `require_library_or_gem'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/mysql_adapter.rb:65:in `mysql_connection'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    c:/Ruby/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+    c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+    c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:46:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:13:in `run'
+    c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+    c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+/!\ FAILSAFE /!\  Mon Feb 08 00:42:47 -0600 2010
+  Status: 500 Internal Server Error
+  no such file to load -- mysql
+    c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:156:in `require'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:156:in `require'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/kernel/requires.rb:7:in `require_library_or_gem'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/kernel/reporting.rb:11:in `silence_warnings'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/kernel/requires.rb:5:in `require_library_or_gem'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/mysql_adapter.rb:65:in `mysql_connection'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    c:/Ruby/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+    c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+    c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:46:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:13:in `run'
+    c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+    c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+/!\ FAILSAFE /!\  Mon Feb 08 00:44:53 -0600 2010
+  Status: 500 Internal Server Error
+  no such file to load -- mysql
+    C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:156:in `require'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:156:in `require'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/kernel/requires.rb:7:in `require_library_or_gem'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/kernel/reporting.rb:11:in `silence_warnings'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/kernel/requires.rb:5:in `require_library_or_gem'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/mysql_adapter.rb:65:in `mysql_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    C:/Ruby/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:46:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:13:in `run'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+    C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+/!\ FAILSAFE /!\  Mon Feb 08 00:46:24 -0600 2010
+  Status: 500 Internal Server Error
+  Unknown database 'gym'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/mysql_adapter.rb:576:in `real_connect'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/mysql_adapter.rb:576:in `connect'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/mysql_adapter.rb:204:in `initialize'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/mysql_adapter.rb:76:in `new'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/mysql_adapter.rb:76:in `mysql_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    C:/Ruby/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:46:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:13:in `run'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+    C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+/!\ FAILSAFE /!\  Mon Feb 08 00:46:25 -0600 2010
+  Status: 500 Internal Server Error
+  Unknown database 'gym'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/mysql_adapter.rb:576:in `real_connect'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/mysql_adapter.rb:576:in `connect'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/mysql_adapter.rb:204:in `initialize'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/mysql_adapter.rb:76:in `new'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/mysql_adapter.rb:76:in `mysql_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    C:/Ruby/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:46:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:13:in `run'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+    C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mMysql::Error: query: not connected: CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mMysql::Error: query: not connected: CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mMysql::Error: query: not connected: CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (159.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (175.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateMembers (20090923075411)
+  [4;35;1mSQL (39.0ms)[0m   [0mCREATE TABLE `members` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `last_name` varchar(255), `phone` varchar(255), `email` varchar(255), `address` varchar(255), `member_number` int(11), `created_by` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (30.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090923075411')[0m
+Migrating to CreateMemberships (20090923075416)
+  [4;35;1mSQL (59.0ms)[0m   [0mCREATE TABLE `memberships` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `member_id` int(11), `rate_id` int(11), `group_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (28.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090923075416')[0m
+Migrating to CreateAttendances (20090923075425)
+  [4;35;1mSQL (60.0ms)[0m   [0mCREATE TABLE `attendances` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `member_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (27.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090923075425')[0m
+Migrating to CreatePayments (20090923075432)
+  [4;35;1mSQL (66.0ms)[0m   [0mCREATE TABLE `payments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `membership_id` int(11), `rate_id` int(11), `paid_month` int(11), `paid_year` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (27.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090923075432')[0m
+Migrating to CreateGroupMembers (20090923075502)
+  [4;35;1mSQL (61.0ms)[0m   [0mCREATE TABLE `group_members` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `group_id` int(11), `member_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (29.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090923075502')[0m
+Migrating to CreateExercises (20090923075601)
+  [4;35;1mSQL (61.0ms)[0m   [0mCREATE TABLE `exercises` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `category_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (29.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090923075601')[0m
+Migrating to CreateRoutineExercises (20090923075729)
+  [4;35;1mSQL (61.0ms)[0m   [0mCREATE TABLE `routine_exercises` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `routine_id` int(11), `exercise_id` int(11), `sets` int(11), `reps` int(11), `super_set` int(11), `user_id` int(11), `comments` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (30.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090923075729')[0m
+Migrating to CreateCategories (20090923075738)
+  [4;35;1mSQL (228.0ms)[0m   [0mCREATE TABLE `categories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (30.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090923075738')[0m
+Migrating to CreateRates (20090923080229)
+  [4;35;1mSQL (77.0ms)[0m   [0mCREATE TABLE `rates` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `price` decimal(4,2), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (21.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090923080229')[0m
+Migrating to CreateRoutines (20090923082825)
+  [4;35;1mSQL (45.0ms)[0m   [0mCREATE TABLE `routines` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `comments` varchar(255), `member_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (22.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090923082825')[0m
+Migrating to CreateGroups (20090923083836)
+  [4;35;1mSQL (52.0ms)[0m   [0mCREATE TABLE `groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `member_id` int(11), `rate_id` int(11), `is_complete` tinyint(1), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (21.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090923083836')[0m
+Migrating to AddAttachmentsPhotoToMember (20091004003031)
+  [4;35;1mSQL (96.0ms)[0m   [0mALTER TABLE `members` ADD `photo_file_name` varchar(255)[0m
+  [4;36;1mSQL (115.0ms)[0m   [0;1mALTER TABLE `members` ADD `photo_content_type` varchar(255)[0m
+  [4;35;1mSQL (113.0ms)[0m   [0mALTER TABLE `members` ADD `photo_file_size` int(11)[0m
+  [4;36;1mSQL (122.0ms)[0m   [0;1mALTER TABLE `members` ADD `photo_updated_at` datetime[0m
+  [4;35;1mSQL (21.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091004003031')[0m
+Migrating to ChangePrecision (20091030071057)
+  [4;36;1mSQL (112.0ms)[0m   [0;1mALTER TABLE `rates` DROP `price`[0m
+  [4;35;1mSQL (140.0ms)[0m   [0mALTER TABLE `rates` ADD `price` decimal(6,2)[0m
+  [4;36;1mSQL (29.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091030071057')[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSHOW FIELDS FROM `attendances`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mdescribe `attendances`[0m
+  [4;36;1mSQL (13.0ms)[0m   [0;1mSHOW KEYS FROM `attendances`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mSQL (8.0ms)[0m   [0;1mdescribe `categories`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mSHOW KEYS FROM `categories`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mSQL (11.0ms)[0m   [0mdescribe `exercises`[0m
+  [4;36;1mSQL (8.0ms)[0m   [0;1mSHOW KEYS FROM `exercises`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `group_members`[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mdescribe `group_members`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW KEYS FROM `group_members`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mdescribe `groups`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW KEYS FROM `groups`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mdescribe `members`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW KEYS FROM `members`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `memberships`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mdescribe `memberships`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW KEYS FROM `memberships`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW FIELDS FROM `payments`[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mdescribe `payments`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW KEYS FROM `payments`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `rates`[0m
+  [4;35;1mSQL (9.0ms)[0m   [0mdescribe `rates`[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mSHOW KEYS FROM `rates`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW FIELDS FROM `routine_exercises`[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mdescribe `routine_exercises`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW KEYS FROM `routine_exercises`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `routines`[0m
+  [4;35;1mSQL (8.0ms)[0m   [0mdescribe `routines`[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mSHOW KEYS FROM `routines`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-02-08 01:24:10) [GET]
+  [4;36;1mAttendance Load (1.0ms)[0m   [0;1mSELECT * FROM `attendances` ORDER BY created_at DESC[0m
+Rendering template within layouts/main
+Rendering attendances/index
+Completed in 3026ms (View: 150, DB: 1) | 200 OK [http://localhost/attendances]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AttendancesController#today (for 127.0.0.1 at 2010-02-08 01:24:17) [GET]
+  [4;35;1mAttendance Load (17.0ms)[0m   [0mSELECT * FROM `attendances` WHERE (created_at > '2010-02-08' AND created_at < '2010-02-09') ORDER BY created_at DESC[0m
+Rendering template within layouts/main
+Rendering attendances/today
+Completed in 287ms (View: 35, DB: 17) | 200 OK [http://localhost/attendances/today]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#index (for 127.0.0.1 at 2010-02-08 01:24:24) [GET]
+  [4;36;1mMembership Load (1.0ms)[0m   [0;1mSELECT * FROM `memberships` [0m
+  [4;35;1mRate Load (1.0ms)[0m   [0mSELECT * FROM `rates` [0m
+Rendering template within layouts/main
+Rendering memberships/index
+Completed in 51ms (View: 32, DB: 2) | 200 OK [http://localhost/memberships]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#new (for 127.0.0.1 at 2010-02-08 01:24:26) [POST]
+  Parameters: {"authenticity_token"=>"XanuoniEJCXl42dG/r7HUKEq7a3TttgeU/xyfAqAJik=", "_"=>""}
+  [4;36;1mMembership Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `memberships`[0m
+Rendering memberships/new
+  [4;35;1mRate Load (0.0ms)[0m   [0mSELECT * FROM `rates` [0m
+Rendered memberships/_form (21.0ms)
+Rendered memberships/_new (36.0ms)
+Completed in 67ms (View: 49, DB: 5) | 200 OK [http://localhost/memberships/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#create (for 127.0.0.1 at 2010-02-08 01:26:52) [POST]
+  Parameters: {"membership"=>{"rate_id"=>"", "member"=>{"name"=>"alberto", "photo"=>#<File:C:/Users/Alberto/AppData/Local/Temp/RackMultipart.752.1>, "phone"=>"81155613191", "last_name"=>"rodriguez", "address"=>"no", "email"=>"albertordz@gmail.com"}}, "x"=>"52", "y"=>"17", "authenticity_token"=>"XanuoniEJCXl42dG/r7HUKEq7a3TttgeU/xyfAqAJik="}
+  [4;36;1mMembership Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `memberships`[0m
+  [4;35;1mMember Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+[paperclip] An error was received while processing: #<Paperclip::NotIdentifiedByImageMagickError: C:/Users/Alberto/AppData/Local/Temp/stream.752.0 is not recognized by the 'identify' command.>
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMembership Create (0.0ms)[0m   [0mINSERT INTO `memberships` (`updated_at`, `member_id`, `rate_id`, `group_id`, `created_at`) VALUES('2010-02-08 07:26:53', NULL, 0, NULL, '2010-02-08 07:26:53')[0m
+  [4;36;1mSQL (19.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/memberships
+Completed in 508ms (DB: 30) | 302 Found [http://localhost/memberships]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#index (for 127.0.0.1 at 2010-02-08 01:26:54) [GET]
+  [4;35;1mMembership Load (0.0ms)[0m   [0mSELECT * FROM `memberships` [0m
+  [4;36;1mRate Load (1.0ms)[0m   [0;1mSELECT * FROM `rates` [0m
+Rendering template within layouts/main
+Rendering memberships/index
+  [4;35;1mMembership Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `memberships`[0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #14 of app/views/memberships/index.html.erb:
+11: 	<% @memberships.each do |membership| %>
+12: 	  	<tr class="<%= cycle("even", "odd") %>">
+13: 			<td><%=membership.id%></td>
+14: 			<td class='capitalize_me'><%=membership.member.name+' '+membership.member.last_name%></td>
+15: 			<td><%=membership.rate.name%></td>
+16: 	    	<td><%= link_to_remote 'Mostrar', :url=>membership, :method=>:get, :html=>{:class=>'link to_show'} %></td>
+17: 			<td><%= link_to_remote 'Editar', :url=>edit_membership_path(membership), :method=>:get, :html=>{:class=>'link to_edit'} %></td>
+
+    app/views/memberships/index.html.erb:14
+    app/views/memberships/index.html.erb:11:in `each'
+    app/views/memberships/index.html.erb:11
+    app/controllers/memberships_controller.rb:10:in `index'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (95.0ms)
+Rendered rescues/_request_and_response (3.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#index (for 127.0.0.1 at 2010-02-08 01:27:19) [GET]
+  [4;36;1mMembership Load (1.0ms)[0m   [0;1mSELECT * FROM `memberships` [0m
+  [4;35;1mRate Load (0.0ms)[0m   [0mSELECT * FROM `rates` [0m
+Rendering template within layouts/main
+Rendering memberships/index
+  [4;36;1mMembership Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `memberships`[0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #14 of app/views/memberships/index.html.erb:
+11: 	<% @memberships.each do |membership| %>
+12: 	  	<tr class="<%= cycle("even", "odd") %>">
+13: 			<td><%=membership.id%></td>
+14: 			<td class='capitalize_me'><%=membership.member.name+' '+membership.member.last_name%></td>
+15: 			<td><%=membership.rate.name%></td>
+16: 	    	<td><%= link_to_remote 'Mostrar', :url=>membership, :method=>:get, :html=>{:class=>'link to_show'} %></td>
+17: 			<td><%= link_to_remote 'Editar', :url=>edit_membership_path(membership), :method=>:get, :html=>{:class=>'link to_edit'} %></td>
+
+    app/views/memberships/index.html.erb:14
+    app/views/memberships/index.html.erb:11:in `each'
+    app/views/memberships/index.html.erb:11
+    app/controllers/memberships_controller.rb:10:in `index'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (158.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (51.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-02-09 10:25:32) [GET]
+  [4;36;1mAttendance Load (116.0ms)[0m   [0;1mSELECT * FROM `attendances` ORDER BY created_at DESC[0m
+Rendering template within layouts/main
+Rendering attendances/index
+Completed in 3156ms (View: 158, DB: 168) | 200 OK [http://localhost/attendances]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#index (for 127.0.0.1 at 2010-02-09 10:25:44) [GET]
+  [4;35;1mMembership Load (24.0ms)[0m   [0mSELECT * FROM `memberships` [0m
+  [4;36;1mRate Load (12.0ms)[0m   [0;1mSELECT * FROM `rates` [0m
+Rendering template within layouts/main
+Rendering memberships/index
+  [4;35;1mMembership Columns (30.0ms)[0m   [0mSHOW FIELDS FROM `memberships`[0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #14 of app/views/memberships/index.html.erb:
+11: 	<% @memberships.each do |membership| %>
+12: 	  	<tr class="<%= cycle("even", "odd") %>">
+13: 			<td><%=membership.id%></td>
+14: 			<td class='capitalize_me'><%=membership.member.name+' '+membership.member.last_name%></td>
+15: 			<td><%=membership.rate.name%></td>
+16: 	    	<td><%= link_to_remote 'Mostrar', :url=>membership, :method=>:get, :html=>{:class=>'link to_show'} %></td>
+17: 			<td><%= link_to_remote 'Editar', :url=>edit_membership_path(membership), :method=>:get, :html=>{:class=>'link to_edit'} %></td>
+
+    app/views/memberships/index.html.erb:14
+    app/views/memberships/index.html.erb:11:in `each'
+    app/views/memberships/index.html.erb:11
+    app/controllers/memberships_controller.rb:10:in `index'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (88.0ms)
+Rendered rescues/_request_and_response (3.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2010-02-09 10:25:56) [GET]
+  [4;36;1mMember Load (59.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (created_at >= '2010-02-09') [0m
+  [4;35;1mMember Load (1.0ms)[0m   [0mSELECT * FROM `members` [0m
+Rendering template within layouts/main
+Rendering members/index
+Completed in 261ms (View: 83, DB: 60) | 200 OK [http://localhost/members]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2010-02-09 10:25:59) [POST]
+  Parameters: {"authenticity_token"=>"P3d5vUECeihuKn809OPN8QoqQjMD9Bf39CH/6t+ER9Q=", "_"=>""}
+  [4;36;1mMember Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+Rendering members/new
+Rendered members/_form (11.0ms)
+Rendered members/_new (123.0ms)
+Completed in 164ms (View: 144, DB: 5) | 200 OK [http://localhost/members/new]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#index (for 127.0.0.1 at 2010-02-09 10:26:05) [GET]
+  [4;35;1mMembership Load (0.0ms)[0m   [0mSELECT * FROM `memberships` [0m
+  [4;36;1mRate Load (1.0ms)[0m   [0;1mSELECT * FROM `rates` [0m
+Rendering template within layouts/main
+Rendering memberships/index
+  [4;35;1mMembership Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `memberships`[0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #14 of app/views/memberships/index.html.erb:
+11: 	<% @memberships.each do |membership| %>
+12: 	  	<tr class="<%= cycle("even", "odd") %>">
+13: 			<td><%=membership.id%></td>
+14: 			<td class='capitalize_me'><%=membership.member.name+' '+membership.member.last_name%></td>
+15: 			<td><%=membership.rate.name%></td>
+16: 	    	<td><%= link_to_remote 'Mostrar', :url=>membership, :method=>:get, :html=>{:class=>'link to_show'} %></td>
+17: 			<td><%= link_to_remote 'Editar', :url=>edit_membership_path(membership), :method=>:get, :html=>{:class=>'link to_edit'} %></td>
+
+    app/views/memberships/index.html.erb:14
+    app/views/memberships/index.html.erb:11:in `each'
+    app/views/memberships/index.html.erb:11
+    app/controllers/memberships_controller.rb:10:in `index'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (101.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#index (for 127.0.0.1 at 2010-02-09 10:27:28) [GET]
+  [4;36;1mMembership Load (0.0ms)[0m   [0;1mSELECT * FROM `memberships` [0m
+  [4;35;1mRate Load (0.0ms)[0m   [0mSELECT * FROM `rates` [0m
+Rendering template within layouts/main
+Rendering memberships/index
+Completed in 24ms (View: 8, DB: 1) | 200 OK [http://localhost/memberships]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#new (for 127.0.0.1 at 2010-02-09 10:27:31) [POST]
+  Parameters: {"authenticity_token"=>"P3d5vUECeihuKn809OPN8QoqQjMD9Bf39CH/6t+ER9Q=", "_"=>""}
+  [4;36;1mMembership Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `memberships`[0m
+Rendering memberships/new
+  [4;35;1mRate Load (0.0ms)[0m   [0mSELECT * FROM `rates` [0m
+Rendered memberships/_form (112.0ms)
+Rendered memberships/_new (172.0ms)
+Completed in 271ms (View: 258, DB: 5) | 200 OK [http://localhost/memberships/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RatesController#index (for 127.0.0.1 at 2010-02-09 10:27:37) [GET]
+  [4;36;1mRate Load (1.0ms)[0m   [0;1mSELECT * FROM `rates` [0m
+Rendering template within layouts/main
+Rendering rates/index
+Completed in 121ms (View: 111, DB: 1) | 200 OK [http://localhost/rates]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RatesController#new (for 127.0.0.1 at 2010-02-09 10:27:40) [GET]
+  [4;35;1mRate Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `rates`[0m
+Rendering template within layouts/main
+Rendering rates/new
+Rendered rates/_form (3.0ms)
+Completed in 37ms (View: 23, DB: 8) | 200 OK [http://localhost/rates/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RatesController#create (for 127.0.0.1 at 2010-02-09 10:27:48) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"P3d5vUECeihuKn809OPN8QoqQjMD9Bf39CH/6t+ER9Q=", "rate"=>{"name"=>"Estudiantes", "price"=>"300"}}
+  [4;36;1mRate Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `rates`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mRate Create (14.0ms)[0m   [0;1mINSERT INTO `rates` (`name`, `updated_at`, `price`, `created_at`) VALUES('Estudiantes', '2010-02-09 16:27:48', 300.0, '2010-02-09 16:27:48')[0m
+  [4;35;1mSQL (17.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/rates/1
+Completed in 53ms (DB: 39) | 302 Found [http://localhost/rates]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RatesController#show (for 127.0.0.1 at 2010-02-09 10:27:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mRate Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `rates`[0m
+  [4;35;1mRate Load (92.0ms)[0m   [0mSELECT * FROM `rates` WHERE (`rates`.`id` = 1) [0m
+Rendering template within layouts/main
+Rendering rates/show
+Completed in 134ms (View: 25, DB: 97) | 200 OK [http://localhost/rates/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#index (for 127.0.0.1 at 2010-02-09 10:27:57) [GET]
+  [4;36;1mMembership Load (1.0ms)[0m   [0;1mSELECT * FROM `memberships` [0m
+  [4;35;1mRate Load (0.0ms)[0m   [0mSELECT * FROM `rates` [0m
+Rendering template within layouts/main
+Rendering memberships/index
+Completed in 30ms (View: 9, DB: 2) | 200 OK [http://localhost/memberships]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#new (for 127.0.0.1 at 2010-02-09 10:27:58) [POST]
+  Parameters: {"authenticity_token"=>"P3d5vUECeihuKn809OPN8QoqQjMD9Bf39CH/6t+ER9Q=", "_"=>""}
+  [4;36;1mMembership Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `memberships`[0m
+Rendering memberships/new
+  [4;35;1mRate Load (1.0ms)[0m   [0mSELECT * FROM `rates` [0m
+  [4;36;1mRate Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `rates`[0m
+Rendered memberships/_form (26.0ms)
+Rendered memberships/_new (32.0ms)
+Completed in 51ms (View: 32, DB: 9) | 200 OK [http://localhost/memberships/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#create (for 127.0.0.1 at 2010-02-09 10:33:29) [POST]
+  Parameters: {"membership"=>{"rate_id"=>"1", "member"=>{"name"=>"Alberto", "photo"=>#<File:C:/Users/Alberto/AppData/Local/Temp/RackMultipart.5252.1>, "phone"=>"8115561319", "last_name"=>"Rodriguez", "address"=>"Filosofos", "email"=>"albertordz@gmail.com"}}, "x"=>"33", "y"=>"8", "authenticity_token"=>"P3d5vUECeihuKn809OPN8QoqQjMD9Bf39CH/6t+ER9Q="}
+  [4;35;1mMembership Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `memberships`[0m
+  [4;36;1mMember Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+[paperclip] An error was received while processing: #<Paperclip::NotIdentifiedByImageMagickError: C:/Users/Alberto/AppData/Local/Temp/stream.5252.0 is not recognized by the 'identify' command.>
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mMembership Create (18.0ms)[0m   [0;1mINSERT INTO `memberships` (`updated_at`, `member_id`, `rate_id`, `group_id`, `created_at`) VALUES('2010-02-09 16:33:30', NULL, 1, NULL, '2010-02-09 16:33:30')[0m
+  [4;35;1mSQL (27.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/memberships
+Completed in 428ms (DB: 54) | 302 Found [http://localhost/memberships]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#index (for 127.0.0.1 at 2010-02-09 10:33:31) [GET]
+  [4;36;1mMembership Load (0.0ms)[0m   [0;1mSELECT * FROM `memberships` [0m
+  [4;35;1mRate Load (1.0ms)[0m   [0mSELECT * FROM `rates` [0m
+Rendering template within layouts/main
+Rendering memberships/index
+  [4;36;1mMembership Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `memberships`[0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #14 of app/views/memberships/index.html.erb:
+11: 	<% @memberships.each do |membership| %>
+12: 	  	<tr class="<%= cycle("even", "odd") %>">
+13: 			<td><%=membership.id%></td>
+14: 			<td class='capitalize_me'><%=membership.member.name+' '+membership.member.last_name%></td>
+15: 			<td><%=membership.rate.name%></td>
+16: 	    	<td><%= link_to_remote 'Mostrar', :url=>membership, :method=>:get, :html=>{:class=>'link to_show'} %></td>
+17: 			<td><%= link_to_remote 'Editar', :url=>edit_membership_path(membership), :method=>:get, :html=>{:class=>'link to_edit'} %></td>
+
+    app/views/memberships/index.html.erb:14
+    app/views/memberships/index.html.erb:11:in `each'
+    app/views/memberships/index.html.erb:11
+    app/controllers/memberships_controller.rb:10:in `index'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (185.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#index (for 127.0.0.1 at 2010-02-09 10:57:49) [GET]
+  [4;36;1mMembership Load (0.0ms)[0m   [0;1mSELECT * FROM `memberships` [0m
+  [4;35;1mRate Load (0.0ms)[0m   [0mSELECT * FROM `rates` [0m
+Rendering template within layouts/main
+Rendering memberships/index
+  [4;36;1mMembership Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `memberships`[0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #14 of app/views/memberships/index.html.erb:
+11: 	<% @memberships.each do |membership| %>
+12: 	  	<tr class="<%= cycle("even", "odd") %>">
+13: 			<td><%=membership.id%></td>
+14: 			<td class='capitalize_me'><%=membership.member.name+' '+membership.member.last_name%></td>
+15: 			<td><%=membership.rate.name%></td>
+16: 	    	<td><%= link_to_remote 'Mostrar', :url=>membership, :method=>:get, :html=>{:class=>'link to_show'} %></td>
+17: 			<td><%= link_to_remote 'Editar', :url=>edit_membership_path(membership), :method=>:get, :html=>{:class=>'link to_edit'} %></td>
+
+    app/views/memberships/index.html.erb:14
+    app/views/memberships/index.html.erb:11:in `each'
+    app/views/memberships/index.html.erb:11
+    app/controllers/memberships_controller.rb:10:in `index'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (86.0ms)
+Rendered rescues/_request_and_response (3.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#index (for 127.0.0.1 at 2010-02-09 10:58:00) [GET]
+  [4;35;1mMembership Load (1.0ms)[0m   [0mSELECT * FROM `memberships` [0m
+  [4;36;1mRate Load (1.0ms)[0m   [0;1mSELECT * FROM `rates` [0m
+Rendering template within layouts/main
+Rendering memberships/index
+  [4;35;1mMembership Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `memberships`[0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #14 of app/views/memberships/index.html.erb:
+11: 	<% @memberships.each do |membership| %>
+12: 	  	<tr class="<%= cycle("even", "odd") %>">
+13: 			<td><%=membership.id%></td>
+14: 			<td class='capitalize_me'><%=membership.member.name+' '+membership.member.last_name%></td>
+15: 			<td><%=membership.rate.name%></td>
+16: 	    	<td><%= link_to_remote 'Mostrar', :url=>membership, :method=>:get, :html=>{:class=>'link to_show'} %></td>
+17: 			<td><%= link_to_remote 'Editar', :url=>edit_membership_path(membership), :method=>:get, :html=>{:class=>'link to_edit'} %></td>
+
+    app/views/memberships/index.html.erb:14
+    app/views/memberships/index.html.erb:11:in `each'
+    app/views/memberships/index.html.erb:11
+    app/controllers/memberships_controller.rb:10:in `index'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (88.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#index (for 127.0.0.1 at 2010-02-09 10:58:18) [GET]
+  [4;36;1mMembership Load (0.0ms)[0m   [0;1mSELECT * FROM `memberships` [0m
+  [4;35;1mRate Load (1.0ms)[0m   [0mSELECT * FROM `rates` [0m
+Rendering template within layouts/main
+Rendering memberships/index
+Completed in 34ms (View: 15, DB: 1) | 200 OK [http://localhost/memberships]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#new (for 127.0.0.1 at 2010-02-09 10:58:19) [POST]
+  Parameters: {"authenticity_token"=>"P3d5vUECeihuKn809OPN8QoqQjMD9Bf39CH/6t+ER9Q=", "_"=>""}
+  [4;36;1mMembership Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `memberships`[0m
+Rendering memberships/new
+  [4;35;1mRate Load (1.0ms)[0m   [0mSELECT * FROM `rates` [0m
+  [4;36;1mRate Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `rates`[0m
+Rendered memberships/_form (29.0ms)
+Rendered memberships/_new (43.0ms)
+Completed in 115ms (View: 93, DB: 10) | 200 OK [http://localhost/memberships/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#create (for 127.0.0.1 at 2010-02-09 10:58:43) [POST]
+  Parameters: {"membership"=>{"rate_id"=>"1", "member"=>{"name"=>"alberto", "photo"=>#<File:C:/Users/Alberto/AppData/Local/Temp/RackMultipart.5964.1>, "phone"=>"90880980", "last_name"=>"rod", "address"=>"sdfjsdfiod l", "email"=>"albertordz@gmail.com"}}, "x"=>"69", "y"=>"9", "authenticity_token"=>"P3d5vUECeihuKn809OPN8QoqQjMD9Bf39CH/6t+ER9Q="}
+  [4;35;1mMembership Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `memberships`[0m
+  [4;36;1mMember Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+[paperclip] An error was received while processing: #<Paperclip::NotIdentifiedByImageMagickError: C:/Users/Alberto/AppData/Local/Temp/stream.5964.0 is not recognized by the 'identify' command.>
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mMembership Create (0.0ms)[0m   [0;1mINSERT INTO `memberships` (`updated_at`, `member_id`, `rate_id`, `group_id`, `created_at`) VALUES('2010-02-09 16:58:43', NULL, 1, NULL, '2010-02-09 16:58:43')[0m
+  [4;35;1mSQL (19.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/memberships
+Completed in 260ms (DB: 28) | 302 Found [http://localhost/memberships]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#index (for 127.0.0.1 at 2010-02-09 10:58:43) [GET]
+  [4;36;1mMembership Load (0.0ms)[0m   [0;1mSELECT * FROM `memberships` [0m
+  [4;35;1mRate Load (1.0ms)[0m   [0mSELECT * FROM `rates` [0m
+Rendering template within layouts/main
+Rendering memberships/index
+  [4;36;1mMembership Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `memberships`[0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #14 of app/views/memberships/index.html.erb:
+11: 	<% @memberships.each do |membership| %>
+12: 	  	<tr class="<%= cycle("even", "odd") %>">
+13: 			<td><%=membership.id%></td>
+14: 			<td class='capitalize_me'><%=membership.member.name+' '+membership.member.last_name%></td>
+15: 			<td><%=membership.rate.name%></td>
+16: 	    	<td><%= link_to_remote 'Mostrar', :url=>membership, :method=>:get, :html=>{:class=>'link to_show'} %></td>
+17: 			<td><%= link_to_remote 'Editar', :url=>edit_membership_path(membership), :method=>:get, :html=>{:class=>'link to_edit'} %></td>
+
+    app/views/memberships/index.html.erb:14
+    app/views/memberships/index.html.erb:11:in `each'
+    app/views/memberships/index.html.erb:11
+    app/controllers/memberships_controller.rb:10:in `index'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (146.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#index (for 127.0.0.1 at 2010-02-09 11:31:44) [GET]
+  [4;36;1mMembership Load (0.0ms)[0m   [0;1mSELECT * FROM `memberships` [0m
+  [4;35;1mRate Load (0.0ms)[0m   [0mSELECT * FROM `rates` [0m
+Rendering template within layouts/main
+Rendering memberships/index
+Completed in 77ms (View: 40, DB: 0) | 200 OK [http://localhost/memberships]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#new (for 127.0.0.1 at 2010-02-09 11:31:47) [POST]
+  Parameters: {"authenticity_token"=>"P3d5vUECeihuKn809OPN8QoqQjMD9Bf39CH/6t+ER9Q=", "_"=>""}
+  [4;36;1mMembership Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `memberships`[0m
+Rendering memberships/new
+  [4;35;1mRate Load (1.0ms)[0m   [0mSELECT * FROM `rates` [0m
+  [4;36;1mRate Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `rates`[0m
+Rendered memberships/_form (29.0ms)
+Rendered memberships/_new (118.0ms)
+Completed in 188ms (View: 165, DB: 9) | 200 OK [http://localhost/memberships/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#create (for 127.0.0.1 at 2010-02-09 11:32:05) [POST]
+  Parameters: {"membership"=>{"rate_id"=>"1", "member"=>{"name"=>"alberto", "photo"=>#<File:C:/Users/Alberto/AppData/Local/Temp/RackMultipart.5324.1>, "phone"=>"324234", "last_name"=>"rodriguez", "address"=>"sdfsdfsdf", "email"=>"albertordz@gmail.com"}}, "x"=>"54", "y"=>"1", "authenticity_token"=>"P3d5vUECeihuKn809OPN8QoqQjMD9Bf39CH/6t+ER9Q="}
+  [4;35;1mMembership Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `memberships`[0m
+  [4;36;1mMember Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+[paperclip] An error was received while processing: #<Paperclip::NotIdentifiedByImageMagickError: C:/Users/Alberto/AppData/Local/Temp/stream.5324.0 is not recognized by the 'identify' command.>
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mMembership Create (0.0ms)[0m   [0;1mINSERT INTO `memberships` (`updated_at`, `member_id`, `rate_id`, `group_id`, `created_at`) VALUES('2010-02-09 17:32:05', NULL, 1, NULL, '2010-02-09 17:32:05')[0m
+  [4;35;1mSQL (34.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/memberships
+Completed in 402ms (DB: 43) | 302 Found [http://localhost/memberships]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#index (for 127.0.0.1 at 2010-02-09 11:32:05) [GET]
+  [4;36;1mMembership Load (1.0ms)[0m   [0;1mSELECT * FROM `memberships` [0m
+  [4;35;1mRate Load (0.0ms)[0m   [0mSELECT * FROM `rates` [0m
+Rendering template within layouts/main
+Rendering memberships/index
+  [4;36;1mMembership Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `memberships`[0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #14 of app/views/memberships/index.html.erb:
+11: 	<% @memberships.each do |membership| %>
+12: 	  	<tr class="<%= cycle("even", "odd") %>">
+13: 			<td><%=membership.id%></td>
+14: 			<td class='capitalize_me'><%=membership.member.name+' '+membership.member.last_name%></td>
+15: 			<td><%=membership.rate.name%></td>
+16: 	    	<td><%= link_to_remote 'Mostrar', :url=>membership, :method=>:get, :html=>{:class=>'link to_show'} %></td>
+17: 			<td><%= link_to_remote 'Editar', :url=>edit_membership_path(membership), :method=>:get, :html=>{:class=>'link to_edit'} %></td>
+
+    app/views/memberships/index.html.erb:14
+    app/views/memberships/index.html.erb:11:in `each'
+    app/views/memberships/index.html.erb:11
+    app/controllers/memberships_controller.rb:10:in `index'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (157.0ms)
+Rendered rescues/_request_and_response (3.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#index (for 127.0.0.1 at 2010-02-09 11:41:26) [GET]
+  [4;36;1mMembership Load (1.0ms)[0m   [0;1mSELECT * FROM `memberships` [0m
+  [4;35;1mRate Load (1.0ms)[0m   [0mSELECT * FROM `rates` [0m
+Rendering template within layouts/main
+Rendering memberships/index
+Completed in 74ms (View: 39, DB: 2) | 200 OK [http://localhost/memberships]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#new (for 127.0.0.1 at 2010-02-09 11:41:40) [POST]
+  Parameters: {"authenticity_token"=>"P3d5vUECeihuKn809OPN8QoqQjMD9Bf39CH/6t+ER9Q=", "_"=>""}
+  [4;36;1mMembership Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `memberships`[0m
+Rendering memberships/new
+  [4;35;1mRate Load (0.0ms)[0m   [0mSELECT * FROM `rates` [0m
+  [4;36;1mRate Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `rates`[0m
+Rendered memberships/_form (26.0ms)
+Rendered memberships/_new (111.0ms)
+Completed in 176ms (View: 157, DB: 9) | 200 OK [http://localhost/memberships/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#create (for 127.0.0.1 at 2010-02-09 11:42:07) [POST]
+  Parameters: {"membership"=>{"rate_id"=>"1", "member"=>{"name"=>"alberto", "photo"=>#<File:C:/Users/Alberto/AppData/Local/Temp/RackMultipart.4820.1>, "phone"=>"0909809", "last_name"=>"rodriguez", "address"=>"skdflskdjfl", "email"=>"albertordz@gmail.com"}}, "x"=>"33", "y"=>"11", "authenticity_token"=>"P3d5vUECeihuKn809OPN8QoqQjMD9Bf39CH/6t+ER9Q="}
+  [4;35;1mMembership Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `memberships`[0m
+  [4;36;1mMember Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+[paperclip] An error was received while processing: #<Paperclip::NotIdentifiedByImageMagickError: C:/Users/Alberto/AppData/Local/Temp/stream.4820.0 is not recognized by the 'identify' command.>
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mMembership Create (0.0ms)[0m   [0;1mINSERT INTO `memberships` (`updated_at`, `member_id`, `rate_id`, `group_id`, `created_at`) VALUES('2010-02-09 17:42:08', NULL, 1, NULL, '2010-02-09 17:42:08')[0m
+  [4;35;1mSQL (27.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/memberships
+Completed in 339ms (DB: 37) | 302 Found [http://localhost/memberships]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#index (for 127.0.0.1 at 2010-02-09 11:42:09) [GET]
+  [4;36;1mMembership Load (1.0ms)[0m   [0;1mSELECT * FROM `memberships` [0m
+  [4;35;1mRate Load (0.0ms)[0m   [0mSELECT * FROM `rates` [0m
+Rendering template within layouts/main
+Rendering memberships/index
+  [4;36;1mMembership Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `memberships`[0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #14 of app/views/memberships/index.html.erb:
+11: 	<% @memberships.each do |membership| %>
+12: 	  	<tr class="<%= cycle("even", "odd") %>">
+13: 			<td><%=membership.id%></td>
+14: 			<td class='capitalize_me'><%=membership.member.name+' '+membership.member.last_name%></td>
+15: 			<td><%=membership.rate.name%></td>
+16: 	    	<td><%= link_to_remote 'Mostrar', :url=>membership, :method=>:get, :html=>{:class=>'link to_show'} %></td>
+17: 			<td><%= link_to_remote 'Editar', :url=>edit_membership_path(membership), :method=>:get, :html=>{:class=>'link to_edit'} %></td>
+
+    app/views/memberships/index.html.erb:14
+    app/views/memberships/index.html.erb:11:in `each'
+    app/views/memberships/index.html.erb:11
+    app/controllers/memberships_controller.rb:10:in `index'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (172.0ms)
+Rendered rescues/_request_and_response (3.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#index (for 127.0.0.1 at 2010-02-09 12:17:07) [GET]
+  [4;36;1mMembership Load (0.0ms)[0m   [0;1mSELECT * FROM `memberships` [0m
+  [4;35;1mRate Load (1.0ms)[0m   [0mSELECT * FROM `rates` [0m
+Rendering template within layouts/main
+Rendering memberships/index
+Completed in 77ms (View: 39, DB: 1) | 200 OK [http://localhost/memberships]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#new (for 127.0.0.1 at 2010-02-09 12:17:10) [POST]
+  Parameters: {"authenticity_token"=>"P3d5vUECeihuKn809OPN8QoqQjMD9Bf39CH/6t+ER9Q=", "_"=>""}
+  [4;36;1mMembership Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `memberships`[0m
+Rendering memberships/new
+  [4;35;1mRate Load (0.0ms)[0m   [0mSELECT * FROM `rates` [0m
+  [4;36;1mRate Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `rates`[0m
+Rendered memberships/_form (30.0ms)
+Rendered memberships/_new (123.0ms)
+Completed in 195ms (View: 175, DB: 7) | 200 OK [http://localhost/memberships/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#create (for 127.0.0.1 at 2010-02-09 12:17:35) [POST]
+  Parameters: {"membership"=>{"rate_id"=>"1", "member"=>{"name"=>"alberto", "photo"=>#<File:C:/Users/Alberto/AppData/Local/Temp/RackMultipart.5396.1>, "phone"=>"9080980", "last_name"=>"rodriguez", "address"=>"DKFLKSJD ", "email"=>"albertordz@gmail.com"}}, "x"=>"55", "y"=>"18", "authenticity_token"=>"P3d5vUECeihuKn809OPN8QoqQjMD9Bf39CH/6t+ER9Q="}
+  [4;35;1mMembership Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `memberships`[0m
+  [4;36;1mMember Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mMember Create (17.0ms)[0m   [0;1mINSERT INTO `members` (`name`, `updated_at`, `photo_file_name`, `photo_file_size`, `created_by`, `photo_updated_at`, `photo_content_type`, `phone`, `member_number`, `last_name`, `address`, `email`, `created_at`) VALUES('alberto', '2010-02-09 18:17:36', 'imgres.jpg', 4255, NULL, '2010-02-09 18:17:36', 'image/jpeg', '9080980', NULL, 'rodriguez', 'DKFLKSJD ', 'albertordz@gmail.com', '2010-02-09 18:17:36')[0m
+[paperclip] Saving attachments.
+[paperclip] saving D:/codigo/Roma/public/system/photos/1/original/imgres.jpg
+[paperclip] saving D:/codigo/Roma/public/system/photos/1/small/imgres.jpg
+  [4;35;1mSQL (11.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMembership Create (0.0ms)[0m   [0mINSERT INTO `memberships` (`updated_at`, `member_id`, `rate_id`, `group_id`, `created_at`) VALUES('2010-02-09 18:17:36', 1, 1, NULL, '2010-02-09 18:17:36')[0m
+  [4;36;1mSQL (21.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/memberships
+Completed in 965ms (DB: 61) | 302 Found [http://localhost/memberships]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#index (for 127.0.0.1 at 2010-02-09 12:17:37) [GET]
+  [4;35;1mMembership Load (1.0ms)[0m   [0mSELECT * FROM `memberships` [0m
+  [4;36;1mRate Load (1.0ms)[0m   [0;1mSELECT * FROM `rates` [0m
+Rendering template within layouts/main
+Rendering memberships/index
+  [4;35;1mMembership Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `memberships`[0m
+  [4;36;1mMember Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (2.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;36;1mRate Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `rates`[0m
+  [4;35;1mRate Load (6.0ms)[0m   [0mSELECT * FROM `rates` WHERE (`rates`.`id` = 1) [0m
+Completed in 65ms (View: 28, DB: 23) | 200 OK [http://localhost/memberships]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#show (for 127.0.0.1 at 2010-02-09 12:17:43) [GET]
+  Parameters: {"authenticity_token"=>"P3d5vUECeihuKn809OPN8QoqQjMD9Bf39CH/6t+ER9Q=", "id"=>"6"}
+  [4;36;1mMembership Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `memberships`[0m
+  [4;35;1mMembership Load (2.0ms)[0m   [0mSELECT * FROM `memberships` WHERE (`memberships`.`id` = 6) [0m
+  [4;36;1mMember Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (2.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+Rendering memberships/show
+  [4;36;1mRate Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `rates`[0m
+  [4;35;1mRate Load (6.0ms)[0m   [0mSELECT * FROM `rates` WHERE (`rates`.`id` = 1) [0m
+Rendered memberships/_show (175.0ms)
+Completed in 223ms (View: 179, DB: 23) | 200 OK [http://localhost/memberships/6?authenticity_token=P3d5vUECeihuKn809OPN8QoqQjMD9Bf39CH%2F6t%2BER9Q%3D]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#new (for 127.0.0.1 at 2010-02-09 12:21:08) [POST]
+  Parameters: {"authenticity_token"=>"P3d5vUECeihuKn809OPN8QoqQjMD9Bf39CH/6t+ER9Q=", "_"=>""}
+  [4;36;1mMembership Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `memberships`[0m
+Rendering memberships/new
+  [4;35;1mRate Load (1.0ms)[0m   [0mSELECT * FROM `rates` [0m
+  [4;36;1mRate Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `rates`[0m
+Rendered memberships/_form (22.0ms)
+Rendered memberships/_new (28.0ms)
+Completed in 48ms (View: 28, DB: 10) | 200 OK [http://localhost/memberships/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#create (for 127.0.0.1 at 2010-02-09 12:21:33) [POST]
+  Parameters: {"membership"=>{"rate_id"=>"1", "member"=>{"name"=>"Lyn May", "photo"=>#<File:C:/Users/Alberto/AppData/Local/Temp/RackMultipart.5396.1>, "phone"=>"908098090", "last_name"=>"Paramo", "address"=>"ojuosiueoie", "email"=>"lunmay@mail.com"}}, "x"=>"30", "y"=>"9", "authenticity_token"=>"P3d5vUECeihuKn809OPN8QoqQjMD9Bf39CH/6t+ER9Q="}
+  [4;35;1mMembership Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `memberships`[0m
+  [4;36;1mMember Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mMember Create (1.0ms)[0m   [0;1mINSERT INTO `members` (`name`, `updated_at`, `photo_file_name`, `photo_file_size`, `created_by`, `photo_updated_at`, `photo_content_type`, `phone`, `member_number`, `last_name`, `address`, `email`, `created_at`) VALUES('Lyn May', '2010-02-09 18:21:33', 'lyn.jpg', 3017, NULL, '2010-02-09 18:21:33', 'image/jpeg', '908098090', NULL, 'Paramo', 'ojuosiueoie', 'lunmay@mail.com', '2010-02-09 18:21:33')[0m
+[paperclip] Saving attachments.
+[paperclip] saving D:/codigo/Roma/public/system/photos/2/original/lyn.jpg
+[paperclip] saving D:/codigo/Roma/public/system/photos/2/small/lyn.jpg
+  [4;35;1mSQL (13.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMembership Create (0.0ms)[0m   [0mINSERT INTO `memberships` (`updated_at`, `member_id`, `rate_id`, `group_id`, `created_at`) VALUES('2010-02-09 18:21:33', 2, 1, NULL, '2010-02-09 18:21:33')[0m
+  [4;36;1mSQL (21.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/memberships
+Completed in 389ms (DB: 43) | 302 Found [http://localhost/memberships]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#index (for 127.0.0.1 at 2010-02-09 12:21:34) [GET]
+  [4;35;1mMembership Load (0.0ms)[0m   [0mSELECT * FROM `memberships` [0m
+  [4;36;1mRate Load (0.0ms)[0m   [0;1mSELECT * FROM `rates` [0m
+Rendering template within layouts/main
+Rendering memberships/index
+  [4;35;1mMembership Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `memberships`[0m
+  [4;36;1mMember Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (4.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;36;1mRate Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `rates`[0m
+  [4;35;1mRate Load (5.0ms)[0m   [0mSELECT * FROM `rates` WHERE (`rates`.`id` = 1) [0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `rates` WHERE (`rates`.`id` = 1) [0m
+Completed in 66ms (View: 28, DB: 21) | 200 OK [http://localhost/memberships]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AttendancesController#today (for 127.0.0.1 at 2010-02-09 12:21:42) [GET]
+  [4;36;1mAttendance Load (235.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (created_at > '2010-02-09' AND created_at < '2010-02-10') ORDER BY created_at DESC[0m
+Rendering template within layouts/main
+Rendering attendances/today
+Completed in 323ms (View: 76, DB: 236) | 200 OK [http://localhost/attendances/today]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AttendancesController#create (for 127.0.0.1 at 2010-02-09 12:21:51) [POST]
+  Parameters: {"membership"=>"6", "commit"=>"Aceptar", "authenticity_token"=>"P3d5vUECeihuKn809OPN8QoqQjMD9Bf39CH/6t+ER9Q=", "_"=>""}
+  [4;35;1mMembership Exists (93.0ms)[0m   [0mSELECT `memberships`.id FROM `memberships` WHERE (`memberships`.`id` = '6') LIMIT 1[0m
+  [4;36;1mMembership Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `memberships`[0m
+  [4;35;1mMembership Load (3.0ms)[0m   [0mSELECT * FROM `memberships` WHERE (`memberships`.`id` = 6) [0m
+  [4;36;1mMember Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (2.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;36;1mAttendance Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `attendances`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAttendance Create (23.0ms)[0m   [0;1mINSERT INTO `attendances` (`updated_at`, `member_id`, `created_at`) VALUES('2010-02-09 18:21:52', 1, '2010-02-09 18:21:52')[0m
+  [4;35;1mSQL (11.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAttendance Load (27.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (created_at > '2010-02-09' AND created_at < '2010-02-10') ORDER BY created_at DESC[0m
+Rendering attendances/create
+  [4;35;1mMember Load (1.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;36;1mMembership Load (1.0ms)[0m   [0;1mSELECT * FROM `memberships` WHERE (`memberships`.member_id = 1) LIMIT 1[0m
+Rendered attendances/_attendance (27.0ms)
+Completed in 363ms (View: 52, DB: 175) | 200 OK [http://localhost/attendances]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AttendancesController#create (for 127.0.0.1 at 2010-02-09 12:21:56) [POST]
+  Parameters: {"membership"=>"6", "commit"=>"Aceptar", "authenticity_token"=>"P3d5vUECeihuKn809OPN8QoqQjMD9Bf39CH/6t+ER9Q=", "_"=>""}
+  [4;35;1mMembership Exists (1.0ms)[0m   [0mSELECT `memberships`.id FROM `memberships` WHERE (`memberships`.`id` = '6') LIMIT 1[0m
+  [4;36;1mMembership Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `memberships`[0m
+  [4;35;1mMembership Load (1.0ms)[0m   [0mSELECT * FROM `memberships` WHERE (`memberships`.`id` = 6) [0m
+  [4;36;1mMember Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (1.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;36;1mAttendance Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `attendances`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAttendance Create (1.0ms)[0m   [0;1mINSERT INTO `attendances` (`updated_at`, `member_id`, `created_at`) VALUES('2010-02-09 18:21:56', 1, '2010-02-09 18:21:56')[0m
+  [4;35;1mSQL (59.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (created_at > '2010-02-09' AND created_at < '2010-02-10') ORDER BY created_at DESC[0m
+Rendering attendances/create
+  [4;35;1mMember Load (1.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;36;1mMembership Load (1.0ms)[0m   [0;1mSELECT * FROM `memberships` WHERE (`memberships`.member_id = 1) LIMIT 1[0m
+Rendered attendances/_attendance (17.0ms)
+Completed in 157ms (View: 24, DB: 77) | 200 OK [http://localhost/attendances]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AttendancesController#create (for 127.0.0.1 at 2010-02-09 12:21:58) [POST]
+  Parameters: {"membership"=>"5", "commit"=>"Aceptar", "authenticity_token"=>"P3d5vUECeihuKn809OPN8QoqQjMD9Bf39CH/6t+ER9Q=", "_"=>""}
+  [4;35;1mMembership Exists (0.0ms)[0m   [0mSELECT `memberships`.id FROM `memberships` WHERE (`memberships`.`id` = '5') LIMIT 1[0m
+Rendered shared/_jimmy (6.0ms)
+Completed in 45ms (View: 31, DB: 1) | 200 OK [http://localhost/attendances]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AttendancesController#create (for 127.0.0.1 at 2010-02-09 12:22:03) [POST]
+  Parameters: {"membership"=>"7", "commit"=>"Aceptar", "authenticity_token"=>"P3d5vUECeihuKn809OPN8QoqQjMD9Bf39CH/6t+ER9Q=", "_"=>""}
+  [4;36;1mMembership Exists (0.0ms)[0m   [0;1mSELECT `memberships`.id FROM `memberships` WHERE (`memberships`.`id` = '7') LIMIT 1[0m
+  [4;35;1mMembership Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `memberships`[0m
+  [4;36;1mMembership Load (2.0ms)[0m   [0;1mSELECT * FROM `memberships` WHERE (`memberships`.`id` = 7) [0m
+  [4;35;1mMember Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (1.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mAttendance Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `attendances`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAttendance Create (1.0ms)[0m   [0mINSERT INTO `attendances` (`updated_at`, `member_id`, `created_at`) VALUES('2010-02-09 18:22:03', 2, '2010-02-09 18:22:03')[0m
+  [4;36;1mSQL (70.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mAttendance Load (1.0ms)[0m   [0mSELECT * FROM `attendances` WHERE (created_at > '2010-02-09' AND created_at < '2010-02-10') ORDER BY created_at DESC[0m
+Rendering attendances/create
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mMembership Load (1.0ms)[0m   [0mSELECT * FROM `memberships` WHERE (`memberships`.member_id = 2) LIMIT 1[0m
+Rendered attendances/_attendance (18.0ms)
+Completed in 167ms (View: 26, DB: 88) | 200 OK [http://localhost/attendances]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AttendancesController#calendar (for 127.0.0.1 at 2010-02-09 12:22:09) [GET]
+  Parameters: {"date"=>"2010-02-09"}
+Rendering template within layouts/main
+Rendering attendances/calendar
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (created_at > '2010-02-01' AND created_at < '2010-02-02') [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM `attendances` WHERE (created_at > '2010-02-02' AND created_at < '2010-02-03') [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (created_at > '2010-02-03' AND created_at < '2010-02-04') [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM `attendances` WHERE (created_at > '2010-02-04' AND created_at < '2010-02-05') [0m
+  [4;36;1mAttendance Load (1.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (created_at > '2010-02-05' AND created_at < '2010-02-06') [0m
+  [4;35;1mAttendance Load (1.0ms)[0m   [0mSELECT * FROM `attendances` WHERE (created_at > '2010-02-06' AND created_at < '2010-02-07') [0m
+  [4;36;1mAttendance Load (1.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (created_at > '2010-02-07' AND created_at < '2010-02-08') [0m
+  [4;35;1mAttendance Load (1.0ms)[0m   [0mSELECT * FROM `attendances` WHERE (created_at > '2010-02-08' AND created_at < '2010-02-09') [0m
+  [4;36;1mAttendance Load (1.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (created_at > '2010-02-09' AND created_at < '2010-02-10') [0m
+  [4;35;1mAttendance Load (1.0ms)[0m   [0mSELECT * FROM `attendances` WHERE (created_at > '2010-02-10' AND created_at < '2010-02-11') [0m
+  [4;36;1mAttendance Load (1.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (created_at > '2010-02-11' AND created_at < '2010-02-12') [0m
+  [4;35;1mAttendance Load (1.0ms)[0m   [0mSELECT * FROM `attendances` WHERE (created_at > '2010-02-12' AND created_at < '2010-02-13') [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (created_at > '2010-02-13' AND created_at < '2010-02-14') [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM `attendances` WHERE (created_at > '2010-02-14' AND created_at < '2010-02-15') [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (created_at > '2010-02-15' AND created_at < '2010-02-16') [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM `attendances` WHERE (created_at > '2010-02-16' AND created_at < '2010-02-17') [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (created_at > '2010-02-17' AND created_at < '2010-02-18') [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM `attendances` WHERE (created_at > '2010-02-18' AND created_at < '2010-02-19') [0m
+  [4;36;1mAttendance Load (1.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (created_at > '2010-02-19' AND created_at < '2010-02-20') [0m
+  [4;35;1mAttendance Load (1.0ms)[0m   [0mSELECT * FROM `attendances` WHERE (created_at > '2010-02-20' AND created_at < '2010-02-21') [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (created_at > '2010-02-21' AND created_at < '2010-02-22') [0m
+  [4;35;1mAttendance Load (1.0ms)[0m   [0mSELECT * FROM `attendances` WHERE (created_at > '2010-02-22' AND created_at < '2010-02-23') [0m
+  [4;36;1mAttendance Load (1.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (created_at > '2010-02-23' AND created_at < '2010-02-24') [0m
+  [4;35;1mAttendance Load (1.0ms)[0m   [0mSELECT * FROM `attendances` WHERE (created_at > '2010-02-24' AND created_at < '2010-02-25') [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (created_at > '2010-02-25' AND created_at < '2010-02-26') [0m
+  [4;35;1mAttendance Load (1.0ms)[0m   [0mSELECT * FROM `attendances` WHERE (created_at > '2010-02-26' AND created_at < '2010-02-27') [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (created_at > '2010-02-27' AND created_at < '2010-02-28') [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM `attendances` WHERE (created_at > '2010-02-28' AND created_at < '2010-03-01') [0m
+Rendered instant_calendar/_calendar (334.0ms)
+Completed in 387ms (View: 365, DB: 14) | 200 OK [http://localhost/attendances/calendar?date=2010-02-09]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AttendancesController#day (for 127.0.0.1 at 2010-02-09 12:22:20) [GET]
+  Parameters: {"date"=>"2010-02-09"}
+Redirected to http://localhost:3000/attendances/today
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/attendances/day?date=2010-02-09]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AttendancesController#today (for 127.0.0.1 at 2010-02-09 12:22:20) [GET]
+  [4;36;1mAttendance Load (1.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (created_at > '2010-02-09' AND created_at < '2010-02-10') ORDER BY created_at DESC[0m
+Rendering template within layouts/main
+Rendering attendances/today
+  [4;35;1mAttendance Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `attendances`[0m
+  [4;36;1mMember Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mMembership Load (1.0ms)[0m   [0;1mSELECT * FROM `memberships` WHERE (`memberships`.member_id = 2) LIMIT 1[0m
+  [4;35;1mMembership Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `memberships`[0m
+  [4;36;1mMember Load (1.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;35;1mMembership Load (0.0ms)[0m   [0mSELECT * FROM `memberships` WHERE (`memberships`.member_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `memberships` WHERE (`memberships`.member_id = 1) LIMIT 1[0m
+Completed in 125ms (View: 88, DB: 17) | 200 OK [http://localhost/attendances/today]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RatesController#index (for 127.0.0.1 at 2010-02-09 12:55:01) [GET]
+  [4;36;1mRate Load (1.0ms)[0m   [0;1mSELECT * FROM `rates` [0m
+Rendering template within layouts/main
+Rendering rates/index
+  [4;35;1mRate Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `rates`[0m
+Completed in 60ms (View: 46, DB: 5) | 200 OK [http://localhost/rates]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RatesController#new (for 127.0.0.1 at 2010-02-09 12:55:42) [GET]
+  [4;36;1mRate Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `rates`[0m
+Rendering template within layouts/main
+Rendering rates/new
+Rendered rates/_form (2.0ms)
+Completed in 40ms (View: 23, DB: 5) | 200 OK [http://localhost/rates/new]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-02-09 21:01:05) [GET]
+  [4;36;1mAttendance Load (44.0ms)[0m   [0;1mSELECT * FROM `attendances` ORDER BY created_at DESC[0m
+Rendering template within layouts/main
+Rendering attendances/index
+  [4;35;1mAttendance Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `attendances`[0m
+  [4;36;1mMember Columns (23.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (29.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mMembership Load (23.0ms)[0m   [0;1mSELECT * FROM `memberships` WHERE (`memberships`.member_id = 2) LIMIT 1[0m
+  [4;35;1mMembership Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `memberships`[0m
+  [4;36;1mMember Load (1.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;35;1mMembership Load (0.0ms)[0m   [0mSELECT * FROM `memberships` WHERE (`memberships`.member_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `memberships` WHERE (`memberships`.member_id = 1) LIMIT 1[0m
+Completed in 3611ms (View: 726, DB: 128) | 200 OK [http://localhost/attendances]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AttendancesController#today (for 127.0.0.1 at 2010-02-09 22:53:45) [GET]
+  [4;36;1mAttendance Load (94.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (created_at > '2010-02-09' AND created_at < '2010-02-10') ORDER BY created_at DESC[0m
+Rendering template within layouts/main
+Rendering attendances/today
+  [4;35;1mAttendance Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `attendances`[0m
+  [4;36;1mMember Columns (7.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (5.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mMembership Load (0.0ms)[0m   [0;1mSELECT * FROM `memberships` WHERE (`memberships`.member_id = 2) LIMIT 1[0m
+  [4;35;1mMembership Columns (9.0ms)[0m   [0mSHOW FIELDS FROM `memberships`[0m
+  [4;36;1mMember Load (1.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;35;1mMembership Load (0.0ms)[0m   [0mSELECT * FROM `memberships` WHERE (`memberships`.member_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `memberships` WHERE (`memberships`.member_id = 1) LIMIT 1[0m
+Completed in 264ms (View: 129, DB: 121) | 200 OK [http://localhost/attendances/today]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#index (for 127.0.0.1 at 2010-02-09 22:54:00) [GET]
+  [4;36;1mMembership Load (0.0ms)[0m   [0;1mSELECT * FROM `memberships` [0m
+  [4;35;1mRate Load (78.0ms)[0m   [0mSELECT * FROM `rates` [0m
+Rendering template within layouts/main
+Rendering memberships/index
+  [4;36;1mMembership Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `memberships`[0m
+  [4;35;1mMember Columns (26.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (3.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;35;1mRate Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `rates`[0m
+  [4;36;1mRate Load (6.0ms)[0m   [0;1mSELECT * FROM `rates` WHERE (`rates`.`id` = 1) [0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `rates` WHERE (`rates`.`id` = 1) [0m
+Completed in 219ms (View: 79, DB: 121) | 200 OK [http://localhost/memberships]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AttendancesController#today (for 127.0.0.1 at 2010-02-09 22:54:06) [GET]
+  [4;35;1mAttendance Load (1.0ms)[0m   [0mSELECT * FROM `attendances` WHERE (created_at > '2010-02-09' AND created_at < '2010-02-10') ORDER BY created_at DESC[0m
+Rendering template within layouts/main
+Rendering attendances/today
+  [4;36;1mAttendance Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `attendances`[0m
+  [4;35;1mMember Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (2.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mMembership Load (1.0ms)[0m   [0mSELECT * FROM `memberships` WHERE (`memberships`.member_id = 2) LIMIT 1[0m
+  [4;36;1mMembership Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `memberships`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;36;1mMembership Load (0.0ms)[0m   [0;1mSELECT * FROM `memberships` WHERE (`memberships`.member_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `memberships` WHERE (`memberships`.member_id = 1) LIMIT 1[0m
+Completed in 85ms (View: 53, DB: 23) | 200 OK [http://localhost/attendances/today]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AttendancesController#create (for 127.0.0.1 at 2010-02-09 22:54:12) [POST]
+  Parameters: {"membership"=>"7", "commit"=>"Aceptar", "authenticity_token"=>"nM1uwe95cTBnX7Q+9Raj6aVs7puqk8CWYHMT0XsiPlM=", "_"=>""}
+  [4;35;1mMembership Exists (99.0ms)[0m   [0mSELECT `memberships`.id FROM `memberships` WHERE (`memberships`.`id` = '7') LIMIT 1[0m
+  [4;36;1mMembership Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `memberships`[0m
+  [4;35;1mMembership Load (5.0ms)[0m   [0mSELECT * FROM `memberships` WHERE (`memberships`.`id` = 7) [0m
+  [4;36;1mMember Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (3.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mAttendance Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `attendances`[0m
+  [4;35;1mSQL (20.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAttendance Create (61.0ms)[0m   [0;1mINSERT INTO `attendances` (`updated_at`, `member_id`, `created_at`) VALUES('2010-02-10 04:54:12', 2, '2010-02-10 04:54:12')[0m
+  [4;35;1mSQL (36.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAttendance Load (1.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (created_at > '2010-02-09' AND created_at < '2010-02-10') ORDER BY created_at DESC[0m
+Rendering attendances/create
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mMembership Load (0.0ms)[0m   [0;1mSELECT * FROM `memberships` WHERE (`memberships`.member_id = 2) LIMIT 1[0m
+Rendered attendances/_attendance (14.0ms)
+Completed in 317ms (View: 34, DB: 242) | 200 OK [http://localhost/attendances]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AttendancesController#calendar (for 127.0.0.1 at 2010-02-09 22:55:04) [GET]
+  Parameters: {"date"=>"2010-02-09"}
+Rendering template within layouts/main
+Rendering attendances/calendar
+  [4;35;1mAttendance Load (1.0ms)[0m   [0mSELECT * FROM `attendances` WHERE (created_at > '2010-02-01' AND created_at < '2010-02-02') [0m
+  [4;36;1mAttendance Load (1.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (created_at > '2010-02-02' AND created_at < '2010-02-03') [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM `attendances` WHERE (created_at > '2010-02-03' AND created_at < '2010-02-04') [0m
+  [4;36;1mAttendance Load (1.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (created_at > '2010-02-04' AND created_at < '2010-02-05') [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM `attendances` WHERE (created_at > '2010-02-05' AND created_at < '2010-02-06') [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (created_at > '2010-02-06' AND created_at < '2010-02-07') [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM `attendances` WHERE (created_at > '2010-02-07' AND created_at < '2010-02-08') [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (created_at > '2010-02-08' AND created_at < '2010-02-09') [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM `attendances` WHERE (created_at > '2010-02-09' AND created_at < '2010-02-10') [0m
+  [4;36;1mAttendance Load (1.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (created_at > '2010-02-10' AND created_at < '2010-02-11') [0m
+  [4;35;1mAttendance Load (1.0ms)[0m   [0mSELECT * FROM `attendances` WHERE (created_at > '2010-02-11' AND created_at < '2010-02-12') [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (created_at > '2010-02-12' AND created_at < '2010-02-13') [0m
+  [4;35;1mAttendance Load (1.0ms)[0m   [0mSELECT * FROM `attendances` WHERE (created_at > '2010-02-13' AND created_at < '2010-02-14') [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (created_at > '2010-02-14' AND created_at < '2010-02-15') [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM `attendances` WHERE (created_at > '2010-02-15' AND created_at < '2010-02-16') [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (created_at > '2010-02-16' AND created_at < '2010-02-17') [0m
+  [4;35;1mAttendance Load (1.0ms)[0m   [0mSELECT * FROM `attendances` WHERE (created_at > '2010-02-17' AND created_at < '2010-02-18') [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (created_at > '2010-02-18' AND created_at < '2010-02-19') [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM `attendances` WHERE (created_at > '2010-02-19' AND created_at < '2010-02-20') [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (created_at > '2010-02-20' AND created_at < '2010-02-21') [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM `attendances` WHERE (created_at > '2010-02-21' AND created_at < '2010-02-22') [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (created_at > '2010-02-22' AND created_at < '2010-02-23') [0m
+  [4;35;1mAttendance Load (1.0ms)[0m   [0mSELECT * FROM `attendances` WHERE (created_at > '2010-02-23' AND created_at < '2010-02-24') [0m
+  [4;36;1mAttendance Load (3.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (created_at > '2010-02-24' AND created_at < '2010-02-25') [0m
+  [4;35;1mAttendance Load (1.0ms)[0m   [0mSELECT * FROM `attendances` WHERE (created_at > '2010-02-25' AND created_at < '2010-02-26') [0m
+  [4;36;1mAttendance Load (1.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (created_at > '2010-02-26' AND created_at < '2010-02-27') [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM `attendances` WHERE (created_at > '2010-02-27' AND created_at < '2010-02-28') [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (created_at > '2010-02-28' AND created_at < '2010-03-01') [0m
+Rendered instant_calendar/_calendar (176.0ms)
+Completed in 210ms (View: 192, DB: 13) | 200 OK [http://localhost/attendances/calendar?date=2010-02-09]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AttendancesController#day (for 127.0.0.1 at 2010-02-09 22:55:20) [GET]
+  Parameters: {"date"=>"2010-02-10"}
+  [4;35;1mAttendance Load (1.0ms)[0m   [0mSELECT * FROM `attendances` WHERE (created_at > '2010-02-10' AND created_at < '2010-02-11') ORDER BY created_at DESC[0m
+Rendering template within layouts/main
+Rendering attendances/day
+  [4;36;1mAttendance Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `attendances`[0m
+  [4;35;1mMember Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (1.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mMembership Load (0.0ms)[0m   [0mSELECT * FROM `memberships` WHERE (`memberships`.member_id = 2) LIMIT 1[0m
+  [4;36;1mMembership Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `memberships`[0m
+Completed in 215ms (View: 185, DB: 19) | 200 OK [http://localhost/attendances/day?date=2010-02-10]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AttendancesController#show (for 127.0.0.1 at 2010-02-09 22:55:24) [GET]
+  Parameters: {"authenticity_token"=>"nM1uwe95cTBnX7Q+9Raj6aVs7puqk8CWYHMT0XsiPlM=", "id"=>"4"}
+  [4;35;1mAttendance Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `attendances`[0m
+  [4;36;1mAttendance Load (3.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (`attendances`.`id` = 4) [0m
+Rendering template within layouts/main
+Rendering attendances/show
+Completed in 35ms (View: 15, DB: 8) | 200 OK [http://localhost/attendances/4?authenticity_token=nM1uwe95cTBnX7Q%2B9Raj6aVs7puqk8CWYHMT0XsiPlM%3D]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AttendancesController#show (for 127.0.0.1 at 2010-02-09 22:55:26) [GET]
+  Parameters: {"authenticity_token"=>"nM1uwe95cTBnX7Q+9Raj6aVs7puqk8CWYHMT0XsiPlM=", "id"=>"4"}
+  [4;35;1mAttendance Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `attendances`[0m
+  [4;36;1mAttendance Load (3.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (`attendances`.`id` = 4) [0m
+Rendering template within layouts/main
+Rendering attendances/show
+Completed in 107ms (View: 88, DB: 8) | 200 OK [http://localhost/attendances/4?authenticity_token=nM1uwe95cTBnX7Q%2B9Raj6aVs7puqk8CWYHMT0XsiPlM%3D]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AttendancesController#show (for 127.0.0.1 at 2010-02-09 22:55:27) [GET]
+  Parameters: {"authenticity_token"=>"nM1uwe95cTBnX7Q+9Raj6aVs7puqk8CWYHMT0XsiPlM=", "id"=>"4"}
+  [4;35;1mAttendance Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `attendances`[0m
+  [4;36;1mAttendance Load (4.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (`attendances`.`id` = 4) [0m
+Rendering template within layouts/main
+Rendering attendances/show
+Completed in 26ms (View: 8, DB: 8) | 200 OK [http://localhost/attendances/4?authenticity_token=nM1uwe95cTBnX7Q%2B9Raj6aVs7puqk8CWYHMT0XsiPlM%3D]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AttendancesController#show (for 127.0.0.1 at 2010-02-09 22:55:28) [GET]
+  Parameters: {"authenticity_token"=>"nM1uwe95cTBnX7Q+9Raj6aVs7puqk8CWYHMT0XsiPlM=", "id"=>"4"}
+  [4;35;1mAttendance Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `attendances`[0m
+  [4;36;1mAttendance Load (4.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (`attendances`.`id` = 4) [0m
+Rendering template within layouts/main
+Rendering attendances/show
+Completed in 26ms (View: 8, DB: 10) | 200 OK [http://localhost/attendances/4?authenticity_token=nM1uwe95cTBnX7Q%2B9Raj6aVs7puqk8CWYHMT0XsiPlM%3D]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AttendancesController#today (for 127.0.0.1 at 2010-02-09 22:55:44) [GET]
+  [4;35;1mAttendance Load (1.0ms)[0m   [0mSELECT * FROM `attendances` WHERE (created_at > '2010-02-09' AND created_at < '2010-02-10') ORDER BY created_at DESC[0m
+Rendering template within layouts/main
+Rendering attendances/today
+  [4;36;1mAttendance Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `attendances`[0m
+  [4;35;1mMember Columns (7.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (3.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mMembership Load (0.0ms)[0m   [0mSELECT * FROM `memberships` WHERE (`memberships`.member_id = 2) LIMIT 1[0m
+  [4;36;1mMembership Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `memberships`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;36;1mMembership Load (0.0ms)[0m   [0;1mSELECT * FROM `memberships` WHERE (`memberships`.member_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `memberships` WHERE (`memberships`.member_id = 1) LIMIT 1[0m
+Completed in 81ms (View: 52, DB: 20) | 200 OK [http://localhost/attendances/today]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#index (for 127.0.0.1 at 2010-02-09 23:03:08) [GET]
+  [4;35;1mMembership Load (1.0ms)[0m   [0mSELECT * FROM `memberships` [0m
+  [4;36;1mRate Load (0.0ms)[0m   [0;1mSELECT * FROM `rates` [0m
+Rendering template within layouts/main
+Rendering memberships/index
+  [4;35;1mMembership Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `memberships`[0m
+  [4;36;1mMember Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (2.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;36;1mRate Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `rates`[0m
+  [4;35;1mRate Load (5.0ms)[0m   [0mSELECT * FROM `rates` WHERE (`rates`.`id` = 1) [0m
+  [4;36;1mMember Load (1.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `rates` WHERE (`rates`.`id` = 1) [0m
+Completed in 70ms (View: 32, DB: 21) | 200 OK [http://localhost/memberships]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembershipsController#new (for 127.0.0.1 at 2010-02-09 23:03:11) [POST]
+  Parameters: {"authenticity_token"=>"nM1uwe95cTBnX7Q+9Raj6aVs7puqk8CWYHMT0XsiPlM=", "_"=>""}
+  [4;36;1mMembership Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `memberships`[0m
+Rendering memberships/new
+  [4;35;1mRate Load (0.0ms)[0m   [0mSELECT * FROM `rates` [0m
+  [4;36;1mRate Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `rates`[0m
+Rendered memberships/_form (36.0ms)
+Rendered memberships/_new (145.0ms)
+Completed in 172ms (View: 154, DB: 8) | 200 OK [http://localhost/memberships/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AttendancesController#today (for 127.0.0.1 at 2010-02-10 12:58:25) [GET]
+  [4;36;1mAttendance Load (316.0ms)[0m   [0;1mSELECT * FROM `attendances` WHERE (created_at > '2010-02-10' AND created_at < '2010-02-11') ORDER BY created_at DESC[0m
+Rendering template within layouts/main
+Rendering attendances/today
+  [4;35;1mAttendance Columns (62.0ms)[0m   [0mSHOW FIELDS FROM `attendances`[0m
+  [4;36;1mMember Columns (60.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (4.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mMembership Load (44.0ms)[0m   [0;1mSELECT * FROM `memberships` WHERE (`memberships`.member_id = 2) LIMIT 1[0m
+  [4;35;1mMembership Columns (14.0ms)[0m   [0mSHOW FIELDS FROM `memberships`[0m
+Completed in 4305ms (View: 743, DB: 500) | 200 OK [http://localhost/attendances/today]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AttendancesController#create (for 127.0.0.1 at 2010-02-10 12:58:45) [POST]
+  Parameters: {"membership"=>"9", "commit"=>"Aceptar", "authenticity_token"=>"pxnoJj8xM5d6jNh8GW1GE4oD3v9zhVABjYfZWtSQQQU=", "_"=>""}
+  [4;36;1mMembership Exists (1.0ms)[0m   [0;1mSELECT `memberships`.id FROM `memberships` WHERE (`memberships`.`id` = '9') LIMIT 1[0m
+Rendered shared/_jimmy (5.0ms)
+Completed in 36ms (View: 24, DB: 1) | 200 OK [http://localhost/attendances]
+  [4;36;1mSQL (64.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (193.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (106.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateMembers (20090923075411)
+Migrating to CreateMemberships (20090923075416)
+Migrating to CreateAttendances (20090923075425)
+Migrating to CreatePayments (20090923075432)
+Migrating to CreateGroupMembers (20090923075502)
+Migrating to CreateExercises (20090923075601)
+Migrating to CreateRoutineExercises (20090923075729)
+Migrating to CreateCategories (20090923075738)
+Migrating to CreateRates (20090923080229)
+Migrating to CreateRoutines (20090923082825)
+Migrating to CreateGroups (20090923083836)
+Migrating to AddAttachmentsPhotoToMember (20091004003031)
+Migrating to ChangePrecision (20091030071057)
+Migrating to CreateUsers (20100210214737)
+  [4;36;1mSQL (185.0ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `password` varchar(255), `name` varchar(255), `last_name` varchar(255), `landing_page` varchar(255), `role` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (47.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100210214737')[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (17.0ms)[0m   [0mSHOW FIELDS FROM `attendances`[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mdescribe `attendances`[0m
+  [4;35;1mSQL (25.0ms)[0m   [0mSHOW KEYS FROM `attendances`[0m
+  [4;36;1mSQL (45.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mdescribe `categories`[0m
+  [4;36;1mSQL (9.0ms)[0m   [0;1mSHOW KEYS FROM `categories`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+  [4;36;1mSQL (12.0ms)[0m   [0;1mdescribe `exercises`[0m
+  [4;35;1mSQL (9.0ms)[0m   [0mSHOW KEYS FROM `exercises`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `group_members`[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mdescribe `group_members`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW KEYS FROM `group_members`[0m
+  [4;35;1mSQL (13.0ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mdescribe `groups`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW KEYS FROM `groups`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mdescribe `members`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW KEYS FROM `members`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `memberships`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mdescribe `memberships`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW KEYS FROM `memberships`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW FIELDS FROM `payments`[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mdescribe `payments`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW KEYS FROM `payments`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mSHOW FIELDS FROM `rates`[0m
+  [4;36;1mSQL (8.0ms)[0m   [0;1mdescribe `rates`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW KEYS FROM `rates`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW FIELDS FROM `routine_exercises`[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mdescribe `routine_exercises`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW KEYS FROM `routine_exercises`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `routines`[0m
+  [4;36;1mSQL (8.0ms)[0m   [0;1mdescribe `routines`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mSHOW KEYS FROM `routines`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (13.0ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (10.0ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateMembers (20090923075411)
+Migrating to CreateMemberships (20090923075416)
+Migrating to CreateAttendances (20090923075425)
+Migrating to CreatePayments (20090923075432)
+Migrating to CreateGroupMembers (20090923075502)
+Migrating to CreateExercises (20090923075601)
+Migrating to CreateRoutineExercises (20090923075729)
+Migrating to CreateCategories (20090923075738)
+Migrating to CreateRates (20090923080229)
+Migrating to CreateRoutines (20090923082825)
+Migrating to CreateGroups (20090923083836)
+Migrating to AddAttachmentsPhotoToMember (20091004003031)
+Migrating to ChangePrecision (20091030071057)
+Migrating to CreateUsers (20100210214737)
+Migrating to AddToMembershipsAndUsers (20100210235930)
+  [4;36;1mSQL (385.0ms)[0m   [0;1mALTER TABLE `memberships` ADD `pending_months` int(11)[0m
+  [4;35;1mSQL (130.0ms)[0m   [0mALTER TABLE `memberships` ADD `pay_day` int(11)[0m
+  [4;36;1mSQL (112.0ms)[0m   [0;1mALTER TABLE `users` ADD `salt` varchar(255)[0m
+  [4;35;1mSQL (129.0ms)[0m   [0mALTER TABLE `members` ADD `is_female` bool[0m
+  [4;36;1mSQL (17.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100210235930')[0m
+  [4;35;1mSQL (12.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW FIELDS FROM `attendances`[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mdescribe `attendances`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW KEYS FROM `attendances`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mSQL (8.0ms)[0m   [0;1mdescribe `categories`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mSHOW KEYS FROM `categories`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mSQL (11.0ms)[0m   [0mdescribe `exercises`[0m
+  [4;36;1mSQL (10.0ms)[0m   [0;1mSHOW KEYS FROM `exercises`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `group_members`[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mdescribe `group_members`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW KEYS FROM `group_members`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mdescribe `groups`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW KEYS FROM `groups`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mdescribe `members`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW KEYS FROM `members`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW FIELDS FROM `memberships`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mdescribe `memberships`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW KEYS FROM `memberships`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW FIELDS FROM `payments`[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mdescribe `payments`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW KEYS FROM `payments`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `rates`[0m
+  [4;35;1mSQL (8.0ms)[0m   [0mdescribe `rates`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mSHOW KEYS FROM `rates`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `routine_exercises`[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mdescribe `routine_exercises`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW KEYS FROM `routine_exercises`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `routines`[0m
+  [4;35;1mSQL (8.0ms)[0m   [0mdescribe `routines`[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mSHOW KEYS FROM `routines`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (14.0ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (11.0ms)[0m   [0mSHOW KEYS FROM `users`[0m
