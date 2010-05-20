@@ -23,10 +23,24 @@
 		<tr>	
 			<th><%=m.label :member, "Photo" %></th>  
 	    	<td><%=m.file_field :photo %></td>
-		</tr>
-	
+		</tr>	
 <%end%>
 
+		<tr>
+			<th>Membres&iacute;a Pagada</th>
+			<td><%= check_box_tag  :paid %></td>
+		</tr>
+		
+		<!-->
+		<tr>
+			<th>Meses pendientes</th>  
+	    	<td><%=f.text_field  :pending_months %></td>
+		</tr>-->
+		
+		<tr>
+			<th>Fecha de corte</th>  
+	    	<td><%= f.text_field  :pay_day, :value=>Date.today.day, :size=>'2' %> de cada Mes</td>
+		</tr>
 		<tr>	
 			<th><%=f.label :membership, "Tarifa" %></th>  
 			<td><%=select("membership", "rate_id", Rate.all.collect {|r| [ r.name, r.id ] }, {:include_blank => 'None'}) %></td>

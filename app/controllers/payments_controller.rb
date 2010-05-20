@@ -1,7 +1,13 @@
 class PaymentsController < ApplicationController
+
+layout 'main'
+
   # GET /payments
   # GET /payments.xml
   def index
+    session[:title]='Pagos'
+    session[:image]='members.png'
+  	
     @payments = Payment.all
 
     respond_to do |format|

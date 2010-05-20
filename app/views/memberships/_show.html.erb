@@ -24,6 +24,13 @@
 				<td><span class='card_rate'><%=@membership.rate.name%>, <%=number_to_currency(@membership.rate.price)%></span></td>	
 			</tr>			
 			<tr>
+				<td><span class='card_address'><%=debug (@membership.pending_months) %>  meses pendientes</span></td>	
+			</tr>		
+			<tr>
+				<td><span class='card_address'><%=debug (@membership.pay_day) %>  de cada mes</span></td>	
+			</tr>
+			
+			<tr>
 				<td colspan=2>
 				<%=link_to_function('cerrar', nil, :class=>'big_close') do |page|	  
 					page.visual_effect :fade, "show_membership", :duration => 0.5

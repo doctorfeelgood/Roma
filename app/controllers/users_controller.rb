@@ -1,7 +1,13 @@
 class UsersController < ApplicationController
   # GET /users
   # GET /users.xml
+  
+   layout 'main'
+  
   def index
+  	session[:title]='Lista de usuarios'
+    session[:image]='members.png'
+  	
     @users = User.all
 
     respond_to do |format|
@@ -30,6 +36,28 @@ class UsersController < ApplicationController
       format.html # new.html.erb
       format.xml  { render :xml => @user }
     end
+  end
+  
+  def authenticate
+  	@user=User.findByUsername(params[:username])
+  	if @user
+  		if @user.password==params(:password)
+  			session[:access_granted]=true
+  			session[:user]=@user
+  			flash[:notice]='Bienvenido #{@user.name}'
+  			redirect_to @user.landing_page
+  		else
+  			session[:access_granted]=false
+  			flash[:notice]='Los datos son incorrectos'
+  			redirect_to :back
+  		end
+  	else
+  		#NO SE ENCONTRO EL USERNAME
+  		session[:access_granted]=false
+  		flash[:notice]='Datos de conexión incorrectos'
+  		redirect_to :back
+  	end #end del si existe el user
+  	
   end
 
   # GET /users/1/edit

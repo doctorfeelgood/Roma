@@ -1,0 +1,38 @@
+<table class='form_table'>
+	<tr>
+		<th><%= f.label 'Nombre' %></th>
+		<td><%= f.text_field :name %></td>
+	</tr>	
+	<tr>
+		<th><%= f.label 'Apellido' %></th>
+		<td><%= f.text_field :last_name %></td>
+	</tr>			
+	<tr>
+		<th><%= f.label 'Nombre de Usuario' %></th>
+		<td><%= f.text_field :username %></td>
+	</tr>
+
+	<tr>
+		<th><%= f.label 'email' %></th>
+		<td><%= f.text_field :email %></td>
+	</tr>
+	
+	<tr>
+		<th><%= f.label 'Contraseaa' %></th>
+		<td><%= f.text_field :password %></td>
+	</tr>
+	<tr>
+		<th><%= f.label 'Confirme contrasena' %></th>
+		<td><%= text_field_tag :password_confirmation %></td>
+	</tr>
+	<!--Cambiar a un select cuando tenga definidos los roles-->
+	<tr>
+		<th><%= f.label 'Rol' %></th>
+		<td><%= f.text_field :role %></td>
+	</tr>
+	<tr>
+		<th><%= f.label 'Página inicio' %></th>
+		<td><%= f.text_field :landing_page %></td>
+	</tr>			
+			
+</table>

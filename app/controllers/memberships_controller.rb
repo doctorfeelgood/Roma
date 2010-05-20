@@ -35,12 +35,21 @@ class MembershipsController < ApplicationController
   # POST /memberships
   # POST /memberships.xml
   def create
-    @membership = Membership.new(:rate_id=>params[:membership][:rate_id].to_i)
+    @membership = Membership.new(:rate_id=>params[:membership][:rate_id].to_i, :pending_months=>params[:membership][:pending_months], :pay_day=>params[:membership][:pay_day])
     @member=Member.new(params[:membership][:member])
     @member.save
     @membership.member_id=@member.id
+    
+
+    
     respond_to do |format|
       if @membership.save
+      	
+      	    if params[:paid]
+    			@payment=Payment.new(:membership_id=>@membership.id, :rate_id=>@membership.rate_id, :paid_month=>Date.today.month, :paid_year=>Date.today.year)
+    			@payment.save
+    		end
+      	
         flash[:notice] = 'Membership was successfully created.'
         format.html { redirect_to(memberships_path) }
         format.xml  { render :xml => @membership, :status => :created, :location => @membership }
