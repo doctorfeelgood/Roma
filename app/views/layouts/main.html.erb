@@ -12,6 +12,7 @@
 		<div id='stripe'></div>
 		<div id='wrapper'>
 			<div id='header'>
+				<%=image_tag ('gym-e_logobar.gif', :class => "float_left")%>
 				<%=image_tag ('logo_300.png', :class => "float_left")%>
 				<span id='welcome_user'><% if session[:access_granted] %>&nbsp; Bienvenido <%=session[:user].name.capitalize%> &nbsp; <%end%> </span>
 				<div id='menu_box'>
@@ -25,7 +26,8 @@
 					<a href='/sessions/logout'  class='menu_link' ><%=image_tag 'door_out.png'%>Logout</a>
 				</div><!-- termina el menu box -->
 			</div><!--termina el header-->
-			<div id='title'><%=image_tag(session[:image])%><%=session[:title]%> </div>
+			<% session[:title]=(session[:title].blank? )? "Iniciar Sesi&oacute;n" : session[:title]%>
+			<div id='title'><%=image_tag(session[:image])%><%=  session[:title]%> </div>
 			<div id='content'>
 				<% if flash[:notice] then %><div id="flash_notice"><%= flash[:notice] %></div><% end %>
 				<script type="text/javascript">

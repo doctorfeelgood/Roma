@@ -4,6 +4,8 @@
 		<tr>
 			<th class='sortable'>Membres&iacute;a</th>
 			<th class='sortable'>Nombre</th>
+			<th class='sortable'>Corte</th>
+			<th class='sortable'>Meses Pendientes</th>
 			<th class='sortable'>Tarifa</th>
 			<th colspan='3'>Acciones</th>
 	  	</tr>
@@ -12,7 +14,8 @@
 	  	<tr class="<%= cycle("even", "odd") %>">
 			<td><%=membership.id%></td>
 			<td class='capitalize_me'><%=membership.member.name+' '+membership.member.last_name%></td>
-			<td><%=membership.rate.name%></td>
+			<td><%=membership.pay_day%></td>
+			<td><%=membership.pending_months%></td>
 	    	<td><%= link_to_remote 'Mostrar', :url=>membership, :method=>:get, :html=>{:class=>'link to_show'} %></td>
 			<td><%= link_to_remote 'Editar', :url=>edit_membership_path(membership), :method=>:get, :html=>{:class=>'link to_edit'} %></td>
 

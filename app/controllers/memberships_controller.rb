@@ -40,17 +40,13 @@ class MembershipsController < ApplicationController
     @member.save
     @membership.member_id=@member.id
     
-
-    
     respond_to do |format|
       if @membership.save
-      	
       	    if params[:paid]
     			@payment=Payment.new(:membership_id=>@membership.id, :rate_id=>@membership.rate_id, :paid_month=>Date.today.month, :paid_year=>Date.today.year)
     			@payment.save
     		end
-      	
-        flash[:notice] = 'Membership was successfully created.'
+        flash[:notice] = 'La membresia se guardó con éxito.'
         format.html { redirect_to(memberships_path) }
         format.xml  { render :xml => @membership, :status => :created, :location => @membership }
       else
@@ -82,6 +78,7 @@ class MembershipsController < ApplicationController
   # DELETE /memberships/1.xml
   def destroy
     @membership = Membership.find(params[:id])
+    @payments = Payment.find(:all, :conditions=> "membership_id=#{@membership.id}")
     @membership.destroy
 
     respond_to do |format|

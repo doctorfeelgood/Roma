@@ -2,6 +2,7 @@ class SessionsController < ApplicationController
 	
 def login
 	session[:title]='Ingresar al sistema' 
+	session[:image] = 'notices.png'
 end	
 	
 def authenticate

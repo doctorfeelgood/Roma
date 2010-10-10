@@ -1,7 +1,7 @@
 <%session[:even_or_odd]='odd'%>
 <div class='rounded_corners option_buttons_box' style="">
-	<%=link_to image_tag('mini-calendar.png')+" Calendario", {:action=>'calendar', :date=>Date.today}, :class=>'button_link right_rounded'%>
-	<%=link_to image_tag('ayer.png')+" Ayer", {:action=>'day', :date=>Date.today-1}, :class=>'button_link left_rounded'%>
+	<%=link_to image_tag('mini-calendar.png', :border=>0)+" Calendario", {:action=>'calendar', :date=>Date.today}, :class=>'button_link right_rounded'%>
+	<%=link_to image_tag('ayer.png', :border=>0)+" Ayer", {:action=>'day', :date=>Date.today-1}, :class=>'button_link left_rounded'%>
 </div>	
 <div class='clear'></div>
 <table width=100% cellspacing=7>
@@ -14,19 +14,25 @@
 			<div class="table_container"  >
 				<table class='list_table' >
 					<tr>
+						<th class='sortable'>Hora</th>
 						<th class='sortable'>Membres&iacute;a</th>
 						<th class='sortable'>Nombre</th>
-						<th class='sortable'>Hora</th>
+						<th class='sortable'>D&iacute;a Corte</th>	
+						<th class='sortable'>Meses Pendientes</th>
 						<th colspan='3'>Acciones</th>
 				  	</tr>
 					<tr id='empty_row' style='height:0px'></tr>
 				<% @attendances.each do |attendance| %>
 				  	<tr class="<%= cycle("even", "odd") %>">
+				  		<td><b><%=attendance.created_at.strftime("%H:%M")%></b></td>
 						<td><%=attendance.member.membership.id%></td>
 						<td class='capitalize_me'><%=attendance.member.name+' '+attendance.member.last_name%></td>
-						<td><%=attendance.created_at.strftime("%H:%M")%></td>
+						<td><%=attendance.member.membership.pay_day%></td>
+						<td><%=attendance.member.membership.pending_months%></td>
+						<td><%= link_to 'Pagar', attendance, :class=>'link'  %></td><!-- poner el icono para pagar -->
 				    	<td><%= link_to_remote 'Mostrar', :url=>attendance, :method=>:get, :html=>{:class=>'link to_show'} %></td>
 				    	<td><%= link_to 'Eliminar', attendance, :class=>'link to_destroy', :confirm => 'Está seguro?', :method => :delete  %></td>
+				    	
 				  	</tr>
 				<% end %>
 				</table>

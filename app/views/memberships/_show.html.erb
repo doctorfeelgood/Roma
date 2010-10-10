@@ -8,27 +8,13 @@
 				<th rowspan=6><%= image_tag @member.photo.url(:small) %>  </th>
 				<td><span class='card_name'><%=@member.name%> <%=@member.last_name%></span></td>
 			</tr>
-			<tr>
-				<td><span class='card_number'><%=@membership.id%></span></td>
-			</tr>
-			<tr>
-				<td><span class='card_phone'><%=@member.phone%></span></td>
-			</tr>
-			<tr>
-				<td><span class='card_email'><%=@member.email%></span></td>
-			</tr>
-			<tr>
-				<td><span class='card_address'><%=@member.address%></span></td>	
-			</tr>
-			<tr>
-				<td><span class='card_rate'><%=@membership.rate.name%>, <%=number_to_currency(@membership.rate.price)%></span></td>	
-			</tr>			
-			<tr>
-				<td><span class='card_address'><%=debug (@membership.pending_months) %>  meses pendientes</span></td>	
-			</tr>		
-			<tr>
-				<td><span class='card_address'><%=debug (@membership.pay_day) %>  de cada mes</span></td>	
-			</tr>
+			<tr><td><span class='card_number'><%=@membership.id%></span></td></tr>
+			<tr><td><span class='card_phone'><%=@member.phone%></span></td></tr>
+			<tr><td><span class='card_email'><%=@member.email%></span></td></tr>
+			<tr><td><span class='card_address'><%=@member.address%></span></td>	</tr>
+			<tr><td><span class='card_rate'><%=@membership.rate.name%>, <%=number_to_currency(@membership.rate.price)%></span></td></tr>			
+			<tr><td><span class='card_address'><%=@membership.pending_months%>  meses pendientes</span></td>	</tr>		
+			<tr><td><span class='card_address'><%=@membership.pay_day %>  de cada mes</span></td>	</tr>
 			
 			<tr>
 				<td colspan=2>
