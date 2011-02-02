@@ -1,0 +1,2 @@
+page.replace_html("new_payment", :partial => "new", :object => @payment)         
+page[:new_payment].visual_effect :appear

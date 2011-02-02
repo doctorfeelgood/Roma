@@ -1,5 +1,5 @@
-<div class='top_bar member_table_width'><span class="list_title">Listado de membres&iacute;as</span></div>
-<div class="table_container member_table_width">
+<div class='top_bar'><span class="list_title">Listado de membres&iacute;as</span></div>
+<div class="table_container"><!-- si anado aqui la clase member_table_width tengo que anadirla arriba tambien, para width-->
 	<table class='list_table'>
 		<tr>
 			<th class='sortable'>Membres&iacute;a</th>
@@ -7,24 +7,23 @@
 			<th class='sortable'>Corte</th>
 			<th class='sortable'>Meses Pendientes</th>
 			<th class='sortable'>Tarifa</th>
-			<th colspan='3'>Acciones</th>
+			<th>&nbsp;</th>
 	  	</tr>
 
 	<% @memberships.each do |membership| %>
 	  	<tr class="<%= cycle("even", "odd") %>">
-			<td><%=membership.id%></td>
+			<td><%=membership.id%> </td>
 			<td class='capitalize_me'><%=membership.member.name+' '+membership.member.last_name%></td>
 			<td><%=membership.pay_day%></td>
-			<td><%=membership.pending_months%></td>
-	    	<td><%= link_to_remote 'Mostrar', :url=>membership, :method=>:get, :html=>{:class=>'link to_show'} %></td>
-			<td><%= link_to_remote 'Editar', :url=>edit_membership_path(membership), :method=>:get, :html=>{:class=>'link to_edit'} %></td>
+			<td><%=membership.pending_months.size%></td>
+			<td>la tarifa</td>
+			<td><%=actions_menu(membership)%></td>
 
-	    	<td><%= link_to 'Eliminar', membership, :class=>'link to_destroy', :confirm => 'Está seguro?', :method => :delete  %></td>
 	  	</tr>
 	<% end %>
 	</table>
 	<div class='list_footer'>
-		<%= link_to_remote 'Nueva Membres&iacute;a', :url=>{:action=>'new'}, :html=>{:class=>'link_to_new'} %>
+		<%= new_button('Nueva Membres&iacute;a') %>
 	</div><!--termina list footer-->
 </div><!--termina list container -->
 
@@ -34,4 +33,6 @@
 </div>
 <div id="edit_membership" style='display:none;' class='on_top' >
 </div>
+
+
 

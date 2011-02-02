@@ -1,0 +1,40 @@
+
+<div class='top_bar'><span class="list_title">Todos los pagos pendientes</span></div>
+<div class="table_container"  >
+	<table class='list_table' >
+		<tr>
+			<th class='sortable'>Corte</th>
+			<th class='sortable'>Usuario</th>
+			<th class='sortable'>Meses Pendientes</th>
+			<th class='sortable'>Tarifa</th>
+			<th class='sortable'>Adeudo Total</th>
+			<th colspan='3'>Acciones</th>
+	  	</tr>
+<% @memberships.each do |membership| %>
+  <tr class="<%= cycle("even", "odd") %>">
+  	<td><%=membership.pay_day%> </td>
+  	<td><%=membership.id%> <%=membership.member.name%> <%=membership.member.last_name%></td>
+  	<td>
+  		
+  			<% membership.pending_months. each do |pendingMonth|%>
+  				<div class='pending_month'>
+  					 <%=spanish_month(pendingMonth.month)%> 
+  				</div>	
+  			<%end%>
+  		
+  	</td>
+  	<td><span class='rate_price'  title='<%=membership.rate.name%> '> $<%=membership.rate.price%></td>
+  	<td><%=h number_to_currency (membership.pending_months.size.to_i * membership.rate.price)%></td>
+    <td><%= link_to 'Show', membership %></td>
+    <td><%= link_to 'Edit', edit_membership_path(membership) %></td>
+    <td><%= link_to 'Destroy', membership, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+	<div class='list_footer'>
+		<%= link_to_remote 'Realizar un  pago', :url=>{:action=>'new'}, :html=>{:class=>'link_to_new'} %>
+	</div><!--termina list footer-->
+</div><!--termina list container -->
+
+<div id="new_payment" style='display:none;' class='on_top' >
+</div>

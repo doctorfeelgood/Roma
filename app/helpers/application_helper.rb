@@ -24,4 +24,26 @@ module ApplicationHelper
   	end
   	mes
   end
+  
+  def new_button (text)
+  	link_to_remote image_tag('add.png')+" "+text, :url=>{:action=>'new'}, :html=>{:class=>'list_footer_button_link'}
+  end
+  
+  def actions_menu(membership)
+	html = "<div style='position:relative; display:inline-block;'>
+					<div>#{ link_to_function(image_tag('actions.png', :size=>'16x16', :border=>0), nil, :class=>'algo') do |page|	
+									page.select(".actions_menu:not(#actions_menu_#{membership.id})").each {|mi| mi.hide }
+									page.visual_effect :toggle_appear, "actions_menu_#{membership.id}", :duration => 0.5
+								end }
+					</div>
+					<div id='actions_menu_#{membership.id}' class='actions_menu' style='display:none;''>
+						<table cellpadding=0 cellspacing = 1>
+							<tr><td class='menu_item'>#{link_to_remote 'Mostrar', :url=>membership, :method=>:get, :html=>{:class=>'link to_show'}}</td></tr>
+							<tr><td class='menu_item'>#{link_to_remote 'Editar', :url=>edit_membership_path(membership), :method=>:get, :html=>{:class=>'link to_edit'}}</td></tr>
+							<tr><td class='menu_item'>#{link_to 'Eliminar', membership, :class=>'link to_destroy', :confirm => 'Está seguro?', :method => :delete}</td></tr>
+						</table>
+					</div></div>"
+	html
+  end
+  
 end

@@ -1,0 +1,11 @@
+<h1>New pending_month</h1>
+
+<% form_for(@pending_month) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', pending_months_path %>

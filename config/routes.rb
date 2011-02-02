@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :reports, :collection=>{:all_pending=>:get}
+
+  map.resources :pending_months
+
   
 	map.root :controller => "sessions", :action=>"login"
 	map.resources :users

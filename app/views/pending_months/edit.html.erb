@@ -1,0 +1,12 @@
+<h1>Editing pending_month</h1>
+
+<% form_for(@pending_month) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @pending_month %> |
+<%= link_to 'Back', pending_months_path %>

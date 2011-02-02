@@ -31,11 +31,6 @@ layout 'main'
   # GET /payments/new.xml
   def new
     @payment = Payment.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @payment }
-    end
   end
 
   # GET /payments/1/edit
@@ -46,8 +41,9 @@ layout 'main'
   # POST /payments
   # POST /payments.xml
   def create
+  	
     @payment = Payment.new(params[:payment])
-    			@payment=Payment.new(:membership_id=>@membership.id, :rate_id=>@membership.rate_id, :paid_month=>Date.today.month, :paid_year=>Date.today.year)
+    			#@payment=Payment.new(:membership_id=>@membership.id, :rate_id=>@membership.rate_id, :paid_month=>Date.today.month, :paid_year=>Date.today.year)
     			@payment.save
     respond_to do |format|
       if @payment.save

@@ -183,7 +183,7 @@ textarea:focus { background-color: #ffd }
 
 .member_table_width
 {
-	width:600px;
+	width:500px;
 }
 
 
@@ -236,6 +236,7 @@ textarea:focus { background-color: #ffd }
 {
 	font-size:2em;
 	color:#0072BC;
+	font-weight:bold;
 }
 
 .card_number
@@ -387,6 +388,7 @@ textarea:focus { background-color: #ffd }
 	vertical-align:middle;
 	height:16px;
 	width:16px;
+	border:0;
 }
 
 .left_rounded
@@ -400,7 +402,7 @@ textarea:focus { background-color: #ffd }
 
 .right_rounded
 {
-	-moz-border-radius-toprigth: 8px;
+	-moz-border-radius-topright: 8px;
 	-moz-border-radius-bottomright: 8px;
 	-webkit-border-top-right-radius: 8px;
 	-webkit-border-bottom-right-radius: 8px;
@@ -414,7 +416,78 @@ textarea:focus { background-color: #ffd }
 	background:url(../images/little_button_bg.png) repeat-x;
 }
 
+.list_footer_button_link
+{
+	display:inline-block;
+	padding:2px;
+	padding-right:6px;
+	text-decoration:none;
+	border:1px solid #cdcdcd;
+	color:#0072BC;
+	font-weight:bold;
+	-moz-border-radius-bottomright:6px;
+	-moz-border-radius-bottomleft:6px;
+	-webkit-border-bottom-left-radius: 6px;
+	-webkit-border-bottom-right-radius: 6px;
+	line-height:20px;
+}
 
+.list_footer_button_link:hover
+{
+	background:url(../images/little_button_bg.png) repeat-x;
+}
+
+.list_footer_button_link img
+{
+	display:block;
+	float:left;
+	margin:2px;
+	height:16px;
+	width:16px;
+	border:0;
+}
+
+
+.actions_menu
+{
+	padding:2px;
+	border:1px solid #888;
+	-moz-border-radius:4px;
+	-webkit-border-bottom-left-radius: 6px;
+	-webkit-border-top-left-radius: 6px;
+	-webkit-border-bottom-right-radius: 6px;
+	position:absolute;  
+	left:-86px; 
+	top:4px;
+	z-index:100;
+}
+
+.actions_menu .menu_item 
+{
+	background:url(../images/blackbg.png);
+	border: 1px solid #888;
+	padding-left:0;
+	
+}
+.actions_menu .menu_item:hover
+{
+	background:url(../images/whitebg.png);
+	color:#000;
+}
+
+.actions_menu .menu_item a
+{
+	color:#fff;
+	padding-right:2px;
+	display:block;
+	text-decoration:none;
+	cursor:pointer;
+}
+
+.actions_menu .menu_item a:hover
+{
+	color:#000;
+}
 
 /*esto es para el top bar */
 .total_members
@@ -424,4 +497,20 @@ textarea:focus { background-color: #ffd }
 	margin-right:20px;
 	float:right;
 	line-height:26px;
+}
+
+.pending_month
+{
+	background-color:#FF9999;
+	border:1px solid #990000;
+	color: #990000;
+	-moz-border-radius-topleft:2px;
+	-moz-border-radius-bottomleft: 2px;
+	-webkit-border-top-left-radius: 2px;
+	-webkit-border-bottom-left-radius: 2px;		
+	display:inline-block;
+	float:left;
+	padding-left:2px;
+	padding-right:2px;
+	margin:2px;
 }

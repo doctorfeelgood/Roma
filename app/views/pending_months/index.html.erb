@@ -1,0 +1,18 @@
+<h1>Listing pending_months</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% @pending_months.each do |pending_month| %>
+  <tr>
+    <td><%= link_to 'Show', pending_month %></td>
+    <td><%= link_to 'Edit', edit_pending_month_path(pending_month) %></td>
+    <td><%= link_to 'Destroy', pending_month, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New pending_month', new_pending_month_path %>

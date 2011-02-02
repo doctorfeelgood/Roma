@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100314214927) do
+ActiveRecord::Schema.define(:version => 20101024023257) do
 
   create_table "attendances", :force => true do |t|
     t.integer  "member_id"
@@ -71,7 +71,9 @@ ActiveRecord::Schema.define(:version => 20100314214927) do
     t.datetime "updated_at"
     t.integer  "pending_months"
     t.integer  "pay_day"
-    t.boolean  "active",         :default => true
+    t.boolean  "active",             :default => true
+    t.boolean  "is_up_to_date",      :default => true
+    t.integer  "last_checked_month"
   end
 
   create_table "payments", :force => true do |t|
@@ -83,11 +85,27 @@ ActiveRecord::Schema.define(:version => 20100314214927) do
     t.datetime "updated_at"
   end
 
+  create_table "pending_months", :force => true do |t|
+    t.integer  "membership_id"
+    t.integer  "rate_id"
+    t.integer  "attendances"
+    t.date     "period_begins"
+    t.date     "period_ends"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "month",         :default => 1
+  end
+
   create_table "rates", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.decimal  "price",      :precision => 6, :scale => 2
+  end
+
+  create_table "reports", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "routine_exercises", :force => true do |t|

@@ -1,19 +1,19 @@
-<div class='popup' id='popup'>
+<div class='popup'>
 	<div class='popup_info'>
 		<%=link_to_function(nil, nil, :class=>'close') do |page|	  
-			page.visual_effect :fade, "new_membership", :duration => 0.5
+			page.visual_effect :fade, "new_payment", :duration => 0.5
 		  end %>
 		
-		<div class='popup_title'>Nueva Membres&iacute;a</div>
-		
-		<% form_for @membership, :html => { :multipart => true } do |f| %>  
+
+		<% form_for @payment, :html => { :multipart => true } do |f| %>  
 			<%= f.error_messages %>
 			<%= render :partial => 'form', :locals => {:f => f} %>
+
 
 		<div class='two_column'>
 			<div class='left'>
 				<%=link_to_function(image_tag('cancelar.png'), nil, :class=>'left_button') do |page|	  
-					page.visual_effect :fade, "new_membership", :duration => 0.5
+					page.visual_effect :fade, "new_payment", :duration => 0.5
 				  end %>
 			</div>
 			<div class='right'>
@@ -27,5 +27,3 @@
 
 	</div>
 </div>
-
-<%=draggable_element("popup", :revert => false) %>

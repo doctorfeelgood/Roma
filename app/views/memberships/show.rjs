@@ -1,2 +1,3 @@
-page.replace_html("show_membership", :partial => "show", :object => @membership)         
+page.replace_html("show_membership", :partial => "show", :object => @membership) 
+page.visual_effect :fade, "actions_menu_#{@membership.id}", :duration => 0.5        
 page[:show_membership].visual_effect :appear

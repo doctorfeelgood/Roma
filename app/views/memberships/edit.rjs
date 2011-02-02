@@ -1,3 +1,4 @@
 @editing=true
-page.replace_html("edit_membership", :partial => "edit", :object => @membership)         
+page.replace_html("edit_membership", :partial => "edit", :object => @membership)    
+page.visual_effect :fade, "actions_menu_#{@membership.id}", :duration => 0.5             
 page[:edit_membership].visual_effect :appear

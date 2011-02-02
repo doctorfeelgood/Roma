@@ -25,6 +25,9 @@
 <% end %>
 </table>
 	<div class='list_footer'>
-		<%= link_to 'New payment', new_payment_path %>
+		<%= link_to_remote 'Realizar un  pago', :url=>{:action=>'new'}, :html=>{:class=>'link_to_new'} %>
 	</div><!--termina list footer-->
 </div><!--termina list container -->
+
+<div id="new_payment" style='display:none;' class='on_top' >
+</div>

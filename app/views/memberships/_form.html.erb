@@ -21,7 +21,7 @@
 		  	<td><%=m.text_field :address, :class => "capitalize_me" %></td>	
 		</tr>	
 		<tr>	
-			<th><%=m.label :member, "Photo" %></th>  
+			<th><%=m.label :member, "Foto" %></th>  
 	    	<td><%=m.file_field :photo %></td>
 		</tr>	
 <%end%>
@@ -31,10 +31,10 @@
 			<td><%= check_box_tag  :paid %></td>
 		</tr>
 		
-		<!-->
+		<!--
 		<tr>
 			<th>Meses pendientes</th>  
-	    	<td><%=f.text_field  :pending_months %></td>
+	    	<td><%#f.text_field  :pending_months %></td>
 		</tr>-->
 		
 		<tr>

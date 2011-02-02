@@ -1,0 +1,27 @@
+
+	<table align="center" class="form_table" width='100%'>
+				<tr>
+		 	<th><%= f.label 'Membership id:' %></th>
+		  	<td><%=f.text_field :membership_id%></td>	
+		</tr>
+		<tr>	
+			<th><%=f.label :payment, "Tarifa" %></th>  
+			<td><%=select("payment", "rate_id", Rate.all.collect {|r| [ r.name, r.id ] }, {:include_blank => 'None'}) %></td>
+		</tr>		
+		<tr>
+		   	<th><%=f.label 'Month:' %></th>
+		    <td><%=f.text_field :paid_month %></td>
+		</tr>
+		<tr>
+		 	<th><%= f.label 'Year:' %></th>
+		  	<td><%=f.text_field :paid_year %></td>	
+		</tr>
+
+
+		<tr>
+			<th>Membres&iacute;a Pagada</th>
+			<td><%= check_box_tag  :paid %></td>
+		</tr>
+	
+	
+	</table>
