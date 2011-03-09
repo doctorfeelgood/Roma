@@ -180,6 +180,19 @@ textarea:focus { background-color: #ffd }
 			color:#fff;
 			font-weight:bold;
 		}
+		
+		.login_button
+		{	
+			border:2px dashed #fff;
+			background:none;
+			color:#fff;
+		}
+		
+		.login_button:hover
+		{	
+			background:#fff;
+			color:#333;
+		}
 
 .member_table_width
 {
@@ -513,4 +526,27 @@ textarea:focus { background-color: #ffd }
 	padding-left:2px;
 	padding-right:2px;
 	margin:2px;
+}
+
+.middle_image{
+	vertical-align:middle;
+}
+
+.vertical-text
+{
+	float:left; 
+	color:#000;
+	font-weight:bold;
+	font-size:16px;
+	line-height:20px;
+    -webkit-transform: rotate(-90deg);
+    -webkit-transform-origin: left top;
+    -moz-transform: rotate(-90deg);
+    -moz-transform-origin: left top;
+    -o-transform: rotate(-90deg);
+    -o-transform-origin: left top;
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    position: absolute;
+    bottom: -20px;
 }

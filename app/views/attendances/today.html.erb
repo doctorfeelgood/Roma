@@ -48,6 +48,7 @@
 			<div class="table_container" style='padding:10px' >
 				<% form_remote_tag :url => {:controller => 'attendances', :action => 'create'},
 				:html => {:action => {:controller => 'attendances', :action => 'create'}, :id=>'add_member'} do %>
+				<%=image_tag 'barcode.png', :size=>'24x24', :class=>'middle_image' %>
 				<%= text_field_tag :membership, nil, :size=>'10'%> <%= submit_tag 'Aceptar' -%>
 				<% end %>
 			</div>

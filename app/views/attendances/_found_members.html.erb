@@ -6,20 +6,21 @@
 			<div class="table_container" style='background-color:#fff;'>
 				<table class='list_table' >
 					<tr>
-						<th class='sortable'>Membres&iacute;a</th>
-						<th class='sortable'>Nombre</th>
-						<th ></th>
+						<th class='sortable' width='100px'>Membres&iacute;a</th>
+						<th class='sortable' width='250px'>Nombre</th>
 				  	</tr>
 				<% @members.each do |member| %>
-				  	<tr class="<%= cycle("even", "odd") %>">
+				  	<tr class="<%= cycle('even', 'odd') %>" id="row_<%=member.membership.id%>" onclick="window.location.href = '<%= url_for :controller => 'attendances', :action => 'today' %>'">
 						<td><%=member.membership.id%></td>
 						<td class='capitalize_me'><%=member.name+' '+member.last_name%></td>
-				    	<td><%= link_to_remote image_tag('right.png', :border=>0, :class=>'add_button'), :url=>{:controller => 'attendances', :action => 'create', :membership=>member.membership.id, :from_results=>true}, :method=>:post %></td>
+				    	<!--<td><%# link_to_remote image_tag('right.png', :border=>0, :class=>'add_button'), :url=>{:controller => 'attendances', :action => 'create', :membership=>member.membership.id, :from_results=>true}, :method=>:post %></td>-->
 				  	</tr>
 				<% end %>
+					<% @mem = @members[1] %>
 				</table>
+					
 				<div class='list_footer' >
-
+					
 				</div><!--termina list footer-->
 			</div><!--termina list container -->		
 		<div class='clear'></div>
