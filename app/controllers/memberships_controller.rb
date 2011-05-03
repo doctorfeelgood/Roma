@@ -78,7 +78,8 @@ class MembershipsController < ApplicationController
   # DELETE /memberships/1.xml
   def destroy
     @membership = Membership.find(params[:id])
-    @payments = Payment.find(:all, :conditions=> "membership_id=#{@membership.id}")
+    #@payments = Payment.find(:all, :conditions=> "membership_id=#{@membership.id}")
+	@payments = Paymente.where("membership_id", @membership.id)
     @membership.destroy
 
     respond_to do |format|

@@ -1,4 +1,4 @@
-require 'test_helper'
+require 'rails/test_helper'
 
 class MembershipsControllerTest < ActionController::TestCase
   test "should get index" do

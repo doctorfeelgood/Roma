@@ -30,7 +30,7 @@ def authenticate
   def logout
   	session[:access_granted]=false
   	session[:user]=nil
-  	 redirect_to :back;
+  	redirect_to :back;
   end
   
 end

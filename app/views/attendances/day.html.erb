@@ -22,8 +22,8 @@
 						<td><%=attendance.member.membership.id%></td>
 						<td class='capitalize_me'><%=attendance.member.name+' '+attendance.member.last_name%></td>
 						<td><%=attendance.created_at.strftime("%H:%M")%></td>
-				    	<td><%= link_to_remote 'Mostrar', :url=>attendance, :method=>:get, :html=>{:class=>'link to_show'} %></td>
-				    	<td><%= link_to 'Eliminar', attendance, :class=>'link to_destroy', :confirm => 'EstÃ¡ seguro?', :method => :delete  %></td>
+				    	<td><%= link_to 'Mostrar', :url=>attendance, {:class=>'link to_show'}, {:method=>:get, :remote=>true} %></td>
+				    	<td><%= link_to 'Eliminar', attendance, :class=>'link to_destroy', :confirm => 'Está seguro?', :method => :delete  %></td>
 				  	</tr>
 				<% end %>
 				</table>
@@ -42,7 +42,7 @@
 				</div>
 
 
-			
+
 		</td>
 	</tr>
 </table>
@@ -55,6 +55,3 @@
 <div id="edit_attendance" style='display:none;' class='on_top' >
 </div>
 <div id="jimmy" style='display:none;' class='on_top'></div>
-
-
-

@@ -1,7 +1,9 @@
 # Methods added to this helper will be available to all templates in the application.
+# encoding: utf-8
 module ApplicationHelper
   def attendances_count(date)
-    count=Attendance.find(:all, :conditions=>['created_at > ? AND created_at < ?', date, date+1]).size
+    #count=Attendance.find(:all, :conditions=>['created_at > ? AND created_at < ?', date, date+1]).size
+	count=Attendance.where('created_at > ? AND created_at < ?', date, date+1).size
     count
   end
   
@@ -26,7 +28,7 @@ module ApplicationHelper
   end
   
   def new_button (text)
-  	link_to_remote image_tag('add.png')+" "+text, :url=>{:action=>'new'}, :html=>{:class=>'list_footer_button_link'}
+  	link_to image_tag('new.png')+" "+text, {:action=>'new'}, {:class=>'list_footer_button_link'}, {:remote=>true}
   end
   
   def actions_menu(membership)
@@ -40,7 +42,7 @@ module ApplicationHelper
 						<table cellpadding=0 cellspacing = 1>
 							<tr><td class='menu_item'>#{link_to_remote 'Mostrar', :url=>membership, :method=>:get, :html=>{:class=>'link to_show'}}</td></tr>
 							<tr><td class='menu_item'>#{link_to_remote 'Editar', :url=>edit_membership_path(membership), :method=>:get, :html=>{:class=>'link to_edit'}}</td></tr>
-							<tr><td class='menu_item'>#{link_to 'Eliminar', membership, :class=>'link to_destroy', :confirm => 'Está seguro?', :method => :delete}</td></tr>
+							<tr><td class='menu_item'>#{link_to 'Eliminar', membership, :class=>'link to_destroy', :confirm => 'Esta seguro?', :method => :delete}</td></tr>
 						</table>
 					</div></div>"
 	html

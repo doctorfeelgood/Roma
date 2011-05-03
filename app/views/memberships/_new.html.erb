@@ -6,9 +6,18 @@
 		
 		<div class='popup_title'>Nueva Membres&iacute;a</div>
 		
-		<% form_for @membership, :html => { :multipart => true } do |f| %>  
-			<%= f.error_messages %>
-			<%= render :partial => 'form', :locals => {:f => f} %>
+		<%=form_for @membership, :html => { :multipart => true } do |f| %>  
+			<% if @membership.errors.any? %>
+				<div id="error_explanation">
+					<h2><%= pluralize(@membership.errors.count, "error") %> prohibited this membership from being saved:</h2>
+					<ul>
+						<% @membership.errors.full_messages.each do |msg| %>
+							<li><%= msg %></li>
+						<% end %>
+					</ul>
+				</div>
+			<% end %>
+			<%= render 'form', :f => f %>
 
 		<div class='two_column'>
 			<div class='left'>

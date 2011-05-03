@@ -13,7 +13,7 @@
 				  	<tr class="<%= cycle('even', 'odd') %>" id="row_<%=member.membership.id%>" onclick="window.location.href = '<%= url_for :controller => 'attendances', :action => 'today' %>'">
 						<td><%=member.membership.id%></td>
 						<td class='capitalize_me'><%=member.name+' '+member.last_name%></td>
-				    	<!--<td><%# link_to_remote image_tag('right.png', :border=>0, :class=>'add_button'), :url=>{:controller => 'attendances', :action => 'create', :membership=>member.membership.id, :from_results=>true}, :method=>:post %></td>-->
+				    	<!--<td><%# link_to image_tag('right.png', :border=>0, :class=>'add_button'), :url=>{:controller => 'attendances', :action => 'create', :membership=>member.membership.id, :from_results=>true}, :method=>:post %></td>-->
 				  	</tr>
 				<% end %>
 					<% @mem = @members[1] %>

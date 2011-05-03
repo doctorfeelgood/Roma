@@ -1,6 +1,6 @@
 <div id='login_container'>
 	<div id='login_form'>
-		<% form_tag 'authenticate' do -%>
+		<%= form_tag url_for( :controller => 'sessions', :action => 'authenticate' ), { :method => 'post'} do-%>
 		<table>
 			<tr>
 				<td align='right'><%= label_tag 'Usuario' %></td>

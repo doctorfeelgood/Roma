@@ -17,7 +17,7 @@
 	<% end %>
 	</table>
 	<div class='list_footer'>
-		<%= link_to_remote 'Agregar', :url=>{:action=>'new'}, :html=>{:class=>'link_to_new'} %>
+		<%= link_to 'Agregar', :url=>{:action=>'new'}, {:class=>'link_to_new'}, {:remote=>true}%>
 	</div><!--termina list footer-->
 </div><!--termina list container -->	
 

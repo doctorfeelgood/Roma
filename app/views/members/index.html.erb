@@ -11,15 +11,15 @@
 	  	<tr class="<%= cycle("even", "odd") %>">
 			<td><%=member.member_number%></td>
 			<td><%=member.name%> <%=member.last_name%></td>
-	    	<td><%= link_to_remote 'Mostrar', :url=>{:action=>'show_member', :id=>member.id}, :html=>{:class=>'link to_show'} %></td>
-			<td><%= link_to_remote 'Editar', :url=>edit_member_path(member), :method=>:get, :html=>{:class=>'link to_edit'} %></td>
+	    	<td><%= link_to 'Mostrar', :url=>{:action=>'show_member', :id=>member.id}, {:class=>'link to_show'} %></td>
+			<td><%= link_to 'Editar', :url=>edit_member_path(member), {:class=>'link to_edit'}, {:remote=>true, :method=>:get} %></td>
 
 	    	<td><%= link_to 'Eliminar', member, :class=>'link to_destroy', :confirm => 'Está seguro?', :method => :delete  %></td>
 	  	</tr>
 	<% end %>
 	</table>
 	<div class='list_footer'>
-		<%= link_to_remote 'Agregar', :url=>{:action=>'new'}, :html=>{:class=>'link_to_new'} %>
+		<%= link_to 'Agregar', :url=>{:action=>'new'}, {:class=>'link_to_new'}, {:remote=>true} %>
 	</div><!--termina list footer-->
 </div><!--termina list container -->	
 

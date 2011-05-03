@@ -12,8 +12,8 @@
 		<div id='stripe'></div>
 		<div id='wrapper'>
 			<div id='header'>
-				<%=image_tag ('gym-e_logobar.gif', :class => "float_left")%>
-				<%=image_tag ('logo_300.png', :class => "float_left")%>
+				<%=image_tag('gym-e_logobar.gif', :class => "float_left")%>
+				<%=image_tag('logo_300.png', :class => "float_left")%>
 				<span id='welcome_user'><% if session[:access_granted] %>&nbsp; Bienvenido <%=session[:user].name.capitalize%> &nbsp; <%end%> </span>
 				<div id='menu_box'>
 					<a href=<%=members_path%> class='menu_link' ><%=image_tag 'house.png'%>Dashboard</a>

@@ -3,11 +3,14 @@ class AttendancesController < ApplicationController
   
   def search_member
     if (params[:name]!='' && params[:last_name]!='' )
-      @members=Member.find(:all, :conditions=>['name LIKE ? OR last_name LIKE ?', "%#{params[:name]}%", "%#{params[:last_name]}%"])
+      #@members=Member.find(:all, :conditions=>['name LIKE ? OR last_name LIKE ?', "%#{params[:name]}%", "%#{params[:last_name]}%"])
+	  @members=Member.where("name LIKE ? OR last_name LIKE ?", "%#{params[:name]}%", "%#{params[:last_name]}%")
     elsif (params[:name]!='')
-      @members=Member.find(:all, :conditions=>['name LIKE ?', "%#{params[:name]}%"])
+      #@members=Member.find(:all, :conditions=>['name LIKE ?', "%#{params[:name]}%"])
+	  @members=Member.where("name LIKE ?", "%#{params[:name]}%")
     elsif (params[:last_name]!='')
-      @members=Member.find(:all, :conditions=>['last_name LIKE ?', "%#{params[:last_name]}%" ])
+      #@members=Member.find(:all, :conditions=>['last_name LIKE ?', "%#{params[:last_name]}%" ])
+	  @members=Members.where("last_name LIKE ?", "%#{params[:last_name]}%" )
     end
     
     if @members.size>0    
@@ -22,7 +25,8 @@ class AttendancesController < ApplicationController
   
   
   def today
-    @attendances = Attendance.find(:all, :conditions=>['created_at > ? AND created_at < ?', Date.today, Date.today+1], :order=>'created_at DESC')
+    #@attendances = Attendance.find(:all, :conditions=>['created_at > ? AND created_at < ?', Date.today, Date.today+1], :order=>'created_at DESC')
+	@attendances = Attendance.where("created_at > ?  AND created_at < ?", Date.today, Date.today+1).order('created_at DESC')
     @date=Date.today
     session[:image]='attendances.png'
     session[:title]='Asistencia de hoy'  
@@ -34,7 +38,8 @@ class AttendancesController < ApplicationController
       redirect_to(:action=>"today")
     else
       session[:image]='calendar.png'
-      @attendances = Attendance.find(:all, :conditions=>['created_at > ? AND created_at < ?', @date, @date+1], :order=>'created_at DESC')
+      #@attendances = Attendance.find(:all, :conditions=>['created_at > ? AND created_at < ?', @date, @date+1], :order=>'created_at DESC')
+	  @attendances = Attendance.where('created_at > ? AND created_at < ?',  @date, @date+1).order('created_at DESC')
       session[:title]='Consultando fecha'
     end
   end
@@ -96,7 +101,8 @@ class AttendancesController < ApplicationController
       membership=Membership.find(params[:membership])
       @attendance=Attendance.new(:member_id=>membership.member.id)
       @attendance.save
-      @attendances = Attendance.find(:all, :conditions=>['created_at > ? AND created_at < ?', Date.today, Date.today+1], :order=>'created_at DESC')
+      #@attendances = Attendance.find(:all, :conditions=>['created_at > ? AND created_at < ?', Date.today, Date.today+1], :order=>'created_at DESC')
+	  @attendances = Attendance.where('created_at > ? AND created_at < ?', Date.today, Date.today+1).order('created_at DESC')
       session[:from_results] = params[:from_results] ? true : false
     else
       jimmy_says("No hay ning&uacute;n miembro con ese n&uacute;mero")

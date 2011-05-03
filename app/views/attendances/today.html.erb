@@ -30,7 +30,7 @@
 						<td><%=attendance.member.membership.pay_day%></td>
 						<td><%=attendance.member.membership.pending_months%></td>
 						<td><%= link_to 'Pagar', attendance, :class=>'link'  %></td><!-- poner el icono para pagar -->
-				    	<td><%= link_to_remote 'Mostrar', :url=>attendance, :method=>:get, :html=>{:class=>'link to_show'} %></td>
+				    	<td><%= link_to 'Mostrar', attendances_path(attendance), {:class=>'link to_show'}, {:method=>:get, :remote=>true} %></td>
 				    	<td><%= link_to 'Eliminar', attendance, :class=>'link to_destroy', :confirm => 'Está seguro?', :method => :delete  %></td>
 				    	
 				  	</tr>
@@ -46,8 +46,8 @@
 
 			<div class='top_bar'><span class="list_title">Agregar miembro</span></div>
 			<div class="table_container" style='padding:10px' >
-				<% form_remote_tag :url => {:controller => 'attendances', :action => 'create'},
-				:html => {:action => {:controller => 'attendances', :action => 'create'}, :id=>'add_member'} do %>
+				<% form_tag :url => {:controller => 'attendances', :action => 'create'},
+				:html => {:action => {:controller => 'attendances', :action => 'create'}, :id=>'add_member'}, :remote=>true do %>
 				<%=image_tag 'barcode.png', :size=>'24x24', :class=>'middle_image' %>
 				<%= text_field_tag :membership, nil, :size=>'10'%> <%= submit_tag 'Aceptar' -%>
 				<% end %>
@@ -56,8 +56,8 @@
 		
 			<div class='top_bar' style='margin-top:20px'><span class="list_title">Buscar miembro</span></div>
 			<div class="table_container" style='padding:10px' >
-				<% form_remote_tag :url => {:controller => 'attendances', :action => 'search_member'},
-				:html => {:action => {:controller => 'attendances', :action => 'search_member'}, :id=>'search_member'} do %>
+				<% form_tag :url => {:controller => 'attendances', :action => 'search_member'},
+				:html => {:action => {:controller => 'attendances', :action => 'search_member'}, :id=>'search_member'}, :remote=>true do %>
 				<table align='center'>
 					<tr>
 						<th>Nombre</th>

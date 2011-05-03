@@ -1,66 +1,104 @@
-ActionController::Routing::Routes.draw do |map|
-  map.resources :reports, :collection=>{:all_pending=>:get}
+Roma::Application.routes.draw do
+	resources :reports do
+		collection do
+			get :all_pending
+		end
+	end
+	resources :pending_months
+	root :to => "sessions#login"
+	resources :users
+	resources :memberships
 
-  map.resources :pending_months
+	  resources :groups
+	  resources :exercises do
+		collection do
+			get :show_exercise
+		end
+	  end
+	  resources :categories do
+		collection do
+			get :show_category
+		end
+	  end
+	  resources :attendances do  
+		collection do
+			get :today
+			get :calendar
+			get :day
+		end
+	  end
+	  resources :routines
+	  resources :rates
+	  resources :payments
+	  resources :members do
+		collection do
+			get :show_member
+		end
+	  end
+	  resources :groups
+	  resources :exercises
+	  resources :categories
+	  
+	  resources :sessions do
+		collection do
+			post :authenticate
+		end
+	  end
 
-  
-	map.root :controller => "sessions", :action=>"login"
-	map.resources :users
-
-  map.resources :memberships
-
-  map.resources :groups
-  map.resources :exercises, :collection=>{:show_exercise=>:get}
-  map.resources :categories, :collection=>{:show_category=>:get}
-  map.resources :attendances, :collection=>{:today=>:get, :calendar=>:get, :day=>:get}
-  map.resources :routines
-  map.resources :rates
-  map.resources :payments
-  map.resources :members, :collection=>{:show_member=>:get}
-  map.resources :groups
-  map.resources :exercises
-  map.resources :categories
-  map.resources :attendances
-
-  # The priority is based upon order of creation: first created -> highest priority.
+  # The priority is based upon order of creation:
+  # first created -> highest priority.
 
   # Sample of regular route:
-  #   map.connect 'products/:id', :controller => 'catalog', :action => 'view'
+  #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:
-  #   map.purchase 'products/:id/purchase', :controller => 'catalog', :action => 'purchase'
+  #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
-  #   map.resources :products
+  #   resources :products
 
   # Sample resource route with options:
-  #   map.resources :products, :member => { :short => :get, :toggle => :post }, :collection => { :sold => :get }
+  #   resources :products do
+  #     member do
+  #       get 'short'
+  #       post 'toggle'
+  #     end
+  #
+  #     collection do
+  #       get 'sold'
+  #     end
+  #   end
 
   # Sample resource route with sub-resources:
-  #   map.resources :products, :has_many => [ :comments, :sales ], :has_one => :seller
-  
+  #   resources :products do
+  #     resources :comments, :sales
+  #     resource :seller
+  #   end
+
   # Sample resource route with more complex sub-resources
-  #   map.resources :products do |products|
-  #     products.resources :comments
-  #     products.resources :sales, :collection => { :recent => :get }
+  #   resources :products do
+  #     resources :comments
+  #     resources :sales do
+  #       get 'recent', :on => :collection
+  #     end
   #   end
 
   # Sample resource route within a namespace:
-  #   map.namespace :admin do |admin|
-  #     # Directs /admin/products/* to Admin::ProductsController (app/controllers/admin/products_controller.rb)
-  #     admin.resources :products
+  #   namespace :admin do
+  #     # Directs /admin/products/* to Admin::ProductsController
+  #     # (app/controllers/admin/products_controller.rb)
+  #     resources :products
   #   end
 
-  # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
-   #map.root :controller => "sessions", :action=>"login"
+  # You can have the root of your site routed with "root"
+  # just remember to delete public/index.html.
+  # root :to => "welcome#index"
 
   # See how all your routes lay out with "rake routes"
 
-  # Install the default routes as the lowest priority.
-  # Note: These default routes make all actions in every controller accessible via GET requests. You should
-  # consider removing the them or commenting them out if you're using named routes and resources.
-  map.connect ':controller/:action/:id'
-  map.connect ':controller/:action/:id.:format'
+  # This is a legacy wild controller route that's not recommended for RESTful applications.
+  # Note: This route will make all actions in every controller accessible via GET requests.
+  # match ':controller(/:action(/:id(.:format)))'
 end

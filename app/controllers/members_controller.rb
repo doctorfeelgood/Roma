@@ -5,7 +5,8 @@ class MembersController < ApplicationController
   # GET /members.xml
   def index
     #usar este para attendances
-    @hoy=Member.find(:all, :conditions=>["created_at >= ?", Date.today])
+    #@hoy=Member.find(:all, :conditions=>["created_at >= ?", Date.today])
+	@hoy=Member.where("created_at >= ?", Date.today) #creo que este no lo uso
     session[:image]='members.png'
     @members = Member.all
     session[:title]='Miembros'

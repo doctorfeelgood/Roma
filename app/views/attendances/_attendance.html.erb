@@ -5,6 +5,6 @@
 	<td><%=attendance.member.membership.pay_day%></td>
 	<td><%=attendance.member.membership.pending_months%></td>
 	<td><%= link_to 'Pagar', attendance, :class=>'link'  %></td><!-- poner el icono para pagar -->
-	<td><%= link_to_remote 'Mostrar', :url=>attendance, :method=>:get, :html=>{:class=>'link to_show'} %></td>
+	<td><%= link_to_remote 'Mostrar', :url=>attendance, {:class=>'link to_show'}, {:method=>:get, :remote=>true} %></td>
 	<td><%= link_to 'Eliminar', attendance, :class=>'link to_destroy', :confirm => 'Está seguro?', :method => :delete  %></td>
 </tr>

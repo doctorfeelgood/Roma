@@ -1,4 +1,4 @@
-require 'test_helper'
+require 'rails/test_helper'
 
 class GroupTest < ActiveSupport::TestCase
   # Replace this with your real tests.
